@@ -99,8 +99,10 @@
                                                     </div>
                                                     <div class="mat-form-field-suffix ng-tns-c111-6 ng-star-inserted">
                                                         <!---->
-                                                        <mat-icon role="img" matsuffix="" class="mat-icon notranslate cursor-pointer eye-icon material-icons mat-icon-no-color ng-tns-c111-6 ng-star-inserted" aria-hidden="true" data-mat-icon-type="font">visibility_off</mat-icon>
-                                                        <!---->
+                                                        <mat-icon id="visiblepass" role="img" matsuffix="" class="mat-icon notranslate cursor-pointer eye-icon material-icons mat-icon-no-color ng-tns-c111-6 ng-star-inserted" aria-hidden="true" data-mat-icon-type="font">visibility_off</mat-icon>
+                                                      
+                                                        <mat-icon id="invisiblepass" role="img" matsuffix="" class="mat-icon notranslate cursor-pointer eye-icon material-icons mat-icon-no-color ng-tns-c111-6 ng-star-inserted" aria-hidden="true" data-mat-icon-type="font">visibility_on</mat-icon>
+                                                     
                                                     </div>
                                                     <!---->
                                                 </div>
@@ -117,15 +119,15 @@
                                             </div>
                                         </mat-form-field>
                                     </div>
-                                    <div class="text-end rd-mb-2"><a routerlink="/forgot-password" class="bottom-text" href="#/forgot-password">Forgot Password?</a></div>
+                                    <div class="text-end rd-mb-2"><a onclick="forgotPassword()" class="bottom-text">Forgot Password?</a></div>
                                     <button type="submit" class="rd-btn-primary w-100">Login</button>
                                     <div class="separator my-4"><span class="sep-inner">Login with</span></div>
                                     <div class="oauthdiv">
                                         <div class="oauth-btn">
-                                            <button id="otpbtn" type="button" mat-menu-item="" routerlink="/login-otp" class="mat-focus-indicator text-center mat-menu-item" tabindex="0" role="menuitem" aria-disabled="false">
-                                                <img src="../../../assets/images/rd-figma/lock-otp.svg" alt="" style="width: 32px;"> OTP
+                                            <button onclick="otpbtn()" type="button" class="mat-focus-indicator text-center mat-menu-item" tabindex="0" role="menuitem" aria-disabled="false">
+                                                <img src="~/images/lock-otp.svg" alt="" style="width: 32px;"> OTP
                                                 <div matripple="" class="mat-ripple mat-menu-ripple"></div>
-                                                <!---->
+                                                
                                             </button>
                                         </div>
                                     </div>
@@ -133,7 +135,7 @@
                             </div>
                         </div>
 
-                        <div id="login-form-withOTP" class="col-md-6 login-form" style="display:none">
+                        <div id="login-form-withOTP" class="col-md-6 login-form">
                             <div>
                                 <form  novalidate="" class="ng-untouched ng-pristine ng-invalid">
                                     <div  class="text-center">
@@ -181,9 +183,55 @@
                                         </div>
                                     </div><!---->
                                     <div  class="text-center mt-4 mb-2 mt-md-4 mb-md-2">
-                                        <a id="backToLogin" class="bottom-text">Login With Password</a>
+                                        <a onclick="backToLogin()" class="bottom-text">Login With Password</a>
                                     </div>
                                     <button  type="submit" class="rd-btn-primary w-100">Send OTP</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="forgot-pass-form" class="col-md-6 login-form ng-star-inserted">
+                            <div>
+                                <form novalidate="" class="ng-pristine ng-invalid ng-touched">
+                                    <div class="text-center"><img src="../../../assets/images/RapidHr-newLogo.png" alt="RapidHR" class="logo"></div>
+                                    <div class="text-center rd-mt-2">
+                                        <p class="rd-text-primary login">Reset Password</p>
+                                    </div>
+                                    <p class="login-description fw-light rd-mt-1 text-center">Please enter your registered email address </p>
+                                    <!---->
+                                    <div class="icon_wrap icon_wrap_in mt-4 mb-3 mt-md-4 mb-md-3">
+                                        <mat-form-field class="mat-form-field example-full-width my-1 ng-tns-c111-17 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-should-float mat-form-field-has-label ng-pristine ng-invalid ng-star-inserted mat-form-field-invalid ng-touched">
+                                            <div class="mat-form-field-wrapper ng-tns-c111-17">
+                                                <div class="mat-form-field-flex ng-tns-c111-17">
+                                                    <!----><!---->
+                                                    <div class="mat-form-field-infix ng-tns-c111-17">
+                                                        <input matinput="" autocomplete="off" name="email" type="text" placeholder="Enter your email" formcontrolname="email" required="" class="mat-input-element mat-form-field-autofill-control ng-tns-c111-17 ng-pristine ng-invalid cdk-text-field-autofill-monitored invalid ng-touched" id="mat-input-14" data-placeholder="Enter your email" aria-required="true">
+                                                        <span class="mat-form-field-label-wrapper ng-tns-c111-17">
+                                                            <label class="mat-form-field-label ng-tns-c111-17 ng-star-inserted" id="mat-form-field-label-29" for="mat-input-14" aria-owns="mat-input-14">
+                                                                <!---->
+                                                                <mat-label class="ng-tns-c111-17 ng-star-inserted">Email Address</mat-label>
+                                                                <!----><span aria-hidden="true" class="mat-placeholder-required mat-form-field-required-marker ng-tns-c111-17 ng-star-inserted"> *</span><!---->
+                                                            </label>
+                                                            <!---->
+                                                        </span>
+                                                    </div>
+                                                    <!---->
+                                                </div>
+                                                <div class="mat-form-field-underline ng-tns-c111-17 ng-star-inserted"><span class="mat-form-field-ripple ng-tns-c111-17"></span></div>
+                                                <!---->
+                                                <div class="mat-form-field-subscript-wrapper ng-tns-c111-17">
+                                                    <!---->
+                                                    <div class="mat-form-field-hint-wrapper ng-tns-c111-17 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                                                        <!---->
+                                                        <div class="mat-form-field-hint-spacer ng-tns-c111-17"></div>
+                                                    </div>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="text-center mt-4 mb-2 mt-md-4 mb-md-2"><a onclick="backToLogin()" class="bottom-text">Back To Login</a></div>
+                                    <button type="submit" class="rd-btn-primary w-100">Send OTP</button>
                                 </form>
                             </div>
                         </div>

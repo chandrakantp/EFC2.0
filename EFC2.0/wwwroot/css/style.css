@@ -34183,7 +34183,8 @@ em, i {
     font-size: 1rem;
     color: #fff;
     font-weight: 600;
-    padding: 10px 20px
+    padding: 10px 20px;
+    transition:all .3s linear;
 }
 
     .rd-btn-primary:hover {
