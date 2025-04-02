@@ -1,0 +1,367 @@
+﻿.rd-shadow-100 {
+    box-shadow: 0 4px 4px -2px #18274b14,0 2px 4px -2px #18274b1f
+}
+
+.rd-shadow-200 {
+    box-shadow: 0 8px 8px -4px #18274b14,0 4px 6px -4px #18274b1f
+}
+
+.rd-shadow-300 {
+    box-shadow: 0 8px 16px -6px #18274b14,0 6px 8px -6px #18274b1f
+}
+
+.rd-shadow-400 {
+    box-shadow: 0 8px 24px -4px #18274b14,0 6px 12px -6px #18274b1f
+}
+
+.rd-shadow-500, .rd-shadow-600 {
+    box-shadow: 0 10px 32px -4px #18274b1a,0 6px 14px -6px #18274b1f
+}
+
+.rd-shadow-700 {
+    box-shadow: 0 14px 64px -4px #18274b1f,0 8px 22px -6px #18274b1f
+}
+
+.rd-shadow-800 {
+    box-shadow: 0 18px 88px -4px #18274b24,0 8px 28px -6px #18274b1f
+}
+
+.navbar.fixed-top {
+    position: fixed;
+    z-index: 1000 !important
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff
+}
+
+.sidebar-dropdown {
+    top: 0;
+    bottom: unset
+}
+
+.sidebar-dropdown-list {
+    list-style-type: none;
+    position: relative
+}
+
+    .sidebar-dropdown-list li {
+        padding: 5px 0;
+        font-size: 12px
+    }
+
+.navbar.page-header {
+    height: 60px;
+    overflow-y: visible;
+    transition: all .3s ease
+}
+
+.navbar.page-header {
+    background-color: #fff
+}
+
+.main-container {
+    position: relative;
+    min-height: 100%;
+    margin-top: 60px
+}
+
+.left-nav {
+    bottom: 0;
+    width: 80px;
+    z-index: 999;
+    background-color: #273143
+}
+
+.left-nav, .left-nav-body {
+    position: absolute;
+    top: 0;
+    background-color: #325080
+}
+
+    .left-nav-body.left-nav-fixed-top {
+        top: 60px
+    }
+
+    .left-nav-body.left-nav-fixed-bottom {
+        top: auto;
+        bottom: 0
+    }
+
+    .left-nav-body .nav-item:hover {
+        background-color: #ff823e
+    }
+
+    .left-nav-body.left-nav-fixed-bottom, .left-nav-body.left-nav-fixed-top {
+        position: fixed;
+        width: 80px
+    }
+
+.left-nav-body {
+    width: 100%
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem
+}
+
+.navbar-nav {
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none
+}
+
+.left-nav-body .nav-item {
+    position: relative;
+    width: 80px;
+    text-align: center;
+    padding: 10px 8px;
+    background: 0 0;
+    color: #d3d3d3;
+    border-bottom: 1px solid #2c4162;
+    cursor:pointer;
+    transition: .3s ease
+}
+
+    .left-nav-body .nav-item:hover .sidebar-dropdown, .sidebar-dropdown-list .sidebar-dropdown-list-item:hover .sidebar-sub-dropdown {
+        display: inline-block
+    }
+
+    .left-nav-body .nav-item .sidebar-dropdown {
+        padding: 2px 0;
+        position: absolute;
+        left: 80px;
+        z-index: 1001;
+        display: none;
+        width: 180px;
+        font-weight: 500;
+        color: #d3d3d3;
+        text-align: left;
+        background: #325080
+    }
+
+.top-set {
+    top: 0;
+    bottom: unset
+}
+
+.bottom-set {
+    top: unset;
+    bottom: 0
+}
+
+.middle-set {
+    top: -60px !important;
+    bottom: unset !important
+}
+
+.left-nav-body .nav-item .sidebar-sub-dropdown {
+    position: absolute;
+    top: unset;
+    left: 180px;
+    margin-top: -25px;
+    padding: 2px 0;
+    z-index: 1001;
+    display: none;
+    width: 180px;
+    font-weight: 500;
+    color: #d3d3d3;
+    text-align: left;
+    background: #325080
+}
+
+.app-container, .min-h-100-50 {
+    min-height: calc(100vh - 50px)
+}
+
+.app-container {
+    margin-left: 80px
+}
+
+.topnav.nav {
+    height: 40px;
+    background-color: #ff009d;
+    box-shadow: 3px 0 6px #d8dde6
+}
+
+.nav-item p {
+    margin: 0;
+    font-size: 11px;
+    color: #fff
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #fff !important
+}
+
+    .nav-item a:hover {
+        color: #f0f0f0
+    }
+
+.nav-item {
+    color: #e4e6e9
+}
+
+.sidebar-dropdown-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+    .sidebar-dropdown-list a .sidebar-dropdown-label {
+        padding-right: 2px
+    }
+
+.sidebar-dropdown-list li .side-arr {
+    font-size: 16px;
+    margin: 0 15px
+}
+
+@media only screen and (max-width: 600px) {
+    .my-logo {
+        height: 38px
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .my-logo {
+        height: 30px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .my-logo {
+        height: 35px
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .my-logo {
+        height: 35px
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .my-logo {
+        height: 50px
+    }
+}
+
+.top-nav-right .top-nav-icon {
+    margin: 0 8px;
+    color: #8b8b8b;
+    cursor: pointer
+}
+
+.top-nav-right .profile-data {
+    margin: 0 8px;
+    cursor: pointer;
+    border: 1px solid #E4E6E9;
+    padding: 4px;
+    border-radius: 23px
+}
+
+.sidebar-dropdown-list li {
+    cursor: pointer
+}
+
+[dir=rtl] .left-nav {
+    right: 0 !important
+}
+
+.rtl .left-nav {
+    background-color: red !important
+}
+
+.app-container {
+    background: #F3F4F7
+}
+
+.new-svg-flex {
+    gap: 12px
+}
+
+.userName, .userRole {
+    font-size: 12px;
+    font-weight: 500
+}
+
+.m-4px {
+    margin: 0 8px
+}
+
+.username {
+    display: flex;
+    align-items: center
+}
+
+    .username p {
+        margin: 0
+    }
+
+.round-circle-left {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block
+}
+
+.status-active {
+    background-color: #49d417
+}
+
+.status-inactive {
+    background-color: #ced4da
+}
+
+.status-away, .status_berightback {
+    background-color: #fdb913
+}
+
+.status-busy, .status-incall {
+    background-color: #d74654
+}
+
+.status-presenting {
+    background-color: #f46a6a
+}
+
+.link-button {
+    color: #00a8e8
+}
+
+.fs-16px {
+    font-size: 16px
+}
+
+.menu-butt {
+    font-size: 14px
+}
+
+    .menu-butt mat-icon {
+        font-size: 16px
+    }
+
+.notif-wrap {
+    position: relative
+}
+
+.badge-not {
+    position: absolute;
+    left: 23px;
+    bottom: 12px
+}
