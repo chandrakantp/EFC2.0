@@ -34148,11 +34148,12 @@ em, i {
     font-size: 12px;
     color: #fff;
     font-weight: 500;
-    padding: 6px 10px
+    padding: 6px 10px;
+    transition: all .3s linear;
 }
 
     .rd-btn-primary-sm:hover {
-        background-color: #1e2533
+        background-color: #325080
     }
 
     .rd-btn-primary-sm, .rd-btn-primary-sm:hover, .rd-btn-primary-sm:active, .rd-btn-primary-sm:focus, .rd-btn-primary-sm:visited {

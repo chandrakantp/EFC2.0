@@ -46,6 +46,28 @@
                                 <button type="button" class="rd-btn-primary-sm home-login-btn rd-mt-2 ng-star-inserted"> Check In </button>
                              
                             </div>
+                            <div class="card-wrapper-bg mt-3">
+                                <div class="leave-bg">
+                                    <div class="d-flex justify-content-between rd-mb-1">
+                                        <div class="rd-home-headings1">Leave Balance</div>
+                                        <div routerlink="/self-service-all/attendance/leaves/leave-history/apply-leave/0" class="apply-button" tabindex="0">Apply For Leave</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 rd-mt-2 ng-star-inserted">
+                                            <div class="leave-border">
+                                                <div class="leave-head"> Casual Leave </div>
+                                                <div class="rd-mt-2"><span class="leave-count">10.00</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 rd-mt-2 ng-star-inserted">
+                                            <div class="leave-border">
+                                                <div class="leave-head"> Sick Leave </div>
+                                                <div class="rd-mt-2"><span class="leave-count">08.00</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-8 card-bg-grey scrollable-column">
@@ -122,7 +144,7 @@
                             </div>
                         </div>
                         <div class="row rd-mt-2">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="events-wrap">
                                     <div class="d-flex justify-content-between rd-mb-1">
                                         <div class="rd-home-headings1">Events</div>
@@ -156,7 +178,7 @@
                                             <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c182-14 ng-star-inserted" id="mat-tab-content-0-1">
                                                 <div class="mat-tab-body-content ng-tns-c182-14 ng-trigger ng-trigger-translateTab">
                                                     <div class="row ng-star-inserted" style="">
-                                                        <div class="col-md-3 rd-mt-2 text-center ng-star-inserted">
+                                                        <div class="col-md-6 rd-mt-2 text-center ng-star-inserted">
                                                             <div class="bday-border">
                                                                 <div>
                                                                     <img src="~/images/emptyProfile.jpg" alt="" class="event-img ng-star-inserted">
@@ -175,57 +197,83 @@
                                     </mat-tab-group>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row rd-mt-2">
-                            <div class="col-md-6">
+                            <div class="col-md-6" style="padding-left: 0px;">
                                 <div class="holi-bg">
                                     <div class="d-flex justify-content-between rd-mb-1">
                                         <div class="rd-home-headings1">Holidays of 2025</div>
                                         <div class="apply-button">View All</div>
                                     </div>
-                                    <div class="rd-mt-2"><img src="../../../assets/images/Holiday-dash.png" alt="" class="holi-img ng-star-inserted"></div>
                                     <div class="rd-mt-2">
-                                        <div class="d-flex cal-flex">
-                                            <div class="calendar-bg">
-                                                <div class="d-flex inner-dflex"></div>
-                                            </div>
-                                            <div>
-                                                <div class="holiday-mon"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-end arrows rd-mt-2">
-                                        <button class="button-null" disabled=""><img src="../../../assets/images/Icons set.svg" alt=""></button>
-                                        <div class="arrow-num"> 0/0 </div>
-                                        <button class="button-null" disabled=""><img src="../../../assets/images/Icons set (1).svg" alt=""></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6" style="padding-left: 0px;">
-                                <div class="leave-bg">
-                                    <div class="d-flex justify-content-between rd-mb-1">
-                                        <div class="rd-home-headings1">Leave Balance</div>
-                                        <div routerlink="/self-service-all/attendance/leaves/leave-history/apply-leave/0" class="apply-button" tabindex="0">Apply For Leave</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 rd-mt-2 ng-star-inserted">
-                                            <div class="leave-border">
-                                                <div class="leave-head"> Casual Leave </div>
-                                                <div class="rd-mt-2"><span class="leave-count">NA</span>/<span class="total-count">NA</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 rd-mt-2 ng-star-inserted">
-                                            <div class="leave-border">
-                                                <div class="leave-head"> Sick Leave </div>
-                                                <div class="rd-mt-2"><span class="leave-count">NA</span>/<span class="total-count">NA</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 rd-mt-2 ng-star-inserted">
-                                            <div class="leave-border">
-                                                <div class="leave-head"> Vacation Leave </div>
-                                                <div class="rd-mt-2"><span class="leave-count">NA</span>/<span class="total-count">NA</span></div>
-                                            </div>
-                                        </div>
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Holiday
+                                                    </th>
+                                                    <th>
+                                                        Date
+                                                    </th>
+                                                    <th>
+                                                        Location
+                                                    </th>
+
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        Good Friday
+                                                    </td>
+
+                                                    <td>
+                                                        18 Apr 2025
+                                                        <br>
+                                                        ( Friday )
+                                                    </td>
+
+                                                    <td>
+                                                        Pune / Gurugram
+                                                    </td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        International Labor Day
+                                                    </td>
+
+                                                    <td>
+                                                        01 May 2025
+                                                        <br>
+                                                        ( Thursday )
+                                                    </td>
+
+                                                    <td>
+                                                        Pune / Gurugram
+                                                    </td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Independence Day
+                                                    </td>
+
+                                                    <td>
+                                                        15 Aug 2025
+                                                        <br>
+                                                        ( Friday )
+                                                    </td>
+
+                                                    <td>
+                                                        Pune / Gurugram
+                                                    </td>
+
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
