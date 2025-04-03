@@ -40558,3 +40558,9 @@ input.mat-input-element:read-only {
     border: 1px solid #EFEFEF;
     font-size: 14px
 }
+.form-select{
+    box-shadow:unset;
+}
+.form-select:focus {
+    box-shadow: unset;
+}

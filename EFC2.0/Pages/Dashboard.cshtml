@@ -129,13 +129,20 @@
                                                             <div class="rd-home-headings rd-mb-3">Monthly Attendance</div>
                                                         </div>
                                                         <div class="rd-form-select">
-                                                            <p-dropdown filterby="monthfullname" styleclass="filter-style-sm" optionlabel="monthfullname" optionvalue="monthId" class="p-element p-inputwrapper ng-tns-c242-12 ng-untouched ng-pristine ng-valid ng-star-inserted p-inputwrapper-filled">
-                                                                <div class="ng-tns-c242-12 filter-style-sm p-dropdown p-component">
-                                                                    <div class="p-hidden-accessible ng-tns-c242-12"><input type="text" readonly="" aria-haspopup="listbox" role="combobox" class="ng-tns-c242-12" aria-expanded="false"></div>
-                                                                    <span class="p-element ng-tns-c242-12 p-dropdown-label p-inputtext ng-star-inserted" id="pr_id_1_label">April</span>
-                                                                    <div role="button" aria-label="dropdown trigger" aria-haspopup="listbox" class="p-dropdown-trigger ng-tns-c242-12"><span class="p-dropdown-trigger-icon ng-tns-c242-12 pi pi-chevron-down"></span></div>
-                                                                </div>
-                                                            </p-dropdown>
+                                                            <select id="monthSelect" class="form-select form-select-sm">
+                                                                <option value="1">January</option>
+                                                                <option value="2">February</option>
+                                                                <option value="3">March</option>
+                                                                <option value="4">April</option>
+                                                                <option value="5">May</option>
+                                                                <option value="6">June</option>
+                                                                <option value="7">July</option>
+                                                                <option value="8">August</option>
+                                                                <option value="9">September</option>
+                                                                <option value="10">October</option>
+                                                                <option value="11">November</option>
+                                                                <option value="12">December</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -289,9 +296,7 @@
         });
     });
 </script>
-
 <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
-
 <script>
     window.onload = function () {
 
@@ -315,7 +320,6 @@
 
     }
 </script>
-
 <script>
     const now = new Date();
     const options = { weekday: 'long', day: '2-digit', month: 'short', year: 'numeric' };
