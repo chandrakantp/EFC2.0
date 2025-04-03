@@ -18,6 +18,18 @@ function forgotPassword() {
 }
 
 $(document).ready(function () {
+    $(".profile-data").click(function () {
+        $("#dropdownMenu").toggle();
+        $(".cdk-overlay-backdrop").addClass("cdk-overlay-backdrop-showing");
+    });
+    $(".cdk-overlay-backdrop").click(function () {
+        $("#dropdownMenu").hide();
+        $(".cdk-overlay-backdrop").removeClass("cdk-overlay-backdrop-showing");
+    });
+    $("#logoutButton").click(function () {
+        window.location.href = "index";
+    });
+
     $("#login-form-withOTP").hide();
     $("#forgot-pass-form").hide();
 
