@@ -859,6 +859,9 @@ a.link-primary {
 .mat-tab-body .mat-tab-body-active {
     display: block;
 }
+a.canvasjs-chart-credit {
+    display: none;
+}
 @media(max-width: 599px) {
     .mat-tab-label {
         min-width: 72px
