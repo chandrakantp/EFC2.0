@@ -172,7 +172,17 @@
                                         <div class="mat-tab-body-wrapper">
                                             <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c182-13 mat-tab-body-active ng-star-inserted" id="mat-tab-content-0-0">
                                                 <div class="mat-tab-body-content ng-tns-c182-13 ng-trigger ng-trigger-translateTab">
-                                                    <div class="row ng-star-inserted" style=""></div>
+                                                    <div class="row ng-star-inserted" style="">
+                                                        <div class="col-md-6 rd-mt-2 text-center ng-star-inserted">
+                                                            <div class="bday-border">
+                                                                <div>
+                                                                    <img src="~/images/emptyProfile.jpg" alt="" class="event-img ng-star-inserted">
+                                                                </div>
+                                                                <div class="event-user"> HR DBMR </div>
+                                                                <p class="event-day"> Apr 25,Fri </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </mat-tab-body>
                                             <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c182-14 ng-star-inserted" id="mat-tab-content-0-1">
@@ -186,7 +196,6 @@
                                                                 <div class="event-user"> HR DBMR </div>
                                                                 <p class="event-day"> Apr 25,Fri </p>
                                                                 <div class="rd-table-tags-success rd-mb-1 rd-me-1"><span class="rd-table-tag-dot rd-alert-text-success"></span> 2 Years </div>
-                                                                <div><button type="button" class="rd-btn-outline-secondary-2-sm apply-button-out" disabled=""> Send Wish </button></div>
                                                             </div>
                                                         </div>
                                                         
@@ -287,6 +296,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function () {
+        $("#mat-tab-content-0-0").addClass("mat-tab-body-active").show();
         $("#mat-tab-label-0-0").click(function () {
             $("#mat-tab-label-0-1").removeClass("mat-tab-label-active");
             $(this).addClass("mat-tab-label-active");
