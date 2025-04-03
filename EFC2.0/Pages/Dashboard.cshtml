@@ -141,7 +141,8 @@
                                                 </div>
                                                 <div class="static-mt">
                                                     <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                                                        <canvas basechart="" height="250" style="width: 90%; display: block; box-sizing: border-box;" width="375"></canvas>
+                                                        <canvas id="myChart"></canvas> 
+                                                        @*<canvas basechart="" height="250" style="width: 90%; display: block; box-sizing: border-box;" width="375"></canvas> *@
                                                     </div>
                                                 </div>
                                             </div>
@@ -250,7 +251,29 @@
                     </div>
                 </div>
             </div>
-            <div class="button-container ng-star-inserted"><button class="icon-button bounce"><img src="../../../../assets/images/feedback-req.svg" alt="Feedback Icon" class="icon"><span class="feedback-text">Feedback</span></button></div>
+            <div class="button-container ng-star-inserted">
+                <button class="icon-button bounce">
+                   <img src="../../../../assets/images/feedback-req.svg" alt="Feedback Icon" class="icon">
+                   <span class="feedback-text">Feedback</span>
+                 </button>
+           </div>
         </div>
     </div>
 </div>
+
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+      datasets: [{
+        label: 'Sales',
+        data: [10, 20, 30, 31],
+        backgroundColor: 'blue'
+      }]
+    }
+  });
+</script>
