@@ -4,12 +4,14 @@
 .card-wrapper-bg {
     background-color: #FFEAEA;
     padding: 12px;
-    border-radius: 8px
+    border-radius: 0;
+    position: sticky;
+    top: 60px;
 }
 
 .card-bg-white {
     background-color: #fff;
-    padding: 10px 16px 6px !important
+    padding: 0 16px 0 !important;
 }
 
 .wrapper-1 {
@@ -444,10 +446,10 @@
     font-weight: 500
 }
 
-.fixed-column {
+/*.fixed-column {
     position: sticky;
     top: 60px
-}
+}*/
 
 .scrollable-column {
     overflow-y: auto;
