@@ -79,7 +79,8 @@
 .left-nav, .left-nav-body {
     position: absolute;
     top: 0;
-    background-color: #325080
+    background-color: #FFF;
+    box-shadow: 0 -5px 9px 0 #d6d5d5;
 }
 
     .left-nav-body.left-nav-fixed-top {
@@ -91,8 +92,11 @@
         bottom: 0
     }
 
-    .left-nav-body .nav-item:hover {
-        background-color: #ff823e
+    .left-nav-body .nav-item:hover a svg path {
+        stroke: #fe7125;
+    }
+    .left-nav-body .nav-item:hover a p {
+        color: #fe7125;
     }
 
     .left-nav-body.left-nav-fixed-bottom, .left-nav-body.left-nav-fixed-top {
@@ -131,7 +135,7 @@
     padding: 10px 8px;
     background: 0 0;
     color: #d3d3d3;
-    border-bottom: 1px solid #2c4162;
+    border-bottom: 1px solid #ddd;
     cursor:pointer;
     transition: .3s ease
 }
@@ -200,7 +204,11 @@
 .nav-item p {
     margin: 0;
     font-size: 11px;
-    color: #fff
+    color: #325080;
+    transition: all .3s linear;
+}
+.nav-item a svg path {
+    transition: all .3s linear;
 }
 
 .nav-item a {

@@ -261,18 +261,29 @@
     });
 </script>
 <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+
 <script>
     window.onload = function () {
-
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
             title: {
                 horizontalAlign: "left"
             },
+            legend: { // Enable legend
+                horizontalAlign: "right",
+                verticalAlign: "center",
+                fontSize: 16
+            },
+            toolTip: { // Disable tooltips
+                enabled: false
+            },
             data: [{
                 type: "doughnut",
                 startAngle: 60,
                 indexLabelFontSize: 17,
+                showInLegend: true, // Show legend
+                legendText: "{label}",
+                indexLabel: "", // Remove index labels
                 dataPoints: [
                     { y: 2, label: "Leave", color: "#3357FF" }, // Blue 
                     { y: 26, label: "Present", color: "#006400" }, // Green
@@ -281,9 +292,11 @@
             }]
         });
         chart.render();
-
     }
 </script>
+
+
+
 <script>
     const now = new Date();
     const options = { weekday: 'long', day: '2-digit', month: 'short', year: 'numeric' };
