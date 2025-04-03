@@ -21,25 +21,25 @@
                                         <div class="flex-head"> Shift Timing - (09:30 - 17:30) </div>
                                     </div>
                                     <hr>
-                                    <div class="d-flex flex-row" style="gap: 1.5rem;">
+                                    <div class="d-flex flex-row" style="gap: .5rem;">
                                         <div class="sub-flex">
                                             <div class="flex-head"> Check In </div>
-                                            <div class="flex-head1"> --:-- </div>
+                                            <div class="flex-head1"> 09:15 </div>
                                         </div>
                                         <div class="separtor"></div>
                                         <div class="sub-flex">
                                             <div class="flex-head"> Check out </div>
-                                            <div class="flex-head1"> --:-- </div>
+                                            <div class="flex-head1"> 18:24 </div>
                                         </div>
                                          <div class="separtor"></div>
                                         <div class="sub-flex">
                                             <div class="flex-head"> Break Hours </div>
-                                            <div class="flex-head1"> 00h : 00m  </div>
+                                            <div class="flex-head1"> 00h : 56m  </div>
                                         </div>
                                         <div class="separtor"></div>
                                         <div class="sub-flex">
                                             <div class="flex-head"> Total Hours </div>
-                                            <div class="flex-head1"> 00h : 00m  </div>
+                                            <div class="flex-head1"> 08h : 00m  </div>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                     <div class="col-md-8 card-bg-grey scrollable-column">
                         <div class="d-flex align-items-center justify-content-between tab-padding-grey-card">
                             <div>
-                                <div class="user-text"> Hello HR DBMR </div>
+                                <div class="user-text"> Hello HR DBMR, </div>
                                 <div class="user-text1 mt-1"> This is what we’ve got for you today, fresh insights and inspiration </div>
                             </div>
                         </div>
@@ -260,39 +260,42 @@
         });
     });
 </script>
-<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+<script src="https://unpkg.com/apexcharts@3.22.1/dist/apexcharts.min.js"></script>
 
 <script>
-    window.onload = function () {
-        var chart = new CanvasJS.Chart("chartContainer", {
-            animationEnabled: true,
-            title: {
-                horizontalAlign: "left"
-            },
-            legend: { // Enable legend
-                horizontalAlign: "right",
-                verticalAlign: "center",
-                fontSize: 16
-            },
-            toolTip: { // Disable tooltips
-                enabled: false
-            },
-            data: [{
-                type: "doughnut",
-                startAngle: 60,
-                indexLabelFontSize: 17,
-                showInLegend: true, // Show legend
-                legendText: "{label}",
-                indexLabel: "", // Remove index labels
-                dataPoints: [
-                    { y: 2, label: "Leave", color: "#3357FF" }, // Blue 
-                    { y: 26, label: "Present", color: "#006400" }, // Green
-                    { y: 2, label: "Absent", color: "#f50707" }, // Red
-                ]
-            }]
-        });
-        chart.render();
-    }
+    var options = {
+        series: [22, 2, 2],
+        chart: {
+            type: 'donut',
+        },
+        colors: ['#CBFFBA', '#FFBABA', '#FFDEBA'],
+        labels: ['Present', 'Absent', 'Leave'],
+        dataLabels: {
+            enabled: false
+        },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }],
+        legend: {
+            position: 'bottom',
+            labels: {
+                colors: '#000', 
+                useSeriesColors: false
+            }
+        }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chartContainer"), options);
+    chart.render();
+
 </script>
 
 

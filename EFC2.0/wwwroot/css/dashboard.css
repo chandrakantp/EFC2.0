@@ -1,6 +1,8 @@
-﻿
+﻿footer#fh5co-footer {
+    margin-left: 80px;
+}
 .card-wrapper-bg {
-    background-color: #eff5ff;
+    background-color: #FFEAEA;
     padding: 12px;
     border-radius: 8px
 }
@@ -145,14 +147,15 @@
 }
 
 .card-bg-grey {
-    background-color: #eff5ff;
+    background-color: #FFEAEA;
     padding: 12px
 }
 
 .user-text {
     font-size: 20px;
     font-weight: 700;
-    color: #444
+    color: #000;
+    font-family: cursive;
 }
 
 .user-text1 {

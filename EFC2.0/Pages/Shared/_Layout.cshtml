@@ -4009,7 +4009,7 @@
 </head>
 <body>
     <div>
-        <main role="main" class="pb-3">
+        <main role="main">
             @if (ViewData["HideHeader"] == null || (bool)ViewData["HideHeader"] == false)
             {
                 <partial name="Header" />
@@ -4019,6 +4019,10 @@
                 <partial name="Sidebar" />
             }
             @RenderBody()
+            @if (ViewData["HideFooter"] == null || (bool)ViewData["HideFooter"] == false)
+            {
+                <partial name="Footer" />
+            }
         </main>
     </div>
 

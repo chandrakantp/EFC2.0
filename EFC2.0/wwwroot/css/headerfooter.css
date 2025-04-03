@@ -92,7 +92,7 @@
         bottom: 0
     }
 
-    .left-nav-body .nav-item:hover a svg path {
+    .left-nav-body .nav-item:hover a svg path, .left-nav-body .nav-item:hover a svg rect {
         stroke: #fe7125;
     }
     .left-nav-body .nav-item:hover a p {
@@ -154,7 +154,8 @@
         font-weight: 500;
         color: #d3d3d3;
         text-align: left;
-        background: #325080
+        background: #fff;
+        box-shadow: 3px 1px 9px 0 #d6d5d5;
     }
 
 .top-set {
@@ -184,7 +185,8 @@
     font-weight: 500;
     color: #d3d3d3;
     text-align: left;
-    background: #325080
+    background: #fff;
+    box-shadow: 3px 1px 9px 0 #d6d5d5;
 }
 
 .app-container, .min-h-100-50 {
@@ -213,7 +215,7 @@
 
 .nav-item a {
     text-decoration: none;
-    color: #fff !important
+    color: #325080 !important
 }
 
     .nav-item a:hover {
@@ -229,7 +231,9 @@
     justify-content: space-between;
     align-items: center
 }
-
+.sidebar-dropdown-list a:hover span {
+    color: #fe7125;
+}
     .sidebar-dropdown-list a .sidebar-dropdown-label {
         padding-right: 2px
     }
@@ -372,4 +376,60 @@
     position: absolute;
     left: 23px;
     bottom: 12px
+}
+
+footer#fh5co-footer {
+    background-color: #eee;
+    padding: 15px 0;
+}
+#fh5co-footer .fh5co-widget h3 {
+    color: #444;
+    margin-bottom: 15px;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    letter-spacing: 2px;
+}
+.fh5co-social-icons {
+    margin: 0;
+    padding: 0;
+}
+.fh5co-social-icons li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    background: #fff;
+    border-radius: 50px;
+}
+.fh5co-social-icons li a {
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    color: #f37634;
+    padding: 8px 12px 4px 12px;
+}
+.fh5co-social-icons li a svg {
+    width: 15px;
+    line-height: 2;
+}
+#fh5co-footer .fh5co-widget p {
+    color: #222;
+    font-size: 11px;
+    margin: 0;
+}
+#fh5co-footer .fh5co-footer-links li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#fh5co-footer .fh5co-footer-links li a {
+    color: #444;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size:11px;
+}
+ul.fh5co-footer-links {
+    margin: 0;
 }
