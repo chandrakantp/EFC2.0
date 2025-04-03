@@ -54,9 +54,11 @@
 }
 
 .he-100 {
-    height: 632px
+    height: 670px
 }
-
+.heightWrap {
+    height: 280px;
+}
 .home-login-btn {
     width: 100%
 }
@@ -876,5 +878,4 @@ table.table {
 .table thead tr th, .table tbody tr td {
     font-size: 11px;
     color: #000;
-    padding: 5px;
 }
