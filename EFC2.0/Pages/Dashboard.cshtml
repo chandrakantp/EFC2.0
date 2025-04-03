@@ -17,7 +17,7 @@
                                 </div>
                                 <div class="white-card-wrapper">
                                     <div class="sub-flex1">
-                                        <div class="flex-head1"> Wednesday, 02 Apr 2025 </div>
+                                        <div id="currentDate" class="flex-head1"></div>
                                         <div class="flex-head"> Shift Timing - (09:30 - 17:30) </div>
                                     </div>
                                     <hr>
@@ -139,10 +139,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="static-mt">
+                                                <div class="static">
                                                     <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                                                        <canvas id="myChart"></canvas> 
-                                                        @*<canvas basechart="" height="250" style="width: 90%; display: block; box-sizing: border-box;" width="375"></canvas> *@
+                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>       
                                                     </div>
                                                 </div>
                                             </div>
@@ -158,33 +157,7 @@
                                         <div class="rd-home-headings1">Events</div>
                                         <div class="apply-button">View All</div>
                                     </div>
-                                    <mat-tab-group class="mat-tab-group tab-border tab-home mat-primary">
-                                        <mat-tab-header class="mat-tab-header">
-                                            <div class="mat-tab-label-container">
-                                                <div role="tablist" class="mat-tab-list">
-                                                    <div class="mat-tab-labels">
-                                                        <div role="tab" class="mat-tab-label mat-tab-label-active">
-                                                            <div class="mat-tab-label-content">Birthday</div>
-                                                        </div>
-                                                        <div role="tab" class="mat-tab-label">
-                                                            <div class="mat-tab-label-content">Work Anniversary</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </mat-tab-header>
-                                        <div class="mat-tab-body-wrapper">
-                                            <mat-tab-body class="mat-tab-body mat-tab-body-active">
-                                                <div class="mat-tab-body-content">Birthday Content</div>
-                                            </mat-tab-body>
-                                            <mat-tab-body class="mat-tab-body">
-                                                <div class="mat-tab-body-content">Work Anniversary Content</div>
-                                            </mat-tab-body>
-                                        </div>
-                                    </mat-tab-group>
-
-
-@*                                     <mat-tab-group class="mat-tab-group tab-border tab-home mat-primary" style="max-height: 250px; overflow-y: auto;">
+                                    <mat-tab-group class="mat-tab-group tab-border tab-home mat-primary" style="max-height: 250px; overflow-y: auto;">
                                         <mat-tab-header class="mat-tab-header">
                                             <button aria-hidden="true" type="button" mat-ripple="" tabindex="-1" class="mat-ripple mat-tab-header-pagination mat-tab-header-pagination-before mat-elevation-z4 mat-tab-header-pagination-disabled" disabled="">
                                                 <div class="mat-tab-header-pagination-chevron"></div>
@@ -201,16 +174,16 @@
                                                     </div>
                                                     <mat-ink-bar class="mat-ink-bar" style="visibility: visible; left: 0px; width: 160px;"></mat-ink-bar>
                                                 </div>
-                                            </div>
+                                            </div>  
                                         </mat-tab-header>
                                         <div class="mat-tab-body-wrapper">
-                                            <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c182-13 mat-tab-body-active ng-star-inserted" id="mat-tab-content-0-0" aria-labelledby="mat-tab-label-0-0">
-                                                <div cdkscrollable="" class="mat-tab-body-content ng-tns-c182-13 ng-trigger ng-trigger-translateTab" style="transform: none;">
+                                            <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c182-13 mat-tab-body-active ng-star-inserted" id="mat-tab-content-0-0">
+                                                <div class="mat-tab-body-content ng-tns-c182-13 ng-trigger ng-trigger-translateTab">
                                                     <div class="row ng-star-inserted" style=""></div>
                                                 </div>
                                             </mat-tab-body>
-                                            <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c182-14 ng-star-inserted" id="mat-tab-content-0-1" aria-labelledby="mat-tab-label-0-1">
-                                                <div cdkscrollable="" class="mat-tab-body-content ng-tns-c182-14 ng-trigger ng-trigger-translateTab" style="transform: translate3d(100%, 0px, 0px); min-height: 1px;">
+                                            <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c182-14 ng-star-inserted" id="mat-tab-content-0-1">
+                                                <div class="mat-tab-body-content ng-tns-c182-14 ng-trigger ng-trigger-translateTab">
                                                     <div class="row ng-star-inserted" style="">
                                                         <div class="col-md-3 rd-mt-2 text-center ng-star-inserted">
                                                             <div class="bday-border">
@@ -229,7 +202,7 @@
                                             </mat-tab-body>
                                         </div>
                                     </mat-tab-group>
- *@                                </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row rd-mt-2">
@@ -295,36 +268,56 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function () {
-        $(".mat-tab-label").click(function () {
-            // Remove active class from all tabs and bodies
-            $(".mat-tab-label").removeClass("mat-tab-label-active");
-            $(".mat-tab-body").removeClass("mat-tab-body-active");
-
-            // Add active class to clicked tab
+        $("#mat-tab-label-0-0").click(function () {
+            $("#mat-tab-label-0-1").removeClass("mat-tab-label-active");
             $(this).addClass("mat-tab-label-active");
 
-            // Get the tab index
-            let tabIndex = $(this).index();
+            // Show Birthday tab and hide Work Anniversary
+            $("#mat-tab-content-0-0").addClass("mat-tab-body-active").show();
+            $("#mat-tab-content-0-1").removeClass("mat-tab-body-active").hide();
+            $(".mat-ink-bar").css("left", 0);
+        });
 
-            // Show the corresponding tab content
-            $(".mat-tab-body").eq(tabIndex).addClass("mat-tab-body-active");
+        $("#mat-tab-label-0-1").click(function () {
+            $("#mat-tab-label-0-0").removeClass("mat-tab-label-active");
+            $(this).addClass("mat-tab-label-active");
+
+            // Show Work Anniversary tab and hide Birthday
+            $("#mat-tab-content-0-1").addClass("mat-tab-body-active").show();
+            $("#mat-tab-content-0-0").removeClass("mat-tab-body-active").hide();
+            $(".mat-ink-bar").css("left", 160);
         });
     });
 </script>
 
- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 
 <script>
-  const ctx = document.getElementById('myChart').getContext('2d');
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr'],
-      datasets: [{
-        label: 'Sales',
-        data: [10, 20, 30, 31],
-        backgroundColor: 'blue'
-      }]
+    window.onload = function () {
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            title: {
+                horizontalAlign: "left"
+            },
+            data: [{
+                type: "doughnut",
+                startAngle: 60,
+                indexLabelFontSize: 17,
+                dataPoints: [
+                    { y: 2, label: "Leave", color: "#3357FF" }, // Blue 
+                    { y: 26, label: "Present", color: "#006400" }, // Green
+                    { y: 2, label: "Absent", color: "#f50707" }, // Red
+                ]
+            }]
+        });
+        chart.render();
+
     }
-  });
+</script>
+
+<script>
+    const now = new Date();
+    const options = { weekday: 'long', day: '2-digit', month: 'short', year: 'numeric' };
+    document.getElementById("currentDate").innerText = now.toLocaleDateString("en-GB", options);
 </script>
