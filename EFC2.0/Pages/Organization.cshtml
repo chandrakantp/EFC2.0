@@ -1,0 +1,160 @@
+﻿@page
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<link href="~/css/tabs.css" rel="stylesheet" media="all" onload="this.media='all'" />
+<div class="app-container" dir="ltr">
+    <div class="container-fluid px-0 main-content-page h-100">
+        <div>
+            <ul class="topnav">
+                <li class="nav-active-top" data-target="summary">Dashboard</li>
+                <li data-target="employees">Employees</li>
+                <li data-target="org-structure">Organization Structure</li>
+                <li data-target="onboarding">Onboarding</li>
+                <li data-target="exit">Exit</li>
+                <li data-target="help-desk">Help Desk</li>
+                <li data-target="documents">Documents</li>
+                <li data-target="announcements">Announcements</li>
+                <li data-target="assets">Assets</li>
+                <li data-target="survey">Employee Pulse Survey</li>
+                <li data-target="settings">Settings</li>
+            </ul>
+        </div>
+        <div class="aos-init aos-animate">
+            <div class="content nav-active-top" id="summary">
+                <ul class="topnav-child-1">
+                    <li routerlinkactive="nav-active-top" routerlink="/organization/org-dashboard/org-summary" tabindex="0" class="ng-star-inserted nav-active-top"> Summary </li>
+                    <li routerlinkactive="nav-active-top" routerlink="/organization/org-dashboard/org-reports" tabindex="0" class="ng-star-inserted"> Reports </li>
+                </ul>
+            </div>
+            <div class="content" id="employees">
+                <p>This is the Employees page.</p>
+            </div>
+            @* <div class="container-fluid p-3">
+                <div class="page-title-h d-flex justify-content-between">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <mat-icon role="img" class="mat-icon notranslate text-muted arrow material-icons mat-icon-no-color" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">chevron_left </mat-icon>
+                        <h4 class="card-title m-0 card-heading">Organization Summary</h4>
+                        <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color ng-star-inserted" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">turned_in_not </mat-icon>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 tabcol">
+                        <mat-card class="mat-card mat-focus-indicator b-shadow-none b-border-0 p-3">
+                            <div class="p-1">
+                                <div class="rd-home-headings">Employees</div>
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h3 class="mt-3 mb-1">1</h3>
+                                        <p class="muted card-font fw-light">Total employees</p>
+                                    </div>
+                                    <div>
+                                        <h3 class="mt-3 mb-1">6</h3>
+                                        <p class="muted card-font fw-light">On-boarding</p>
+                                    </div>
+                                    <div>
+                                        <h3 class="mt-3 mb-1">0</h3>
+                                        <p class="muted card-font fw-light">Not migrated</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card>
+                        <mat-card class="mat-card mat-focus-indicator rd-mt-2 b-shadow-none b-border-0 p-3">
+                            <div class="p-1">
+                                <div class="rd-home-headings mb-1">Quick Links</div>
+                                <div class="ng-star-inserted"><a class="links" href="#/organization/org-structure/country-based-dynamicfields-grid">+Employee Custom Fields</a></div>
+                                <div class="ng-star-inserted"><a class="links" href="#/organization/announcement/announcement-list/new-announcement">+New Announcement</a></div>
+                                <div class="ng-star-inserted"><a class="links" href="#/onboard/bulk-upload">+Bulk Employee Import</a></div>
+                                <div class="ng-star-inserted"><a class="links" href="#/organization/org-employees/organization-tree">+Org Tree</a></div>
+                                <div class="ng-star-inserted"><a class="links" href="#/organization/org-employees/employee-view/add-employee">+New Employee</a></div>
+                            </div>
+                        </mat-card>
+                        <mat-card class="mat-card mat-focus-indicator rd-mt-2 b-shadow-none b-border-0 p-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="py-0 mb-2 event-head" style="width: 120%;"><span class="rd-home-headings text-wrap"> Upcoming Joiners</span></div>
+                            </div>
+                            <div class="row" style="max-height: 50vh; overflow-y: auto;">
+                                <div class="col-md-12">
+                                    <div class="py-2 ng-star-inserted" style="cursor: pointer;" tabindex="0">
+                                        <div class="event-names grid-cell-a"> Tom Holland </div>
+                                        <div class="event-names-2 text-muted mt-1">tom.holland@clientdbin.com</div>
+                                        <div>
+                                            <hr class="my-1 f5-grey">
+                                        </div>
+                                    </div>
+                                    <div class="py-2 ng-star-inserted" style="cursor: pointer;" tabindex="0">
+                                        <div class="event-names grid-cell-a"> Hailee Stainfeld </div>
+                                        <div class="event-names-2 text-muted mt-1">hailee.stainfeld@clientdbin.com</div>
+                                        <div>
+                                            <hr class="my-1 f5-grey">
+                                        </div>
+                                    </div>
+                                    <div class="py-2 ng-star-inserted" style="cursor: pointer;" tabindex="0">
+                                        <div class="event-names grid-cell-a"> Florence Pugh </div>
+                                        <div class="event-names-2 text-muted mt-1">florence.pugh@clientdbin.com</div>
+                                        <div>
+                                            <hr class="my-1 f5-grey">
+                                        </div>
+                                    </div>
+                                    <div class="py-2 ng-star-inserted" style="cursor: pointer;" tabindex="0">
+                                        <div class="event-names grid-cell-a"> Oscar Isacc </div>
+                                        <div class="event-names-2 text-muted mt-1">oscar.isacc@clientdbin.com</div>
+                                        <div>
+                                            <hr class="my-1 f5-grey">
+                                        </div>
+                                    </div>
+                                    <div class="py-2 ng-star-inserted" style="cursor: pointer;" tabindex="0">
+                                        <div class="event-names grid-cell-a"> Kit Harington </div>
+                                        <div class="event-names-2 text-muted mt-1">kit.harington@clientdbin.com</div>
+                                        <div>
+                                            <hr class="my-1 f5-grey">
+                                        </div>
+                                    </div>
+                                    <div class="py-2 ng-star-inserted" style="cursor: pointer;" tabindex="0">
+                                        <div class="event-names grid-cell-a"> Awatef Safar </div>
+                                        <div class="event-names-2 text-muted mt-1">awatef.safar@clientdbin.com</div>
+                                        <div>
+                                            <hr class="my-1 f5-grey">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card>
+                    </div>
+                    <div class="col-md-8 tabcol">
+                        <mat-card class="mat-card mat-focus-indicator b-shadow-none b-border-0 p-3">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="rd-home-headings mb-1">Employee Login Rate</div>
+                                </div>
+                            </div>
+                            <div class="p-1">
+                                <form novalidate="" class="row my-1 ng-untouched ng-pristine ng-valid">
+                                    <div class="col-md-3 tabcolumn">
+                                        <div class="rd-form-select pe-1">
+                                            <label class="rd-form-select-label mb-1">Date Range</label>
+                                            <p-dropdown resetfilteronhide="true" styleclass="filter-style" formcontrolname="filterTypeValue" optionlabel="name" optionvalue="value" filterby="name" class="p-element p-inputwrapper ng-tns-c242-299 p-inputwrapper-filled ng-untouched ng-pristine ng-valid ng-star-inserted">
+                                                <div class="ng-tns-c242-299 filter-style p-dropdown p-component">
+                                                    <div class="p-hidden-accessible ng-tns-c242-299"><input type="text" readonly="" aria-haspopup="listbox" role="combobox" class="ng-tns-c242-299" placeholder="Select Filter Type" aria-expanded="false"></div>
+                                                    <span class="p-element ng-tns-c242-299 p-dropdown-label p-inputtext ng-star-inserted" id="pr_id_39_label">
+                                                        Last 1 week
+                                                    </span>
+                                                    <div role="button" aria-label="dropdown trigger" aria-haspopup="listbox" class="p-dropdown-trigger ng-tns-c242-299"><span class="p-dropdown-trigger-icon ng-tns-c242-299 pi pi-chevron-down"></span></div>
+                                                </div>
+                                            </p-dropdown>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div>
+                                    <div>
+                                        <canvas basechart="" height="300" style="width: 781px; display: block; box-sizing: border-box; height: 300px;" width="781"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card>
+                    </div>
+                </div>
+            </div> *@
+        </div>
+    </div>
+</div>

@@ -80,6 +80,8 @@
     position: absolute;
     top: 0;
     background-color: #FFF;
+}
+.left-nav-body {
     box-shadow: 0 -5px 9px 0 #d6d5d5;
 }
 
@@ -101,7 +103,8 @@
 
     .left-nav-body.left-nav-fixed-bottom, .left-nav-body.left-nav-fixed-top {
         position: fixed;
-        width: 80px
+        width: 80px;
+        height: 100%;
     }
 
 .left-nav-body {
