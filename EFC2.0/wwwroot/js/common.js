@@ -47,36 +47,18 @@ $(document).ready(function () {
     });
 });
 $(document).ready(function () {
-    // When a tab is clicked
     $(".topnav li").on("click", function () {
-        // Remove active class from all tabs
         $(".topnav li").removeClass("nav-active-top");
-
-        // Add active class to the clicked tab
         $(this).addClass("nav-active-top");
-
-        // Hide all content divs
-        $(".content").removeClass("nav-active-top");
-
-        // Show the content corresponding to the clicked tab
+        $(".child-content").removeClass("nav-active-top");
+        var target = $(this).data("target");
+        $("#" + target).addClass("nav-active-top");
+    });
+    $(".topnav-child-1 li").on("click", function () {
+        $(".topnav-child-1 li").removeClass("nav-active-top");
+        $(this).addClass("nav-active-top");
+        $(".grand-child").removeClass("nav-active-top");
         var target = $(this).data("target");
         $("#" + target).addClass("nav-active-top");
     });
 });
-//$(document).ready(function () {
-//    // When a tab is clicked
-//    $(".topnav li, .topnav-child-1 li").on("click", function () {
-//        // Remove active class from all tabs
-//        $(".topnav li, .topnav-child-1 li").removeClass("nav-active-top");
-
-//        // Add active class to the clicked tab
-//        $(this).addClass("nav-active-top");
-
-//        // Hide all content divs
-//        $(".content").removeClass("nav-active-top");
-
-//        // Show the content corresponding to the clicked tab
-//        var target = $(this).data("target");
-//        $("#" + target).addClass("nav-active-top");
-//    });
-//});

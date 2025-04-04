@@ -4787,6 +4787,9 @@ textarea.form-control-lg {
     }
 }
 
+.form-control:focus {
+    box-shadow: unset
+}
 .form-select:focus {
     border-color: #86b7fe;
     outline: 0;

@@ -129,10 +129,10 @@
     opacity: 0;
     transition-duration: .3s
 }
-.content {
+.child-content, .grand-child {
     display: none;
 }
 
-.content.nav-active-top {
+.child-content.nav-active-top, .grand-child.nav-active-top {
     display: block;
 }
