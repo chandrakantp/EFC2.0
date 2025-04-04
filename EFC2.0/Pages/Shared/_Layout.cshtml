@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - EFC_2.0 (EMP Facility Center)</title>
     <link rel="shortcut icon" href="https://efc.databridgemarketresearch.com/emp/efc-logo.png" style="height:50px;" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/style.css" rel="stylesheet" media="all" onload="this.media='all'" />
     <link href="~/css/headerfooter.css" rel="stylesheet" media="all" onload="this.media='all'" />
     <style type="text/css">
@@ -4019,10 +4020,10 @@
                 <partial name="Sidebar" />
             }
             @RenderBody()
-            @if (ViewData["HideFooter"] == null || (bool)ViewData["HideFooter"] == false)
+            @* @if (ViewData["HideFooter"] == null || (bool)ViewData["HideFooter"] == false)
             {
                 <partial name="Footer" />
-            }
+            } *@
         </main>
     </div>
 

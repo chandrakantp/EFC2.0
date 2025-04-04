@@ -207,6 +207,7 @@
     margin: 0;
     font-size: 11px;
     color: #325080;
+    font-weight: 500;
     transition: all .3s linear;
 }
 .nav-item a svg path {
@@ -300,7 +301,7 @@
 }
 
 .app-container {
-    background: #F3F4F7
+    background: #ffffff
 }
 
 .new-svg-flex {
