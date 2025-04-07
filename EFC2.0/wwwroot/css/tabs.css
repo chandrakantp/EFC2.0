@@ -41,7 +41,6 @@
 
     .topnav li {
         position: relative;
-        padding: 12px;
         font-size: 11px;
         cursor: pointer;
         font-weight: 500;
@@ -49,8 +48,13 @@
         text-decoration: none;
         text-transform: uppercase
     }
+        .topnav li a {
+            display:block;
+            padding: 12px;
+            color: #8b8b8b;
+        }
 
-        .topnav li:hover {
+        .topnav li a:hover {
             color: #222
         }
 
@@ -58,7 +62,7 @@
             position: absolute;
             top: 0;
             left: 6%;
-            color: #5991c9;
+            color: #325080;
             content: "";
             border-right: 7px solid transparent;
             border-top: 7px solid;
@@ -86,8 +90,6 @@
 }
 
     .topnav-child-1 li {
-        position: relative;
-        padding: 12px;
         font-size: 11px;
         cursor: pointer;
         font-weight: 400;
@@ -96,8 +98,14 @@
         text-transform: capitalize;
         letter-spacing: .7px
     }
+    .topnav-child-1 li a {
+        display:block;
+        padding: 12px;
+        color: #8b8b8b;
+        position:relative;
+    }
 
-        .topnav-child-1 li:hover {
+        .topnav-child-1 li a:hover {
             color: #222
         }
 
@@ -112,27 +120,27 @@
     font-weight: 600 !important
 }
 
-.topnav-child-1 .nav-active-top:after {
+.topnav-child-1 .nav-active-top a:after {
     opacity: 1
 }
 
-.topnav-child-1 li:after {
+.topnav-child-1 li a:after {
     position: absolute;
     bottom: 0;
     width: 100%;
     left: 0;
     height: 2px;
-    background: #5991c9;
-    color: #5991c9;
+    background: #325080;
+    color: #325080;
     content: "";
     border-left: 7px solid transparent;
     opacity: 0;
     transition-duration: .3s
 }
-.child-content, .grand-child {
+.child-content {
     display: none;
 }
 
-.child-content.nav-active-top, .grand-child.nav-active-top {
+.child-content.nav-active-top {
     display: block;
 }

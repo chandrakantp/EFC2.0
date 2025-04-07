@@ -4,7 +4,6 @@ function otpbtn() {
     $("#login-form").hide();
     $("#forgot-pass-form").hide();
 }
-
 function backToLogin() {
     $("#login-form-withOTP").hide();
     $("#login-form").show();
@@ -46,6 +45,7 @@ $(document).ready(function () {
         $("#mat-input-3").attr("type", "password");
     });
 });
+
 $(document).ready(function () {
     $(".topnav li").on("click", function () {
         $(".topnav li").removeClass("nav-active-top");
@@ -54,11 +54,29 @@ $(document).ready(function () {
         var target = $(this).data("target");
         $("#" + target).addClass("nav-active-top");
     });
-    $(".topnav-child-1 li").on("click", function () {
-        $(".topnav-child-1 li").removeClass("nav-active-top");
-        $(this).addClass("nav-active-top");
-        $(".grand-child").removeClass("nav-active-top");
-        var target = $(this).data("target");
-        $("#" + target).addClass("nav-active-top");
+    $('.mat-tab-group .tabs .tab-button').click(function () {
+        var targetTab = $(this).data('target');
+        $('.mat-tab-group .tabs .tab-button').removeClass('mat-tab-body-active');
+        $(this).addClass('mat-tab-body-active');
+        $('.mat-tab-body').removeClass('mat-tab-body-active');
+        $('#' + targetTab).addClass('mat-tab-body-active');
     });
 });
+
+$(document).ready(function () {
+    $("#employeeAddPage").hide();
+    $("#empCards").hide();
+});
+function addEmployee() {
+    $("#employeeDetailPage").hide();
+    $("#employeeAddPage").show();
+}
+function backToEmpDetails() {
+    $("#employeeDetailPage").show();
+    $("#employeeAddPage").hide();
+}
+
+function showEmpCard() {
+    $("#empCards").toggle();
+}
+

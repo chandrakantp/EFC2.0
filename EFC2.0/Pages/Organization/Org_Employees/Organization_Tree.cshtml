@@ -1,0 +1,111 @@
+﻿@page
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<div class="app-container" dir="ltr">
+    <div class="container-fluid px-0 main-content-page h-100">
+        <partial name="Organization_Tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="summary">
+                <ul class="topnav-child-1">
+                    <li><a href="/organization/org_employees/employee_view"> Directory</a> </li>
+                    <li class="nav-active-top"><a href="/organization/org_employees/organization_tree"> Organization Tree</a> </li>
+                    <li><a href="/organization/org_employees/org_employees"> Login Overview</a> </li>
+                    <li><a href="/organization/org_employees/org_summary"> Probation</a></li>
+                </ul>
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div class="px-0 container-fluid">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">Organization Tree</h4>
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color ng-star-inserted" style="cursor: pointer;">turned_in_not </mat-icon>
+
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+
+                                <div class="row ng-star-inserted">
+                                    <div class="col-md-12 text-end">
+                                        <div class="d-flex flex-row justify-content-end align-items-center f-14 gap-2">
+                                            <label for="" class="ng-star-inserted">Expand</label>
+                                            <button mat-ripple="" type="button" ptooltip="Download" tooltipposition="top" class="mat-ripple p-element mat-menu-trigger rd-round-button"><img src="~/images/download.svg"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body mainContentHeightOrg2 pt-0 mb-2 ng-star-inserted">
+                                    <div class="tnew">
+                                        <div selectionmode="single" styleclass="" class="p-element">
+                                            <div class="p-organizationchart p-component">
+                                                <table class="p-element p-organizationchart-table ng-tns-c260-508 ng-star-inserted">
+                                                    <tbody class="ng-tns-c260-508 ng-star-inserted">
+                                                        <tr class="ng-tns-c260-508">
+                                                            <td class="ng-tns-c260-508">
+                                                                <div class="ng-tns-c260-508 p-organizationchart-node-content p-organizationchart-selectable-node p-highlight">
+
+                                                                    <div class="ng-tns-c260-508 ng-star-inserted">
+                                                                        <div class="node-header ng-star-inserted" onclick="showEmpCard()"><img height="60px" width="60px" alt="Profile Image" class="rounded-circle img-offset" src="~/images/emptyProfile.jpg"></div>
+                                                                        <div class="node-content card-tree ng-star-inserted" onclick="showEmpCard()">
+                                                                            <div class="name">HR DBMR</div>
+                                                                            <div class="position">Executive </div>
+                                                                            <div class="subordinates"><img src="~/images/count-ppl.png" height="16px" width="16px" class="mx-1"> 0 </div>
+                                                                        </div>
+                                                                        <div id="empCards" class="main-node-card ng-star-inserted">
+                                                                            <div class="row pop-up-card">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="emp-detail-header">
+                                                                                        <div class="header-left">
+                                                                                            <img src="~/images/emptyProfile.jpg" alt="Profile Image" class="avar">
+                                                                                            <div>
+                                                                                                <p class="header-name">HR DBMR</p>
+                                                                                                <p class="header-sec">Executive </p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <a href="/organization/org_employees/employee_details" class="cursor-pointer" tabindex="0"><img src="~/images/open_in.png" alt="Profile Image" height="17px" width="17px"></a>
+                                                                                    </div>
+                                                                                    <div class="emp-detail">
+                                                                                        <p class="data-left"> Employee ID</p>
+                                                                                        <p class="data-right">EMP-20240425-001</p>
+                                                                                    </div>
+                                                                                    <div class="emp-detail">
+                                                                                        <p class="data-left"> Department</p>
+                                                                                        <p class="data-right">Admin Department</p>
+                                                                                    </div>
+                                                                                    <div class="emp-detail">
+                                                                                        <p class="data-left"> Email</p>
+                                                                                        <p class="data-right">emailatrapiddata.com</p>
+                                                                                    </div>
+                                                                                    <div class="emp-detail">
+                                                                                        <p class="data-left"> Mobile Number</p>
+                                                                                        <p class="data-right">+91 8939131074</p>
+                                                                                    </div>
+                                                                                    <div class="emp-detail">
+                                                                                        <p class="data-left"> Location</p>
+                                                                                        <p class="data-right">Chennai</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,499 @@
+﻿@page
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<div class="app-container" dir="ltr">
+    <div class="container-fluid px-0 main-content-page h-100">
+        <partial name="Organization_Tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="summary">
+                <ul class="topnav-child-1">
+                    <li class="nav-active-top"><a href="/organization/org_employees/employee_view"> Directory</a> </li>
+                    <li><a href="/organization/org_employees/organization_tree"> Organization Tree</a> </li>
+                    <li><a href="/organization/org_employees/org_employees"> Login Overview</a> </li>
+                    <li><a href="/organization/org_employees/org_summary"> Probation</a></li>
+                </ul>
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div id="employeeDetailPage" class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">HR DBMR</h4>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="mainContentHeightOrg2">
+                                    <div class="mat-tab-group mat-primary">
+                                        <div class="tabs">
+                                            <button class="tab-button mat-tab-body-active" data-target="basic-details">Basic Details</button>
+                                            <button class="tab-button" data-target="work-profile">Work Profile</button>
+                                            <button class="tab-button" data-target="salary">Salary</button>
+                                            <button class="tab-button" data-target="documents">Documents</button>
+                                            <button class="tab-button" data-target="assets">Assets</button>
+                                            <button class="tab-button" data-target="contracts">Contracts</button>
+                                            <button class="tab-button" data-target="letters">Letters</button>
+                                            <button class="tab-button" data-target="pro">PRO</button>
+                                            <button class="tab-button" data-target="geo-fencing">Geo-Fencing</button>
+                                            <button class="tab-button" data-target="additional-details">Additional Details</button>
+                                        </div>
+                                        <div class="mat-tab-body-wrapper">
+                                            <div id="basic-details" class="mat-tab-body ng-star-inserted mat-tab-body-active">
+                                                <div class="mat-tab-body-content ng-tns-c182-628 ng-trigger ng-trigger-translateTab">
+                                                    <div class="card-body ng-star-inserted">
+                                                        <form novalidate="" class="ng-touched ng-dirty ng-invalid">
+                                                            <div class="container-fluid">
+                                                                <div class="row mt-3">
+                                                                    <div class="col-md-2">
+                                                                        <div>
+                                                                            <div>
+                                                                                <div class="d-flex flex-column align-items-center text-center">
+                                                                                    <div class="img-box" style="position: relative;">
+                                                                                        <img src="~/images/emptyProfile.jpg" alt="Admin" width="150" for="profilepic" class="rounded-circle propic box-shadow tabempty ng-star-inserted" style="cursor: pointer;"><i class="fa fa-camera camera"></i>
+                                                                                        <p class="camera img-tag">Upload</p>
+                                                                                    </div>
+                                                                                    <span class="d-none"><input type="file" formcontrolname="emppic" name="picture" id="profilepic" accept="image/*" class="ng-untouched ng-pristine ng-valid"></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-10">
+                                                                        <div class="separator my-2"><span class="border p-1 small rounded head fw-bold head px-2">Basic Details</span></div>
+                                                                        <div class="row">
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Title</label>
+                                                                                <select class="form-select">
+                                                                                    <option value="Mr.">Mr.</option>
+                                                                                    <option value="Ms.">Ms.</option>
+                                                                                    <option value="Mrs.">Mrs.</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">First Name*</label>
+                                                                                <input type="text" class="form-control" placeholder="First Name" />
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Last Name*</label>
+                                                                                <input type="text" class="form-control" placeholder="Last Name" />
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Employee Code*</label>
+                                                                                <input type="text" class="form-control" placeholder="Employee Code" />
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Select Gender*</label>
+                                                                                <select class="form-select">
+                                                                                    <option value="Male">Male</option>
+                                                                                    <option value="Female">Female</option>
+                                                                                    <option value="Others">Others</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Date of Birth*</label>
+                                                                                <input type="date" class="form-control" placeholder="Date of Birth" />
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Select Blood Group*</label>
+                                                                                <select class="form-select">
+                                                                                    <option value="Male">Male</option>
+                                                                                    <option value="Female">Female</option>
+                                                                                    <option value="Others">Others</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Select Marital Status</label>
+                                                                                <select class="form-select">
+                                                                                    <option value="Male">Male</option>
+                                                                                    <option value="Female">Female</option>
+                                                                                    <option value="Others">Others</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Select Disablity Status</label>
+                                                                                <select class="form-select">
+                                                                                    <option value="Male">Male</option>
+                                                                                    <option value="Female">Female</option>
+                                                                                    <option value="Others">Others</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Bio Metric Device Code</label>
+                                                                                <input type="text" class="form-control" placeholder="Bio Metric Device Code" />
+                                                                            </div>
+                                                                            <div class="separator my-2"><span class="border p-1 small rounded head fw-bold head px-2">Contact Details</span></div>
+
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Personal Mobile</label>
+                                                                                <input type="text" class="form-control" placeholder="Enter Personal Mobile" />
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Office Mobile*</label>
+                                                                                <input type="text" class="form-control" placeholder="Enter Office Mobile" />
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Personal Email</label>
+                                                                                <input type="email" class="form-control" placeholder="Enter Personal Email" />
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Office Email*</label>
+                                                                                <input type="email" class="form-control" placeholder="Enter Office Email" />
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">LinkedIn Profile</label>
+                                                                                <input type="text" class="form-control" placeholder="Enter LinkedIn Profile Url" />
+                                                                            </div>
+                                                                            <div class="separator my-2"><span class="border p-1 small rounded head fw-bold head px-2">Bank Details</span></div>
+
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Bank Name</label>
+                                                                                <input type="text" class="form-control" placeholder="Enter Bank Name" />
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Bank Account Number</label>
+                                                                                <input type="text" class="form-control" placeholder="Enter Bank Account Number" />
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Bank Account Holder Name</label>
+                                                                                <input type="text" class="form-control" placeholder="Enter Bank Account Holder Name" />
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Secondary Bank Name</label>
+                                                                                <input type="text" class="form-control" placeholder="Enter Secondary Bank Name" />
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Secondary Bank Account Number</label>
+                                                                                <input type="text" class="form-control" placeholder="Enter Secondary Bank Account Number" />
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Secondary Bank Branch</label>
+                                                                                <input type="text" class="form-control" placeholder="Secondary Bank Branch" />
+                                                                            </div>
+                                                                            <div class="separator my-2"><span class="border p-1 small rounded head fw-bold head px-2">Identifications</span></div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Passport Number</label>
+                                                                                <input type="text" class="form-control" placeholder="i.e.JXXXXXXX" />
+                                                                            </div>
+                                                                            <div class="col-md-4 tabcol mb-1">
+                                                                                <label class="rd-form-select-label">Employee Identification Number</label>
+                                                                                <input type="text" class="form-control" placeholder="Enter Employee Identification Number" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="separator my-2"><span class="border p-1 small rounded head fw-bold head px-2">Address</span></div>
+                                                                        <div class="row">
+                                                                            <div class="col-md-12 mb-1">
+                                                                                <label class="rd-form-select-label">Present Address*</label>
+                                                                                <textarea type="text" class="form-control" placeholder="Enter Present Address*"></textarea>
+                                                                            </div>
+                                                                            <div class="col-md-12 my-2">
+                                                                                <label class="rd-form-select-label" style="font-size:14px;font-weight:500"><input type="checkbox">  Permanent Address same as Present Address</label>
+                                                                            </div>
+                                                                            <div class="col-md-12 mb-1">
+                                                                                <label class="rd-form-select-label">Permanent Address</label>
+                                                                                <textarea type="text" class="form-control" placeholder="Enter Permanent Address"></textarea>
+                                                                            </div>
+                                                                            <div class="col-md-4 mb-1">
+                                                                                <label class="rd-form-select-label">Country*</label>
+                                                                                <select class="form-select" placeholder="Select Country">
+                                                                                    <option selected>Select Country</option>
+                                                                                    <option value="1">1</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-4 mb-1">
+                                                                                <label class="rd-form-select-label">State*</label>
+                                                                                <select class="form-select" placeholder="Select State">
+                                                                                    <option selected>Select State</option>
+                                                                                    <option value="1">1</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-4 mb-1">
+                                                                                <label class="rd-form-select-label">City*</label>
+                                                                                <select class="form-select" placeholder="Select City">
+                                                                                    <option selected>Select City</option>
+                                                                                    <option value="1">1</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-4 mb-1">
+                                                                                <label class="rd-form-select-label">Nationality*</label>
+                                                                                <input type="text" class="form-control" placeholder="Enter Nationality" />
+                                                                            </div>
+                                                                            <div class="col-md-4 mb-1">
+                                                                                <label class="rd-form-select-label">Zipcode*</label>
+                                                                                <input type="text" class="form-control" placeholder="Enter Zipcode" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="text-end">
+                                                                            <button type="button" color="primary" class="mat-focus-indicator text-white mat-raised-button mat-button-base mat-primary">
+                                                                                    Submit
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="separator my-2"><span class="border p-1 small rounded head fw-bold head px-2">Education</span></div>
+                                                                            <div class="container-fluid">
+                                                                                <div class="row">
+                                                                                    <div class="col-12 px-0 d-flex justify-content-between align-items-center mt-1">
+                                                                                        <h4 class="fw-bold head mb-0">Education Details </h4>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div class="container-fluid">
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-6"></div>
+                                                                                                <div class="col-md-6 d-flex justify-content-end align-items-center">
+                                                                                                    <div style="position: relative;">
+                                                                                                        <input type="text" class="grid-search-box ng-untouched ng-pristine ng-valid" placeholder="Search">
+                                                                                                        <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">search</mat-icon>
+                                                                                                    </div>
+                                                                                                    <button mat-ripple="" tooltipposition="top" type="button" class="mat-ripple p-element rd-round-button"><img src="~/images/add.svg"></button>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-12 px-0">
+
+                                                                                        <div class="ng-star-inserted">
+                                                                                            <div class="example-table-container rd-table-wrapper">
+                                                                                                <table mat-table="" class="mat-table cdk-table" role="table">
+                                                                                                    <thead role="rowgroup">
+                                                                                                        <tr role="row" mat-header-row="" class="mat-header-row cdk-header-row ng-star-inserted">
+                                                                                                            <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell text-capitalize cdk-column-college mat-column-college ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;"> Institution Name </th>
+                                                                                                            <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell cdk-column-courseName mat-column-courseName ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;">Course Name </th>
+                                                                                                            <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell cdk-column-period mat-column-period ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;">Period</th>
+                                                                                                            <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell text-capitalize cdk-column-passGrade mat-column-passGrade ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;"> Pass Grade </th>
+                                                                                                            <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell text-center cdk-column-Document mat-column-Document ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;">Document</th>
+                                                                                                            <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell px-2 cdk-column-Action mat-column-Action ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top mat-table-sticky-border-elem-left" style="top: 0px; z-index: 101; left: 0px;"> Actions </th>
+
+                                                                                                        </tr>
+
+                                                                                                    </thead>
+                                                                                                    <tbody role="rowgroup">
+
+                                                                                                        <tr class="mat-row mat-no-data-row ng-star-inserted" role="row">
+                                                                                                            <td colspan="9999" class="text-muted no-results ng-star-inserted"><img src="~/images/No result found.svg" class="no-result-found"></td>
+
+                                                                                                        </tr>
+
+                                                                                                    </tbody>
+                                                                                                    <tfoot role="rowgroup" class="mat-table-sticky" style="display: none; bottom: 0px; z-index: 10;">
+                                                                                                    </tfoot>
+                                                                                                </table>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <mat-paginator role="group" aria-label="Select page" class="mat-paginator">
+                                                                                <div class="mat-paginator-outer-container">
+                                                                                    <div class="mat-paginator-container">
+                                                                                        <div class="mat-paginator-page-size ng-star-inserted">
+                                                                                            <div class="mat-paginator-page-size-label"> Items per page: </div>
+                                                                                            <mat-form-field class="mat-form-field mat-paginator-page-size-select ng-tns-c111-1083 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-should-float mat-form-field-hide-placeholder ng-star-inserted">
+                                                                                                <div class="mat-form-field-wrapper ng-tns-c111-1083">
+                                                                                                    <div class="mat-form-field-flex ng-tns-c111-1083">
+
+                                                                                                        <div class="mat-form-field-infix ng-tns-c111-1083">
+                                                                                                            <mat-select role="combobox" aria-autocomplete="none" aria-haspopup="true" class="mat-select ng-tns-c167-1084 ng-tns-c111-1083 ng-star-inserted" id="mat-select-124" tabindex="0" aria-expanded="false" aria-label="Items per page:" aria-required="false" aria-disabled="false" aria-invalid="false">
+                                                                                                                <div cdk-overlay-origin="" class="mat-select-trigger ng-tns-c167-1084">
+                                                                                                                    <div class="mat-select-value ng-tns-c167-1084" id="mat-select-value-125">
+
+                                                                                                                        <span class="mat-select-value-text ng-tns-c167-1084 ng-star-inserted">
+                                                                                                                            <span class="mat-select-min-line ng-tns-c167-1084 ng-star-inserted">10</span>
+                                                                                                                        </span>
+
+                                                                                                                    </div>
+                                                                                                                    <div class="mat-select-arrow-wrapper ng-tns-c167-1084">
+                                                                                                                        <div class="mat-select-arrow ng-tns-c167-1084"></div>
+                                                                                                                    </div>
+                                                                                                                </div>
+
+                                                                                                            </mat-select>
+                                                                                                            <span class="mat-form-field-label-wrapper ng-tns-c111-1083">
+
+                                                                                                            </span>
+                                                                                                        </div>
+
+                                                                                                    </div>
+                                                                                                    <div class="mat-form-field-underline ng-tns-c111-1083 ng-star-inserted"><span class="mat-form-field-ripple ng-tns-c111-1083"></span></div>
+
+                                                                                                    <div class="mat-form-field-subscript-wrapper ng-tns-c111-1083">
+
+                                                                                                        <div class="mat-form-field-hint-wrapper ng-tns-c111-1083 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+
+                                                                                                            <div class="mat-form-field-hint-spacer ng-tns-c111-1083"></div>
+                                                                                                        </div>
+
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </mat-form-field>
+
+                                                                                        </div>
+
+                                                                                        <div class="mat-paginator-range-actions">
+                                                                                            <div class="mat-paginator-range-label"> 0 of 0 </div>
+
+                                                                                            <button mat-icon-button="" type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-previous mat-icon-button mat-button-base mat-button-disabled" aria-label="Previous page" disabled="true">
+                                                                                                <span class="mat-button-wrapper">
+                                                                                                    <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                                                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                                                                                    </svg>
+                                                                                                </span>
+                                                                                                <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                                                            </button>
+
+                                                                                            <button mat-icon-button="" type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-next mat-icon-button mat-button-base mat-button-disabled" aria-label="Next page" disabled="true">
+                                                                                                <span class="mat-button-wrapper">
+                                                                                                    <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                                                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                                                                    </svg>
+                                                                                                </span>
+                                                                                                <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                                                            </button>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </mat-paginator>
+                                                                        </app-education-grid>
+                                                                        <div class="separator my-2"><span class="border p-1 small rounded head fw-bold head px-2">Family</span></div>
+                                                                        <div class="col-md-12 d-flex justify-content-between align-items-center mb-3">
+                                                                            <h4 class="fw-bold head mb-0"> Family Details </h4>
+                                                                        </div>
+                                                                        <div class="container-fluid">
+                                                                            <div class="row">
+                                                                                <div class="col-md-6"></div>
+                                                                                <div class="col-md-6 d-flex justify-content-end align-items-center">
+                                                                                    <div style="position: relative;">
+                                                                                        <input type="text" class="grid-search-box ng-untouched ng-pristine ng-valid" placeholder="Search">
+                                                                                        <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">search</mat-icon>
+                                                                                    </div>
+                                                                                    <button mat-ripple="" tooltipposition="top" type="button" class="mat-ripple p-element rd-round-button"><img src="~/images/add.svg"></button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="ng-star-inserted">
+                                                                            <div class="example-table-container rd-table-wrapper">
+                                                                                <table mat-table="" class="mat-table cdk-table" role="table">
+                                                                                    <thead role="rowgroup">
+                                                                                        <tr role="row" mat-header-row="" class="mat-header-row cdk-header-row ng-star-inserted">
+                                                                                            <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell cdk-column-name mat-column-name ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;"> Name</th>
+                                                                                            <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell text-capitalize cdk-column-relation mat-column-relation ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;"> Relation </th>
+                                                                                            <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell cdk-column-dob mat-column-dob ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;">Date Of Birth</th>
+                                                                                            <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell text-center text-capitalize cdk-column-dependent mat-column-dependent ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;"> Dependent</th>
+                                                                                            <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell text-center cdk-column-isnominee mat-column-isnominee ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;">Nominee</th>
+                                                                                            <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell cdk-column-isemergencycontact mat-column-isemergencycontact ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;">Emergency Contact</th>
+                                                                                            <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell px-2 cdk-column-Action mat-column-Action ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top mat-table-sticky-border-elem-left" style="top: 0px; z-index: 101; left: 0px;"> Actions </th>
+
+                                                                                        </tr>
+
+                                                                                    </thead>
+                                                                                    <tbody role="rowgroup">
+
+                                                                                        <tr class="mat-row mat-no-data-row ng-star-inserted" role="row">
+                                                                                            <td colspan="9999" class="text-muted no-results ng-star-inserted"><img src="~/images/No result found.svg" class="no-result-found"></td>
+
+                                                                                        </tr>
+
+                                                                                    </tbody>
+                                                                                    <tfoot role="rowgroup" class="mat-table-sticky" style="display: none; bottom: 0px; z-index: 10;">
+                                                                                    </tfoot>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <mat-paginator role="group" aria-label="Select page" class="mat-paginator">
+                                                                            <div class="mat-paginator-outer-container">
+                                                                                <div class="mat-paginator-container">
+                                                                                    <div class="mat-paginator-page-size ng-star-inserted">
+                                                                                        <div class="mat-paginator-page-size-label"> Items per page: </div>
+                                                                                        <mat-form-field class="mat-form-field mat-paginator-page-size-select ng-tns-c111-1085 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-should-float mat-form-field-hide-placeholder ng-star-inserted">
+                                                                                            <div class="mat-form-field-wrapper ng-tns-c111-1085">
+                                                                                                <div class="mat-form-field-flex ng-tns-c111-1085">
+
+                                                                                                    <div class="mat-form-field-infix ng-tns-c111-1085">
+                                                                                                        <mat-select role="combobox" aria-autocomplete="none" aria-haspopup="true" class="mat-select ng-tns-c167-1086 ng-tns-c111-1085 ng-star-inserted" id="mat-select-126" tabindex="0" aria-expanded="false" aria-label="Items per page:" aria-required="false" aria-disabled="false" aria-invalid="false">
+                                                                                                            <div cdk-overlay-origin="" class="mat-select-trigger ng-tns-c167-1086">
+                                                                                                                <div class="mat-select-value ng-tns-c167-1086" id="mat-select-value-127">
+
+                                                                                                                    <span class="mat-select-value-text ng-tns-c167-1086 ng-star-inserted">
+                                                                                                                        <span class="mat-select-min-line ng-tns-c167-1086 ng-star-inserted">10</span>
+                                                                                                                    </span>
+
+                                                                                                                </div>
+                                                                                                                <div class="mat-select-arrow-wrapper ng-tns-c167-1086">
+                                                                                                                    <div class="mat-select-arrow ng-tns-c167-1086"></div>
+                                                                                                                </div>
+                                                                                                            </div>
+
+                                                                                                        </mat-select>
+                                                                                                        <span class="mat-form-field-label-wrapper ng-tns-c111-1085">
+
+                                                                                                        </span>
+                                                                                                    </div>
+
+                                                                                                </div>
+                                                                                                <div class="mat-form-field-underline ng-tns-c111-1085 ng-star-inserted"><span class="mat-form-field-ripple ng-tns-c111-1085"></span></div>
+
+                                                                                                <div class="mat-form-field-subscript-wrapper ng-tns-c111-1085">
+
+                                                                                                    <div class="mat-form-field-hint-wrapper ng-tns-c111-1085 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+
+                                                                                                        <div class="mat-form-field-hint-spacer ng-tns-c111-1085"></div>
+                                                                                                    </div>
+
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </mat-form-field>
+
+                                                                                    </div>
+
+                                                                                    <div class="mat-paginator-range-actions">
+                                                                                        <div class="mat-paginator-range-label"> 0 of 0 </div>
+
+                                                                                        <button mat-icon-button="" type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-previous mat-icon-button mat-button-base mat-button-disabled" aria-label="Previous page" disabled="true">
+                                                                                            <span class="mat-button-wrapper">
+                                                                                                <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                                                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                                                                                </svg>
+                                                                                            </span>
+                                                                                            <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                                                        </button>
+
+                                                                                        <button mat-icon-button="" type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-next mat-icon-button mat-button-base mat-button-disabled" aria-label="Next page" disabled="true">
+                                                                                            <span class="mat-button-wrapper">
+                                                                                                <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                                                                </svg>
+                                                                                            </span>
+                                                                                            <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                                                        </button>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </mat-paginator>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="work-profile" class="mat-tab-body ng-star-inserted"></div>
+                                            <div id="salary" class="mat-tab-body ng-star-inserted"></div>
+                                            <div id="documents" class="mat-tab-body ng-star-inserted"></div>
+                                            <div id="assets" class="mat-tab-body ng-star-inserted"></div>
+                                            <div id="contracts" class="mat-tab-body ng-star-inserted"></div>
+                                            <div id="letters" class="mat-tab-body ng-star-inserted"></div>
+                                            <div id="pro" class="mat-tab-body ng-star-inserted"></div>
+                                            <div id="geo-fencing" class="mat-tab-body ng-star-inserted"></div>
+                                            <div id="additional-details" class="mat-tab-body ng-star-inserted"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
