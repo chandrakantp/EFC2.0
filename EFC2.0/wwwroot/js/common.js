@@ -45,8 +45,17 @@ $(document).ready(function () {
         $("#mat-input-3").attr("type", "password");
     });
 });
-
 $(document).ready(function () {
+    var currentUrl = window.location.pathname;
+    $('.topnav li a').each(function () {
+        var link = $(this);
+        if (currentUrl.indexOf(link.attr('href')) !== -1) {
+            link.closest('li').addClass('nav-active-top');
+        } else {
+            link.closest('li').removeClass('nav-active-top');
+        }
+    });
+
     $(".topnav li").on("click", function () {
         $(".topnav li").removeClass("nav-active-top");
         $(this).addClass("nav-active-top");
