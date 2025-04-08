@@ -11,6 +11,8 @@
         color: #fff;
         border-color: #325080;
         box-shadow: unset;
+        font-size: 13px;
+        padding: 8px;
     }
 
 ._mat-animation-noopable.mat-card {
@@ -973,4 +975,46 @@ button.menuClick {
 }
 .mat-tab-body-wrapper .mat-tab-body.mat-tab-body-active {
     display: block;
+}
+
+.orgReports {
+    margin-bottom: 0;
+}
+.orgReports .accordion-item {
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+.orgReports .accordion-button {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    padding: 14px;
+    background-color: #e1e1e1;
+    box-shadow: unset;
+}
+.orgReports .accordion-button.collapsed {
+    background-color: #e1e1e1;
+    box-shadow: unset;
+}
+.orgReports .accordion-body {
+    padding: 14px;
+}
+.orgReports .accordion-body ol {
+    padding-left: 17px;
+}
+.orgReports .accordion-body ol li {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.orgReports .accordion-body ol li a {
+    color: #335180;
+}
+.orgReports .accordion-body ol li a:hover {
+    color: #ff823e;
+}
+.orgReports .accordion-body ol li a .sub-title {
+    color: #646464;
+    font-size: 12px;
+    margin: 6px 0;
 }
