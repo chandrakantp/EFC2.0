@@ -81,3 +81,11 @@ function showEmpCard() {
     $("#empCards").toggle();
 }
 
+function copyEmailText() {
+    const emailText = document.getElementById("emailText").innerText;
+    navigator.clipboard.writeText(emailText).then(() => {
+        alert("Copied to clipboard: " + emailText); // Optional toast or feedback
+    }).catch(err => {
+        console.error("Failed to copy: ", err);
+    });
+}
