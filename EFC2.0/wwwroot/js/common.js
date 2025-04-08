@@ -55,14 +55,6 @@ $(document).ready(function () {
             link.closest('li').removeClass('nav-active-top');
         }
     });
-
-    $(".topnav li").on("click", function () {
-        $(".topnav li").removeClass("nav-active-top");
-        $(this).addClass("nav-active-top");
-        $(".child-content").removeClass("nav-active-top");
-        var target = $(this).data("target");
-        $("#" + target).addClass("nav-active-top");
-    });
     $('.mat-tab-group .tabs .tab-button').click(function () {
         var targetTab = $(this).data('target');
         $('.mat-tab-group .tabs .tab-button').removeClass('mat-tab-body-active');
