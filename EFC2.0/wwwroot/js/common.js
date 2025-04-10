@@ -55,6 +55,7 @@ $(document).ready(function () {
             link.closest('li').removeClass('nav-active-top');
         }
     });
+
     $('.mat-tab-group .tabs .tab-button').click(function () {
         var targetTab = $(this).data('target');
         $('.mat-tab-group .tabs .tab-button').removeClass('mat-tab-body-active');
@@ -76,15 +77,13 @@ function backToEmpDetails() {
     $("#employeeDetailPage").show();
     $("#employeeAddPage").hide();
 }
-
 function showEmpCard() {
     $("#empCards").toggle();
 }
-
 function copyEmailText() {
     const emailText = document.getElementById("emailText").innerText;
     navigator.clipboard.writeText(emailText).then(() => {
-        alert("Copied to clipboard: " + emailText); // Optional toast or feedback
+        alert("Copied to clipboard: " + emailText);
     }).catch(err => {
         console.error("Failed to copy: ", err);
     });

@@ -980,6 +980,7 @@ button.menuClick {
         .mat-tab-group .tabs .tab-button.mat-tab-body-active {
             border-bottom: 2px solid #325080;
             opacity: 1;
+            color: #173d7a;
         }
 
 .mat-tab-body-wrapper .mat-tab-body {
@@ -1055,4 +1056,28 @@ button.menuClick {
 }
 .ck.ck-content {
     height: 400px;
+}
+.historyTabs .tabs {
+    background: #fff;
+    background-color: #fff;
+    box-shadow: 0 4px 4px -2px #18274b14, 0 2px 4px -2px #18274b1f;
+    margin-bottom: 10px;
+}
+.historyTabs .tabs .tab-button {
+    background: transparent;
+    border-bottom: 0 !important;
+    position: relative;
+    padding: 12px;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: 400;
+    color: #5a5959;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: .7px;
+    height: auto;
+}
+.historyTabs .tabs .tab-button.mat-tab-body-active {
+    background-color: #173d7a;
+    color: #fff;
 }
