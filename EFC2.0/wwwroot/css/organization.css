@@ -1040,3 +1040,19 @@ button.menuClick {
                         font-size: 12px;
                         margin: 6px 0;
                     }
+.formButtons button {
+    font-size: 14px;
+    border-radius: 4px;
+    box-shadow: unset;
+}
+.formButtons button.btn-secondary {
+    background-color: transparent;
+    border: 1px solid red;
+    color: red;
+}
+.formButtons button.btn-primary {
+    background-color: #325080;
+}
+.ck.ck-content {
+    height: 400px;
+}

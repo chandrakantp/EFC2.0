@@ -238,7 +238,7 @@
                                                                                                     <input type="text" class="grid-search-box ng-untouched ng-pristine ng-valid" placeholder="Search">
                                                                                                     <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">search</mat-icon>
                                                                                                 </div>
-                                                                                                <button mat-ripple="" tooltipposition="top" type="button" class="mat-ripple p-element rd-round-button"><img src="~/images/add.svg"></button>
+                                                                                                <button data-bs-toggle="modal" data-bs-target="#addEducationModal" type="button" class="mat-ripple p-element rd-round-button"><img src="~/images/add.svg"></button>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -247,7 +247,7 @@
 
                                                                                     <div class="ng-star-inserted">
                                                                                         <div class="example-table-container rd-table-wrapper">
-                                                                                            <table mat-table="" class="mat-table cdk-table" role="table">
+                                                                                            <table class="mat-table cdk-table">
                                                                                                 <thead role="rowgroup">
                                                                                                     <tr class="mat-header-row cdk-header-row ng-star-inserted">
                                                                                                         <th class="mat-header-cell cdk-header-cell text-capitalize cdk-column-college mat-column-college ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top"> Institution Name </th>
@@ -348,7 +348,6 @@
                                                                                 </div>
                                                                             </div>
                                                                         </mat-paginator>
-                                                                        </app-education-grid>
                                                                         <div class="separator my-2"><span class="border p-1 small rounded head fw-bold head px-2">Family</span></div>
                                                                         <div class="col-md-12 d-flex justify-content-between align-items-center mb-3">
                                                                             <h4 class="fw-bold head mb-0"> Family Details </h4>
@@ -361,14 +360,14 @@
                                                                                         <input type="text" class="grid-search-box ng-untouched ng-pristine ng-valid" placeholder="Search">
                                                                                         <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">search</mat-icon>
                                                                                     </div>
-                                                                                    <button mat-ripple="" tooltipposition="top" type="button" class="mat-ripple p-element rd-round-button"><img src="~/images/add.svg"></button>
+                                                                                    <button data-bs-toggle="modal" data-bs-target="#addFamilyModal" type="button" class="mat-ripple p-element rd-round-button"><img src="~/images/add.svg"></button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
 
                                                                         <div class="ng-star-inserted">
                                                                             <div class="example-table-container rd-table-wrapper">
-                                                                                <table mat-table="" class="mat-table cdk-table" role="table">
+                                                                                <table class="mat-table cdk-table">
                                                                                     <thead role="rowgroup">
                                                                                         <tr class="mat-header-row cdk-header-row ng-star-inserted">
                                                                                             <th class="mat-header-cell cdk-header-cell cdk-column-name mat-column-name ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top"> Name</th>
@@ -477,7 +476,7 @@
                                             <div id="work-profile" class="mat-tab-body ng-star-inserted">
                                                 <div class="mat-tab-body-content ng-tns-c182-628 ng-trigger ng-trigger-translateTab">
                                                     <div class="card-body ng-star-inserted">
-                                                        <form class="ng-touched ng-dirty ng-invalid">
+                                                        <div class="ng-touched ng-dirty ng-invalid">
                                                             <div class="container-fluid">
                                                                 <div class="row mt-3">
                                                                     <div class="col-md-12">
@@ -612,7 +611,7 @@
                                                                                                     <input type="text" class="grid-search-box ng-untouched ng-pristine ng-valid" placeholder="Search">
                                                                                                     <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">search</mat-icon>
                                                                                                 </div>
-                                                                                                <button mat-ripple="" tooltipposition="top" type="button" class="mat-ripple p-element rd-round-button"><img src="~/images/add.svg"></button>
+                                                                                                <button data-bs-toggle="modal" data-bs-target="#addExperienceModal" class="mat-ripple p-element rd-round-button"><img src="~/images/add.svg"></button>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -621,7 +620,7 @@
 
                                                                                     <div class="ng-star-inserted">
                                                                                         <div class="example-table-container rd-table-wrapper">
-                                                                                            <table mat-table="" class="mat-table cdk-table" role="table">
+                                                                                            <table class="mat-table cdk-table">
                                                                                                 <thead role="rowgroup">
                                                                                                     <tr class="mat-header-row cdk-header-row ng-star-inserted">
                                                                                                         <th class="mat-header-cell cdk-header-cell text-capitalize cdk-column-college mat-column-college ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top"> Organization </th>
@@ -751,7 +750,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </form>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -765,7 +764,7 @@
                                                         <div class="col-12 px-0">
                                                             <div class="ng-star-inserted">
                                                                 <div class="example-table-container rd-table-wrapper">
-                                                                    <table mat-table="" class="mat-table cdk-table" role="table">
+                                                                    <table class="mat-table cdk-table">
                                                                         <thead role="rowgroup">
                                                                             <tr class="mat-header-row cdk-header-row ng-star-inserted">
                                                                                 <th class="mat-header-cell cdk-header-cell"> Effective From	 </th>
@@ -782,7 +781,7 @@
                                                                                 <td class="mat-cell cdk-cell"> INR 50,100.00 </td>
                                                                                 <td class="mat-cell cdk-cel"> INR 601,200.00 </td>
                                                                                 <td class="mat-cell cdk-cell">
-                                                                                    <img src="~/images/edit1.svg" alt="Edit" title="Edit" width="16px" class="img-fluid me-2"/>
+                                                                                    <img src="~/images/edit1.svg" alt="Edit" title="Edit" width="16px" class="img-fluid me-2" />
                                                                                     <img src="~/images/trash.svg" alt="Delete" title="Delete" width="16px" class="img-fluid" />
                                                                                 </td>
                                                                             </tr>
@@ -799,12 +798,12 @@
                                                     <div class="row">
                                                         <div class="col-md-6"></div>
                                                         <div class="col-md-6 d-flex justify-content-end align-items-center">
-                                                            <button data-bs-toggle="modal" data-bs-target="#addSalaryModal" type="button" class="mat-ripple p-element rd-round-button"><img src="~/images/add.svg"></button>
+                                                            <button data-bs-toggle="modal" data-bs-target="#addDocumentModal" type="button" class="mat-ripple p-element rd-round-button"><img src="~/images/add.svg"></button>
                                                         </div>
                                                         <div class="col-12 px-0">
                                                             <div class="ng-star-inserted">
                                                                 <div class="example-table-container rd-table-wrapper">
-                                                                    <table mat-table="" class="mat-table cdk-table" role="table">
+                                                                    <table class="mat-table cdk-table">
                                                                         <thead role="rowgroup">
                                                                             <tr class="mat-header-row cdk-header-row ng-star-inserted">
                                                                                 <th class="mat-header-cell cdk-header-cell"> Document Type </th>
@@ -835,9 +834,261 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div id="assets" class="mat-tab-body ng-star-inserted"></div>
-                                            <div id="letters" class="mat-tab-body ng-star-inserted"></div>
-                                            <div id="additional-details" class="mat-tab-body ng-star-inserted"></div>
+                                            <div id="assets" class="mat-tab-body ng-star-inserted">
+                                                <div class="container-fluid mt-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6"></div>
+                                                        <div class="col-md-6 d-flex justify-content-end align-items-center">
+                                                            <button data-bs-toggle="modal" data-bs-target="#addAssetsModal" type="button" class="mat-ripple p-element rd-round-button"><img src="~/images/add.svg"></button>
+                                                        </div>
+                                                        <div class="col-12 px-0">
+                                                            <div class="ng-star-inserted">
+                                                                <div class="example-table-container rd-table-wrapper">
+                                                                    <table class="mat-table cdk-table">
+                                                                        <thead role="rowgroup">
+                                                                            <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                                                                <th class="mat-header-cell cdk-header-cell"> Asset Category </th>
+                                                                                <th class="mat-header-cell cdk-header-cell">Asset Name</th>
+                                                                                <th class="mat-header-cell cdk-header-cell">Asset Item	</th>
+                                                                                <th class="mat-header-cell cdk-header-cell">Descripition</th>
+                                                                                <th class="mat-header-cell cdk-header-cell">Given Date	</th>
+                                                                                <th class="mat-header-cell cdk-header-cell">Return Date	</th>
+                                                                                <th class="mat-header-cell cdk-header-cell"> Actions </th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody role="rowgroup">
+                                                                            <tr class="mat-row cdk-row ng-star-inserted">
+                                                                                <td class="mat-cell cdk-cell">Software	</td>
+                                                                                <td class="mat-cell cdk-cell"> Design Software	</td>
+                                                                                <td class="mat-cell cdk-cel"> Oracle</td>
+                                                                                <td class="mat-cell cdk-cel">-</td>
+                                                                                <td class="mat-cell cdk-cel">14/08/2024	</td>
+                                                                                <td class="mat-cell cdk-cel">-</td>
+                                                                                <td class="mat-cell cdk-cell">
+                                                                                    <img src="~/images/edit1.svg" alt="Edit" title="Edit" width="16px" class="img-fluid me-2" />
+                                                                                    <img src="~/images/trash.svg" alt="Delete" title="Delete" width="16px" class="img-fluid" />
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <mat-paginator role="group" aria-label="Select page" class="mat-paginator">
+                                                    <div class="mat-paginator-outer-container">
+                                                        <div class="mat-paginator-container">
+                                                            <div class="mat-paginator-page-size ng-star-inserted">
+                                                                <div class="mat-paginator-page-size-label"> Items per page: </div>
+                                                                <div class="div mat-paginator-page-size-select ng-tns-c111-1083 mat-primary div-type-mat-select div-appearance-legacy div-can-float div-should-float div-hide-placeholder ng-star-inserted">
+                                                                    <div class="div-wrapper ng-tns-c111-1083">
+                                                                        <div class="div-flex ng-tns-c111-1083">
+
+                                                                            <div class="div-infix ng-tns-c111-1083">
+                                                                                <mat-select role="combobox" aria-autocomplete="none" aria-haspopup="true" class="mat-select ng-tns-c167-1084 ng-tns-c111-1083 ng-star-inserted" id="mat-select-124" tabindex="0" aria-expanded="false" aria-label="Items per page:" aria-required="false" aria-disabled="false" aria-invalid="false">
+                                                                                    <div cdk-overlay-origin="" class="mat-select-trigger ng-tns-c167-1084">
+                                                                                        <div class="mat-select-value ng-tns-c167-1084" id="mat-select-value-125">
+
+                                                                                            <span class="mat-select-value-text ng-tns-c167-1084 ng-star-inserted">
+                                                                                                <span class="mat-select-min-line ng-tns-c167-1084 ng-star-inserted">10</span>
+                                                                                            </span>
+
+                                                                                        </div>
+                                                                                        <div class="mat-select-arrow-wrapper ng-tns-c167-1084">
+                                                                                            <div class="mat-select-arrow ng-tns-c167-1084"></div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </mat-select>
+                                                                                <span class="div-label-wrapper ng-tns-c111-1083">
+
+                                                                                </span>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="div-underline ng-tns-c111-1083 ng-star-inserted"><span class="div-ripple ng-tns-c111-1083"></span></div>
+
+                                                                        <div class="div-subscript-wrapper ng-tns-c111-1083">
+
+                                                                            <div class="div-hint-wrapper ng-tns-c111-1083 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+
+                                                                                <div class="div-hint-spacer ng-tns-c111-1083"></div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="mat-paginator-range-actions">
+                                                                <div class="mat-paginator-range-label"> 0 of 0 </div>
+
+                                                                <button mat-icon-button="" type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-previous mat-icon-button mat-button-base mat-button-disabled" aria-label="Previous page" disabled="true">
+                                                                    <span class="mat-button-wrapper">
+                                                                        <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                                </button>
+
+                                                                <button mat-icon-button="" type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-next mat-icon-button mat-button-base mat-button-disabled" aria-label="Next page" disabled="true">
+                                                                    <span class="mat-button-wrapper">
+                                                                        <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                                </button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </mat-paginator>
+                                            </div>
+                                            <div id="letters" class="mat-tab-body ng-star-inserted">
+                                                <div class="container-fluid mt-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6"></div>
+                                                        <div class="col-md-6 d-flex justify-content-end align-items-center">
+                                                            <button data-bs-toggle="modal" data-bs-target="#addLettersModal" type="button" class="mat-ripple p-element rd-round-button"><img src="~/images/add.svg"></button>
+                                                        </div>
+                                                        <div class="col-12 px-0">
+                                                            <div class="ng-star-inserted">
+                                                                <div class="example-table-container rd-table-wrapper">
+                                                                    <table class="mat-table cdk-table">
+                                                                        <thead role="rowgroup">
+                                                                            <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                                                                <th class="mat-header-cell cdk-header-cell">Letter Name </th>
+                                                                                <th class="mat-header-cell cdk-header-cell">Created By	</th>
+                                                                                <th class="mat-header-cell cdk-header-cell">created Date	</th>
+                                                                                <th class="mat-header-cell cdk-header-cell"> Actions </th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody role="rowgroup">
+                                                                            @* <tr class="mat-row cdk-row ng-star-inserted">
+                                                                            <td class="mat-cell cdk-cell">-	</td>
+                                                                            <td class="mat-cell cdk-cel">-</td>
+                                                                            <td class="mat-cell cdk-cel">-</td>
+                                                                            <td class="mat-cell cdk-cell">
+                                                                            <img src="~/images/edit1.svg" alt="Edit" title="Edit" width="16px" class="img-fluid me-2" />
+                                                                            <img src="~/images/trash.svg" alt="Delete" title="Delete" width="16px" class="img-fluid" />
+                                                                            </td>
+                                                                            </tr> *@
+                                                                            <tr class="mat-row mat-no-data-row ng-star-inserted" role="row">
+                                                                                <td colspan="9999" class="text-muted no-results ng-star-inserted"><img src="~/images/No result found.svg" class="no-result-found"></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <mat-paginator role="group" aria-label="Select page" class="mat-paginator">
+                                                    <div class="mat-paginator-outer-container">
+                                                        <div class="mat-paginator-container">
+                                                            <div class="mat-paginator-page-size ng-star-inserted">
+                                                                <div class="mat-paginator-page-size-label"> Items per page: </div>
+                                                                <div class="div mat-paginator-page-size-select ng-tns-c111-1083 mat-primary div-type-mat-select div-appearance-legacy div-can-float div-should-float div-hide-placeholder ng-star-inserted">
+                                                                    <div class="div-wrapper ng-tns-c111-1083">
+                                                                        <div class="div-flex ng-tns-c111-1083">
+
+                                                                            <div class="div-infix ng-tns-c111-1083">
+                                                                                <mat-select role="combobox" aria-autocomplete="none" aria-haspopup="true" class="mat-select ng-tns-c167-1084 ng-tns-c111-1083 ng-star-inserted" id="mat-select-124" tabindex="0" aria-expanded="false" aria-label="Items per page:" aria-required="false" aria-disabled="false" aria-invalid="false">
+                                                                                    <div cdk-overlay-origin="" class="mat-select-trigger ng-tns-c167-1084">
+                                                                                        <div class="mat-select-value ng-tns-c167-1084" id="mat-select-value-125">
+
+                                                                                            <span class="mat-select-value-text ng-tns-c167-1084 ng-star-inserted">
+                                                                                                <span class="mat-select-min-line ng-tns-c167-1084 ng-star-inserted">10</span>
+                                                                                            </span>
+
+                                                                                        </div>
+                                                                                        <div class="mat-select-arrow-wrapper ng-tns-c167-1084">
+                                                                                            <div class="mat-select-arrow ng-tns-c167-1084"></div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </mat-select>
+                                                                                <span class="div-label-wrapper ng-tns-c111-1083">
+
+                                                                                </span>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="div-underline ng-tns-c111-1083 ng-star-inserted"><span class="div-ripple ng-tns-c111-1083"></span></div>
+
+                                                                        <div class="div-subscript-wrapper ng-tns-c111-1083">
+
+                                                                            <div class="div-hint-wrapper ng-tns-c111-1083 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+
+                                                                                <div class="div-hint-spacer ng-tns-c111-1083"></div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="mat-paginator-range-actions">
+                                                                <div class="mat-paginator-range-label"> 0 of 0 </div>
+
+                                                                <button mat-icon-button="" type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-previous mat-icon-button mat-button-base mat-button-disabled" aria-label="Previous page" disabled="true">
+                                                                    <span class="mat-button-wrapper">
+                                                                        <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                                </button>
+
+                                                                <button mat-icon-button="" type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-next mat-icon-button mat-button-base mat-button-disabled" aria-label="Next page" disabled="true">
+                                                                    <span class="mat-button-wrapper">
+                                                                        <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                                </button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </mat-paginator>
+                                            </div>
+                                            <div id="additional-details" class="mat-tab-body ng-star-inserted">
+                                                <div class="container-fluid mt-3">
+                                                    <div class="row">
+                                                        <div class="col-md-4 tabcol mb-1">
+                                                            <label class="rd-form-select-label mb-1">Permanent Account Number (PAN)</label>
+                                                            <input type="text" class="form-control" placeholder="Enter Permanent Account Number" />
+                                                        </div>
+                                                        <div class="col-md-4 tabcol mb-1">
+                                                            <label class="rd-form-select-label mb-1">Aadhaar </label>
+                                                            <input type="text" class="form-control" placeholder="Enter Aadhaar Number" />
+                                                        </div>
+                                                        <div class="col-md-4 tabcol mb-1">
+                                                            <label class="rd-form-select-label mb-1">IFSC Code</label>
+                                                            <input type="text" class="form-control" placeholder="Enter IFSC Code" />
+                                                        </div>
+                                                        <div class="col-md-4 tabcol mb-1">
+                                                            <label class="rd-form-select-label mb-1">ESI Number</label>
+                                                            <input type="text" class="form-control" placeholder="Enter ESI Number" />
+                                                        </div>
+                                                        <div class="col-md-4 tabcol mb-1">
+                                                            <label class="rd-form-select-label mb-1">EPF Number</label>
+                                                            <input type="text" class="form-control" placeholder="Enter EPF Number" />
+                                                        </div>
+                                                        <div class="col-md-12 formButtons d-flex justify-content-end tabcol mt-4">
+                                                            <button type="button" class="btn btn-secondary me-2">Reset</button>
+                                                            <button type="button" class="btn btn-primary">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -850,6 +1101,146 @@
     </div>
 </div>
 
+<div class="modal fade" id="addEducationModal">
+    <div class="modal-dialog efcModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Add Education
+            </div>
+            <div class="row">
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Course *</label>
+                    <input type="text" class="form-control" placeholder="Ex.10th,12th.."/>
+                </div>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Institution *</label>
+                    <input type="text" class="form-control" placeholder="Enter Institution Name" />
+                </div>
+                <div class="col-md-4 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Start Year *</label>
+                    <select class="form-select">
+                        <option selected>Select Start Year</option>
+                        <option value="1">Admin Department</option>
+                        <option value="2">HR Department</option>
+                    </select>
+                </div>
+                <div class="col-md-4 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">End Year *</label>
+                    <select class="form-select">
+                        <option selected>Select End Year</option>
+                        <option value="1">Admin Department</option>
+                        <option value="2">HR Department</option>
+                    </select>
+                </div>
+                <div class="col-md-4 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Grade *</label>
+                    <input type="text" class="form-control" placeholder="Ex.A.." />
+                </div>
+                <div class="col-md-12 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Upload Education Certificate (PNG,JPEG,PDF,DOCX,XLSX)</label>
+                    <input type="file" class="form-control" placeholder="Upload Education Certificate" />
+                </div>
+                <div class="col-md-12 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Description *</label>
+                    <textarea type="text" class="form-control" placeholder="Enter Description"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addFamilyModal">
+    <div class="modal-dialog efcModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Add Member
+            </div>
+            <div class="row">
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Name *</label>
+                    <input type="text" class="form-control" placeholder="Ex.10th,12th.." />
+                </div>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Date of Birth</label>
+                    <input type="date" class="form-control" placeholder="Enter Institution Name" />
+                </div>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Select Member *</label>
+                    <select class="form-select">
+                        <option selected>Select Member</option>
+                        <option value="1">Admin Department</option>
+                        <option value="2">HR Department</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12 my-3">
+                <div>
+                    <label class="rd-form-select-label mb-2"><input type="checkbox" id="1" name="checkboxName"> Dependent</label>
+                </div>
+                <div>
+                    <label class="rd-form-select-label mb-2"><input type="checkbox" id="2" name="checkboxName"> Is Nominee</label>
+                </div>
+                <div>
+                    <label class="rd-form-select-label mb-2"><input type="checkbox" id="3" name="checkboxName"> Add Emergency Contact Number</label>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addExperienceModal">
+    <div class="modal-dialog efcModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Add Experience
+            </div>
+            <div class="row">
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Organization *</label>
+                    <input type="text" class="form-control" placeholder="Enter Organization" />
+                </div>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Designation *</label>
+                    <input type="text" class="form-control" placeholder="Enter Designation" />
+                </div>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Start Year *</label>
+                    <select class="form-select">
+                        <option selected>Select Member</option>
+                        <option value="1">Admin Department</option>
+                        <option value="2">HR Department</option>
+                    </select>
+                </div>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">End Year *</label>
+                    <select class="form-select">
+                        <option selected>Select Member</option>
+                        <option value="1">Admin Department</option>
+                        <option value="2">HR Department</option>
+                    </select>
+                </div>
+                <div class="col-md-12 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Description *</label>
+                    <textarea type="text" class="form-control" placeholder="Enter Description"></textarea>
+                </div>
+                <div class="col-md-12 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Upload Experience Certificate * (PNG,JPEG,PDF,DOCX,XLSX Formats)</label>
+                    <input type="file" class="form-control" placeholder="Enter Designation" />
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="modal fade" id="addSalaryModal">
     <div class="modal-dialog efcModal">
         <div class="modal-content">
@@ -887,3 +1278,149 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="addDocumentModal">
+    <div class="modal-dialog efcModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">Add Document</div>
+            <div class="row">
+                <div class="col-md-12 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Upload Document *</label>
+                    <input type="file" class="form-control" placeholder="Select File" />
+                </div>
+                <div class="col-md-12 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Select Document Type *</label>
+                    <select class="form-select">
+                        <option selected>Select Document Type</option>
+                        <option value="1">Admin Department</option>
+                        <option value="2">HR Department</option>
+                    </select>
+                </div>
+                <div class="col-md-12 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Effective Year</label>
+                    <input type="date" class="form-control" placeholder="Select Expiry Date" />
+                </div>
+                <div class="col-md-12 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Description *</label>
+                    <textarea type="text" class="form-control" placeholder="Document Description"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addAssetsModal">
+    <div class="modal-dialog efcModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">Add Asset</div>
+            <div class="row">
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">
+                        Asset Category *
+                    </label>
+                    <select class="form-select">
+                        <option selected>Select Asset Category</option>
+                        <option value="1">Admin Department</option>
+                        <option value="2">HR Department</option>
+                    </select>
+                </div>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Type of Asset *</label>
+                    <select class="form-select">
+                        <option selected>Select Asset Type</option>
+                        <option value="1">Admin Department</option>
+                        <option value="2">HR Department</option>
+                    </select>
+                </div>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Asset Items *</label>
+                    <select class="form-select">
+                        <option selected>Select Asset Items</option>
+                        <option value="1">Admin Department</option>
+                        <option value="2">HR Department</option>
+                    </select>
+                </div>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Given Date *</label>
+                    <input type="date" class="form-control" placeholder="Select Expiry Date" />
+                </div>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Return Date</label>
+                    <input type="date" class="form-control" placeholder="Select Expiry Date" />
+                </div>
+                <div class="col-md-12 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Description *</label>
+                    <textarea type="text" class="form-control" placeholder="Document Description"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addLettersModal">
+    <div class="modal-dialog efcModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">Assign Letters</div>
+            <div class="row">
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">
+                        Letter Type *
+                    </label>
+                    <select class="form-select">
+                        <option selected>Select Letter Type</option>
+                        <option value="1">Admin Department</option>
+                        <option value="2">HR Department</option>
+                    </select>
+                </div>
+                <div class="col-md-12 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Comments *</label>
+                    <textarea type="text" class="form-control" placeholder="Enter Comments"></textarea>
+                </div>
+            </div>
+            <div class="col-md-12 my-3">
+                <div>
+                    <label class="rd-form-select-label mb-2"><input type="checkbox" id="1" name="checkboxName"> Email</label>
+                </div>
+                <div>
+                    <label class="rd-form-select-label mb-2"><input type="checkbox" id="2" name="checkboxName"> Allow View</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#previewModal" class="btn btn-primary">Preview</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="previewModal">
+    <div class="modal-dialog efcModal previewModal">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="rd-dialog-heading p-0">Document Preview</div>
+                    <textarea name="previewdoc" id="editor"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer mt-3">
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            height: 400,
+            width: '100%'
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>

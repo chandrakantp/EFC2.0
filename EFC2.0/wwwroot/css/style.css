@@ -40585,6 +40585,9 @@ input.mat-input-element:read-only {
 .modal-dialog.efcModal {
     max-width: 42% !important;
 }
+.modal-dialog.efcModal.previewModal {
+    max-width: 70% !important;
+}
 .modal-dialog.efcModal .modal-content {
     display: block;
     padding: 24px;
