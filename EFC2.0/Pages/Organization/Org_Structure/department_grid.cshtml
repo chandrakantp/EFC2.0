@@ -1,4 +1,145 @@
 ﻿@page
-@model EFC2._0.Pages.Organization.Org_Structure.department_gridModel
 @{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
+<div class="app-container" dir="ltr">
+    <div class="container-fluid px-0 main-content-page h-100">
+        <partial name="Organization_Tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="org-structure">
+                <ul class="topnav-child-1">
+                    <li><a href="/organization/org_structure/legal_entities"> Legal Entity</a> </li>
+                    <li class="nav-active-top"><a href="/organization/org_structure/department_grid"> Department</a> </li>
+                    <li><a href="/organization/org_structure/designation_view"> Designation</a> </li>
+                    <li><a href="/organization/org_structure/work_location"> Work Location</a></li>
+                    <li><a href="/organization/org_structure/salary_structure"> Salary Structure</a></li>
+                </ul>
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div id="employeeDetailPage" class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">Departments</h4>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="container-fluid py-2">
+                                        <div class="d-flex justify-content-end tabcol mb-1">
+                                            <div style="position: relative;">
+                                                <input type="text" class="grid-search-box" placeholder="Search" fdprocessedid="xdmbl">
+                                                <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color">search</mat-icon>
+                                            </div>
+                                            <button type="button" class="mat-ripple p-element rd-round-button ng-star-inserted" tabindex="0"><img src="/images/upload_file.svg"></button>
+                                            <button data-bs-toggle="modal" data-bs-target="#addProbationModal" type="button" class="mat-ripple p-element rd-round-button ng-star-inserted" onclick="addEmployee()" fdprocessedid="jx8e7"><img src="/images/add.svg"></button>
+                                            <button type="button" ptooltip="Download" tooltipposition="top" class="mat-ripple p-element mat-menu-trigger rd-round-button" fdprocessedid="g20k8k"><img src="/images/download.svg"></button>
+                                        </div>
+                                        <div class="col-12 px-0">
+                                            <div class="ng-star-inserted">
+                                                <div class="example-table-container rd-table-wrapper">
+                                                    <table class="mat-table cdk-table">
+                                                        <thead role="rowgroup">
+                                                            <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                                                <th class="mat-header-cell cdk-header-cell"> Department Name	 </th>
+                                                                <th class="mat-header-cell cdk-header-cell">Entity Head	</th>
+                                                                <th class="mat-header-cell cdk-header-cell">Country</th>
+                                                                <th class="mat-header-cell cdk-header-cell">State</th>
+                                                                <th class="mat-header-cell cdk-header-cell"> Actions </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody role="rowgroup">
+                                                            <tr class="mat-row cdk-row ng-star-inserted">
+                                                                <td class="mat-cell cdk-cell">Sales Department</td>
+                                                                <td class="mat-cell cdk-cell"> -	</td>
+                                                                <td class="mat-cell cdk-cel">India</td>
+                                                                <td class="mat-cell cdk-cel">Delhi</td>
+                                                                <td class="mat-cell cdk-cell">
+                                                                    <img src="/images/edit1.svg" alt="Edit" title="Edit" width="16px" class="img-fluid me-2">
+                                                                    <img src="/images/trash.svg" alt="Delete" title="Delete" width="16px" class="img-fluid">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mat-paginator">
+                                            <div class="mat-paginator-outer-container">
+                                                <div class="mat-paginator-container">
+                                                    <div class="mat-paginator-page-size ng-star-inserted">
+                                                        <div class="mat-paginator-page-size-label"> Items per page: </div>
+                                                        <mat-form-field class="mat-form-field mat-paginator-page-size-select mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-should-float mat-form-field-hide-placeholder ng-star-inserted">
+                                                            <div class="mat-form-field-wrapper">
+                                                                <div class="mat-form-field-flex">
+
+                                                                    <div class="mat-form-field-infix">
+                                                                        <mat-select role="combobox" aria-autocomplete="none" aria-haspopup="true" class="mat-select ng-star-inserted" id="mat-select-38" tabindex="0" aria-expanded="false" aria-label="Items per page:" aria-required="false" aria-disabled="false" aria-invalid="false">
+                                                                            <div class="mat-select-trigger">
+                                                                                <div class="mat-select-value" id="mat-select-value-39">
+
+                                                                                    <span class="mat-select-value-text ng-star-inserted">
+                                                                                        <span class="mat-select-min-line ng-star-inserted">12</span>
+                                                                                    </span>
+
+                                                                                </div>
+                                                                                <div class="mat-select-arrow-wrapper">
+                                                                                    <div class="mat-select-arrow"></div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </mat-select>
+                                                                        <span class="mat-form-field-label-wrapper">
+
+                                                                        </span>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="mat-form-field-underline ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+
+                                                                <div class="mat-form-field-subscript-wrapper">
+
+                                                                    <div class="mat-form-field-hint-wrapper ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+
+                                                                        <div class="mat-form-field-hint-spacer"></div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </mat-form-field>
+
+                                                    </div>
+
+                                                    <div class="mat-paginator-range-actions">
+                                                        <div class="mat-paginator-range-label"> 1 - 1 of 1 </div>
+
+                                                        <button type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-previous mat-icon-button mat-button-base mat-button-disabled" aria-label="Previous page" disabled="true">
+                                                            <span class="mat-button-wrapper">
+                                                                <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                                                </svg>
+                                                            </span>
+                                                            <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                        </button>
+
+                                                        <button type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-next mat-icon-button mat-button-base mat-button-disabled" aria-label="Next page" disabled="true">
+                                                            <span class="mat-button-wrapper">
+                                                                <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                                </svg>
+                                                            </span>
+                                                            <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                        </button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1081,3 +1081,8 @@ button.menuClick {
     background-color: #173d7a;
     color: #fff;
 }
+.SupportTxt {
+    font-size: 12px;
+    padding-left: 7px;
+    color: #6e6e6e;
+}
