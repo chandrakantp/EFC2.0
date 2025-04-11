@@ -4837,7 +4837,16 @@ textarea.form-control-lg {
         float: left;
         margin-left: -1.5em
     }
-
+.form-check-input[type=checkbox] {
+    border-radius: 0 !important;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #444;
+    box-shadow:unset;
+}
+.form-check-input[type=checkbox]:focus {
+    box-shadow: unset;
+}
 .form-check-reverse {
     padding-right: 1.5em;
     padding-left: 0;
@@ -39535,7 +39544,8 @@ tr.mat-row, tr.mat-footer-row {
 
 .mat-row .mat-cell {
     padding: 4px 16px;
-    font-size: 12px
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .mat-header-cell {
