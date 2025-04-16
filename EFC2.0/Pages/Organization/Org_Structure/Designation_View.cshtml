@@ -16,7 +16,7 @@
                 </ul>
                 <div class="container-fluid p-3">
                     <div class="grand-child nav-active-top">
-                        <div id="employeeDetailPage" class="ng-star-inserted">
+                        <div class="ng-star-inserted">
                             <div class="page-title-h">
                                 <div class="d-flex justify-content-start align-items-center">
                                     <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
@@ -24,7 +24,7 @@
                                 </div>
                             </div>
                             <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
-                                <div class="container-fluid py-2">
+                                <div class="container-fluid py-0">
                                     <div class="row align-items-end  justify-content-between">
                                         <div class="col-md-5 tab-col-width2">
                                             <div class="row align-items-end">
@@ -48,8 +48,8 @@
                                                 <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color">search</mat-icon>
                                             </div>
                                             <button type="button" class="mat-ripple p-element rd-round-button ng-star-inserted" tabindex="0"><img src="/images/upload_file.svg"></button>
-                                            <button data-bs-toggle="modal" data-bs-target="#addProbationModal" type="button" class="mat-ripple p-element rd-round-button ng-star-inserted" onclick="addEmployee()" fdprocessedid="jx8e7"><img src="/images/add.svg"></button>
-                                            <button type="button" ptooltip="Download" tooltipposition="top" class="mat-ripple p-element mat-menu-trigger rd-round-button" fdprocessedid="y4nnuv"><img src="/images/download.svg"></button>
+                                            <button data-bs-toggle="modal" data-bs-target="#addDesignationModal" type="button" class="mat-ripple p-element rd-round-button ng-star-inserted"><img src="/images/add.svg"></button>
+                                            <button type="button" ptooltip="Download" tooltipposition="top" class="mat-ripple p-element mat-menu-trigger rd-round-button"><img src="/images/download.svg"></button>
                                         </div>
                                     </div>
                                     <div class="col-12 px-0">
@@ -155,6 +155,33 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addDesignationModal">
+    <div class="modal-dialog efcModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Add Designation
+            </div>
+            <div class="row">
+                <div class="col-md-12 rd-form-select my-2">
+                    <label class="rd-form-select-label mb-1">Designation Name *</label>
+                    <input type="text" class="form-control" placeholder="Enter Department Name" />
+                </div>
+                <div class="col-md-12 rd-form-select my-2">
+                    <label class="rd-form-select-label mb-1">Department Name</label>
+                    <select class="form-select" placeholder="Department Name">
+                        <option selected>Select Employee Type</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </div>

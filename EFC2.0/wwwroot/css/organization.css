@@ -1086,3 +1086,28 @@ button.menuClick {
     padding-left: 7px;
     color: #6e6e6e;
 }
+
+.btn-group .dropdown-toggle::after {
+    content: unset !important;
+}
+ul.dropdown-menu {
+    border: 0;
+    box-shadow: 0 2px 4px -1px #0003, 0 4px 5px #00000024, 0 1px 10px #0000001f;
+    overflow: auto;
+    border-radius: 4px;
+    outline: 0;
+    min-width: 210px;
+    max-width: 280px;
+}
+
+    ul.dropdown-menu li a {
+        font-size: 14px;
+        font-weight: 400;
+        padding: 12px 20px;
+        display: block;
+        cursor: pointer;
+    }
+
+        ul.dropdown-menu li a:hover {
+            background-color: #f4f4f4;
+        }

@@ -4790,6 +4790,7 @@ textarea.form-control-lg {
 .form-control:focus {
     box-shadow: unset
 }
+
 .form-select:focus {
     border-color: #86b7fe;
     outline: 0;
@@ -4837,16 +4838,20 @@ textarea.form-control-lg {
         float: left;
         margin-left: -1.5em
     }
+
 .form-check-input[type=checkbox] {
     border-radius: 0 !important;
     width: 16px;
     height: 16px;
     border: 2px solid #444;
-    box-shadow:unset;
-}
-.form-check-input[type=checkbox]:focus {
     box-shadow: unset;
+    margin-top: 2px;
 }
+
+    .form-check-input[type=checkbox]:focus {
+        box-shadow: unset;
+    }
+
 .form-check-reverse {
     padding-right: 1.5em;
     padding-left: 0;
@@ -30028,6 +30033,7 @@ input.mat-input-element {
     right: 15px;
     top: 60px;
 }
+
 .cdk-overlay-backdrop {
     position: absolute;
     inset: 0;
@@ -30036,12 +30042,12 @@ input.mat-input-element {
     -webkit-tap-highlight-color: transparent;
     transition: opacity .4s cubic-bezier(.25,.8,.25,1);
     opacity: 0;
-    display:none;
+    display: none;
 }
 
     .cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
         opacity: 1;
-        display:block;
+        display: block;
     }
 
 .cdk-high-contrast-active .cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
@@ -30620,6 +30626,7 @@ body {
     .mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
         background-color: #ff823e
     }
+
         .mat-flat-button.mat-primary:hover, .mat-raised-button.mat-primary:hover, .mat-fab.mat-primary:hover, .mat-mini-fab.mat-primary:hover {
             background-color: #325080
         }
@@ -34203,7 +34210,7 @@ em, i {
     color: #fff;
     font-weight: 600;
     padding: 10px 20px;
-    transition:all .3s linear;
+    transition: all .3s linear;
 }
 
     .rd-btn-primary:hover {
@@ -39726,8 +39733,20 @@ tr.mat-row, tr.mat-footer-row {
     font-size: 11px;
     letter-spacing: .8px;
     color: #363636;
+    margin-bottom: 0 !important;
 }
 
+    .rd-form-select-label span {
+        font-size: 14px;
+        color: #000;
+        padding-left: 5px;
+    }
+    .rd-form-select-label .form-check-input[type=radio] {
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        margin: 0;
+    }
 .multi-dropdown-style, .single-dropdown-style {
     width: 100%
 }
@@ -39867,10 +39886,15 @@ tr.mat-row, tr.mat-footer-row {
     line-height: 24px;
     padding: 0 4px;
     margin-bottom: 16px;
+    margin-top: 10px;
     text-align: start;
-    letter-spacing: .5px
+    letter-spacing: .5px;
 }
-
+.rd-dialog-heading .supportText {
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 10px;
+}
 .p-inputtext:enabled:focus {
     box-shadow: none !important
 }
@@ -40580,27 +40604,35 @@ input.mat-input-element:read-only {
     border: 1px solid #EFEFEF;
     font-size: 14px
 }
+
 .form-select {
     box-shadow: unset;
     padding: 6px 8px;
     font-size: 13px;
     color: #202020;
 }
-.form-select:focus {
-    box-shadow: unset;
-}
+
+    .form-select:focus {
+        box-shadow: unset;
+    }
 
 
 /*Modal Popup*/
 .modal-dialog.efcModal {
-    max-width: 42% !important;
+    max-width: 40% !important;
 }
+
+.modal-dialog.efcMaxModal {
+    max-width: 80% !important;
+}
+
 .modal-dialog.efcModal.previewModal {
     max-width: 70% !important;
 }
+
 .modal-dialog.efcModal .modal-content {
     display: block;
-    padding: 24px;
+    padding: 12px 24px;
     border-radius: 4px;
     box-sizing: border-box;
     overflow: auto;
@@ -40609,24 +40641,29 @@ input.mat-input-element:read-only {
     height: 100%;
     border: 0;
 }
-.modal-dialog.efcModal .modal-content .modal-footer {
-    padding: 0;
-    border: 0;
-}
-.modal-dialog.efcModal .modal-content .modal-footer button {
-    font-size: 14px;
-    border-radius: 4px;
-    box-shadow:unset;
-}
-.modal-dialog.efcModal .modal-content .modal-footer button.btn-primary {
-    background-color: #325080;
-}
-.modal-dialog.efcModal .modal-content .modal-footer button.btn-secondary {
-    background-color: transparent;
-    border: 1px solid red;
-    color: red;
-}
-.modal-dialog.efcModal .modal-content .modal-footer button.btn-secondary:hover {
-    background-color: red;
-    color: white;
-}
+
+    .modal-dialog.efcModal .modal-content .modal-footer {
+        padding: 0;
+        border: 0;
+    }
+
+        .modal-dialog.efcModal .modal-content .modal-footer button {
+            font-size: 14px;
+            border-radius: 4px;
+            box-shadow: unset;
+        }
+
+            .modal-dialog.efcModal .modal-content .modal-footer button.btn-primary {
+                background-color: #325080;
+            }
+
+            .modal-dialog.efcModal .modal-content .modal-footer button.btn-secondary {
+                background-color: transparent;
+                border: 1px solid red;
+                color: red;
+            }
+
+                .modal-dialog.efcModal .modal-content .modal-footer button.btn-secondary:hover {
+                    background-color: red;
+                    color: white;
+                }

@@ -68,6 +68,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#employeeAddPage").hide();
     $("#empCards").hide();
+    $("#addCandidateDetails").hide();
 });
 function addEmployee() {
     $("#employeeDetailPage").hide();
@@ -87,4 +88,12 @@ function copyEmailText() {
     }).catch(err => {
         console.error("Failed to copy: ", err);
     });
+}
+function addCandidate() {
+    $("#CandidateDetailPage").hide();
+    $("#addCandidateDetails").show();
+}
+function backToCanDetails() {
+    $("#CandidateDetailPage").show();
+    $("#addCandidateDetails").hide();
 }

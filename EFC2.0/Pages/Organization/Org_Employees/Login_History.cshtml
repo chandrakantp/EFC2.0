@@ -30,7 +30,7 @@
                                         </div>
                                     </div>
                                     <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
-                                        <div class="container-fluid py-2">
+                                        <div class="container-fluid py-0">
                                             <div class="mainContentHeightOrg pt-0">
                                                 <div class="row">
                                                     <div class="ng-untouched ng-pristine ng-valid">
@@ -65,7 +65,7 @@
                                                                 </div>
                                                                 <div class="col-md-2 d-flex align-items-end tab-col-width2"><button type="button" class="mx-2 rd-btn-tertairy-sm rd-text-secondary-1">Reset</button><button type="button" class="mx-2 rd-btn-primary-sm rd-text-primary-1">Submit</button></div>
                                                                 <div class="col-md-4 d-flex justify-content-end align-items-center tabcol">
-                                                                    <button type="button" class="btn btn-info" onclick="addEmployee()">Login Settings</button>
+                                                                    <button data-bs-toggle="modal" data-bs-target="#loginSettingModal" type="button" class="btn btn-info">Login Settings</button>
                                                                     <div style="position: relative;">
                                                                         <input type="text" class="grid-search-box" placeholder="Search">
                                                                         <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color">search</mat-icon>
@@ -88,9 +88,7 @@
                                                                         <th class="mat-header-cell cdk-header-cell">Office Email</th>
                                                                         <th class="mat-header-cell cdk-header-cell">Employee Status</th>
                                                                         <th class="mat-header-cell cdk-header-cell">Web Login Status</th>
-                                                                        <th class="mat-header-cell cdk-header-cell">Mobile Login Status</th>
                                                                         <th class="mat-header-cell cdk-header-cell">Last Web Login Date</th>
-                                                                        <th class="mat-header-cell cdk-header-cell">Last Mobile Login Date</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody role="rowgroup">
@@ -100,9 +98,7 @@
                                                                         <td class="mat-cell cdk-cel"> chhavi.yadav@databridgemarketresearch.in </td>
                                                                         <td class="mat-cell cdk-cel"> <span class="badge rounded-pill text-bg-success">Active</span> </td>
                                                                         <td class="mat-cell cdk-cel text-center"><img src="/images/circle-check-green.svg" alt="check" class="img-fluid" width="16" /></td>
-                                                                        <td class="mat-cell cdk-cel text-center"><img src="/images/circle-xmark-red.svg" alt="xmark" class="img-fluid" width="16" /></td>
                                                                         <td class="mat-cell cdk-cel text-center"> 11/04/2025 </td>
-                                                                        <td class="mat-cell cdk-cel text-center"> - </td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -364,6 +360,30 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="loginSettingModal">
+    <div class="modal-dialog efcModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Manage Login Options
+                <p class="supportText">Enable/Disable login access for 1 selected employee(s)</p>
+            </div>
+            <div class="row">
+                <div class="col-md-12 my-2">
+                    <div>
+                       @*  <label class="rd-form-select-label mb-2 me-2"><input type="checkbox" id="1" class="form-check-input" name="checkBoxName">  <span> Mobile Login </span></label> *@
+                        <label class="rd-form-select-label mb-2 me-2"><input type="checkbox" id="1" class="form-check-input" name="checkBoxName">  <span> Web Login  </span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Disable</button>
+                <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Enable</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

@@ -13,23 +13,29 @@
                 </ul>
                 <div class="container-fluid p-3">
                     <div class="grand-child nav-active-top">
-                        <div id="employeeDetailPage" class="ng-star-inserted">
+                        <div id="CandidateDetailPage" class="ng-star-inserted">
                             <div class="page-title-h">
                                 <div class="d-flex justify-content-start align-items-center">
                                     <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
-                                    <h4 class="card-title m-0 card-heading">Candidates Details</h4>
+                                    <h4 class="card-title m-0 card-heading">Candidate Details</h4>
                                 </div>
                             </div>
                             <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
-                                <div class="container-fluid py-2">
+                                <div class="container-fluid py-0">
                                     <div class="d-flex justify-content-end tabcol mb-1">
                                         <div style="position: relative;">
                                             <input type="text" class="grid-search-box" placeholder="Search" fdprocessedid="xdmbl">
                                             <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color">search</mat-icon>
                                         </div>
                                         <button type="button" class="mat-ripple p-element rd-round-button ng-star-inserted" tabindex="0"><img src="/images/upload_file.svg"></button>
-                                        <button data-bs-toggle="modal" data-bs-target="#addProbationModal" type="button" class="mat-ripple p-element rd-round-button ng-star-inserted" onclick="addEmployee()" fdprocessedid="jx8e7"><img src="/images/add.svg"></button>
-                                        <button type="button" ptooltip="Download" tooltipposition="top" class="mat-ripple p-element mat-menu-trigger rd-round-button" fdprocessedid="g20k8k"><img src="/images/download.svg"></button>
+                                        <div class="btn-group">
+                                            <button type="button" class="mat-ripple p-element rd-round-button ng-star-inserted dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><img src="/images/add.svg"></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a onclick="addCandidate()">New Candidate</a></li>
+                                                <li><a onclick="addBulkCandidateViaMail()">Bulk Candidate via mail</a></li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" ptooltip="Download" tooltipposition="top" class="mat-ripple p-element mat-menu-trigger rd-round-button"><img src="/images/download.svg"></button>
                                     </div>
                                     <div class="col-12 px-0">
                                         <div class="ng-star-inserted">
@@ -147,9 +153,182 @@
                                 </div>
                             </mat-card>
                         </div>
+                        <div id="addCandidateDetails" class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;" onclick="backToCanDetails()">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">Add Candidate</h4>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="mainContentHeightOrg2">
+                                    <div class="container-fluid">
+                                        <form novalidate="" class="ng-untouched ng-invalid ng-dirty">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Title</label>
+                                                        <select class="form-select" placeholder="Select Title">
+                                                            <option selected>Select Employee Type</option>
+                                                            <option value="1">1</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">First Name*</label>
+                                                        <input type="text" class="form-control" placeholder="Enter First Name" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Last Name*</label>
+                                                        <input type="text" class="form-control" placeholder="Enter Last Name" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Gender</label>
+                                                        <select class="form-select" placeholder="Select Gender">
+                                                            <option selected>Select Title</option>
+                                                            <option value="1">1</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Personal Email*</label>
+                                                        <input type="email" class="form-control" placeholder="Enter Personal Email" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Personal Mobile</label>
+                                                        <input type="text" class="form-control" placeholder="Enter Personal Mobile" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Date of Birth*</label>
+                                                        <input type="date" class="form-control" placeholder="Date of Birth" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Marital Status</label>
+                                                        <select class="form-select" placeholder="Select Marital Status">
+                                                            <option selected>Select Employee Status</option>
+                                                            <option value="1">1</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">
+                                                            Work Location *
+                                                        </label>
+                                                        <select class="form-select" placeholder="Select Work Location">
+                                                            <option selected>Select Country</option>
+                                                            <option value="1">1</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Onboarding Groups</label>
+                                                        <select class="form-select" placeholder="Select Onboarding Groups">
+                                                            <option selected>Select State</option>
+                                                            <option value="1">1</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Passport Number</label>
+                                                        <input type="text" class="form-control" placeholder="i.e.JXXXXXXXXXX" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Date of Join</label>
+                                                        <input type="date" class="form-control" placeholder="Date of Birth" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="separator my-2"><span class="border p-1 small rounded head fw-bold head px-2">Address</span></div>
+                                            <div class="row align-items-center">
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Present Address*</label>
+                                                        <input type="text" class="form-control" placeholder="Enter Present Address" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 my-2">
+                                                    <div>
+                                                        <label class="rd-form-select-label mb-2 me-2 text-muted"><input type="checkbox" id="1" class="form-check-input" name="checkBoxName">  <span> Onboard employee with probation  </span></label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Permanent Address</label>
+                                                        <input type="text" class="form-control" placeholder="Enter Permanent Address" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Country*</label>
+                                                        <select class="form-select" placeholder="Select Country">
+                                                            <option selected>Select City</option>
+                                                            <option value="1">1</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">State*</label>
+                                                        <select class="form-select" placeholder="Select State">
+                                                            <option selected>Select City</option>
+                                                            <option value="1">1</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">City</label>
+                                                        <select class="form-select" placeholder="Select City">
+                                                            <option selected>Select City</option>
+                                                            <option value="1">1</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Zipcode*</label>
+                                                        <input type="text" class="form-control" placeholder="Enter Zipcode" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="rd-form-select my-1">
+                                                        <label class="rd-form-select-label mb-1">Nationality</label>
+                                                        <input type="text" class="form-control" placeholder="Enter Nationality" />
+                                                    </div>
+                                                </div>
+                                                <div class="text-end">
+                                                    <button type="submit" color="primary" class="rd-btn-primary-sm">
+                                                        Submit
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+

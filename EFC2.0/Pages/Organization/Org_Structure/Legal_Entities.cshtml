@@ -16,7 +16,7 @@
                 </ul>
                 <div class="container-fluid p-3">
                     <div class="grand-child nav-active-top">
-                        <div id="employeeDetailPage" class="ng-star-inserted">
+                        <div class="ng-star-inserted">
                             <div class="page-title-h">
                                 <div class="d-flex justify-content-start align-items-center">
                                     <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
@@ -24,7 +24,16 @@
                                 </div>
                             </div>
                             <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
-                                <div class="container-fluid py-2">
+                                <div class="container-fluid py-0">
+                                    <div class="d-flex justify-content-end tabcol mb-1">
+                                        <div style="position: relative;">
+                                            <input type="text" class="grid-search-box" placeholder="Search" fdprocessedid="xdmbl">
+                                            <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color">search</mat-icon>
+                                        </div>
+                                        <button type="button" class="mat-ripple p-element rd-round-button ng-star-inserted" tabindex="0"><img src="/images/upload_file.svg"></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#addLegalEntitiesModal" type="button" class="mat-ripple p-element rd-round-button ng-star-inserted"><img src="/images/add.svg"></button>
+                                        <button type="button" ptooltip="Download" tooltipposition="top" class="mat-ripple p-element mat-menu-trigger rd-round-button"><img src="/images/download.svg"></button>
+                                    </div>
                                     <div class="col-12 px-0">
                                         <div class="ng-star-inserted">
                                             <div class="example-table-container rd-table-wrapper">
@@ -130,6 +139,145 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addLegalEntitiesModal">
+    <div class="modal-dialog efcModal efcMaxModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Add Legal Entity
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="rd-form-select my-1">
+                        <label class="rd-form-select-label mb-1">Entity Name *</label>
+                        <input type="text" class="form-control" placeholder="Enter Entity Name" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rd-form-select my-1">
+                        <label class="rd-form-select-label mb-1">Legal Registration Name *</label>
+                        <input type="text" class="form-control" placeholder="Enter Legal Registration Name" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rd-form-select my-1">
+                        <label class="rd-form-select-label mb-1">Legal Registration Number *</label>
+                        <input type="text" class="form-control" placeholder="Enter Legal Registration Number" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rd-form-select my-1">
+                        <label class="rd-form-select-label mb-1">Entity Head*</label>
+                        <select class="form-select" placeholder="Entity Head">
+                            <option selected>Select Employee Type</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rd-form-select my-1">
+                        <label class="rd-form-select-label mb-1">Currency Format*</label>
+                        <select class="form-select" placeholder="Select Currency Format">
+                            <option selected>Select Title</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rd-form-select my-1">
+                        <label class="rd-form-select-label mb-1">Country*</label>
+                        <select class="form-select" placeholder="Country">
+                            <option selected>Select Title</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rd-form-select my-1">
+                        <label class="rd-form-select-label mb-1">State*</label>
+                        <select class="form-select" placeholder="State">
+                            <option selected>Select Title</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rd-form-select my-1">
+                        <label class="rd-form-select-label mb-1">Select Month*</label>
+                        <select class="form-select" placeholder="Select Month">
+                            <option selected>Select Title</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rd-form-select my-1">
+                        <label class="rd-form-select-label mb-1">Start Year*</label>
+                        <select class="form-select" placeholder="Start Year">
+                            <option selected>Select Title</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rd-form-select my-1">
+                        <label class="rd-form-select-label mb-1">Last Day*</label>
+                        <select class="form-select" placeholder="Select Last Day">
+                            <option selected>Select Title</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rd-form-select my-1">
+                        <label class="rd-form-select-label mb-1">Select Financial Year starting month*</label>
+                        <select class="form-select" placeholder="Select Financial Year starting month">
+                            <option selected>Select Title</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rd-form-select my-1">
+                        <label class="rd-form-select-label mb-1">Upload Logo</label>
+                        <input type="file" class="form-control" placeholder="Upload Logo" />
+                    </div>
+                </div>
+                <div class="col-md-12 my-2">
+                    <div>
+                        <label class="rd-form-select-label mb-2"><input type="checkbox" id="1" class="form-check-input" name="checkboxName">  <span class="fw-600" style="font-size:12px;line-height:20px;">Set same logo in payslip </span></label>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                        <label class="rd-form-select-label mb-1">Address*</label>
+                        <textarea type="file" class="form-control" placeholder="Enter Address"></textarea>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div>
+                        <label class="rd-form-select-label mb-2"><input type="checkbox" id="1" class="form-check-input" name="checkboxName">  <span class="fw-600" style="font-size:12px;line-height:20px;">Set a Default </span></label>
+                    </div>
+                    <div>
+                        <label class="rd-form-select-label mb-2"><input type="checkbox" id="1" class="form-check-input" name="checkboxName">  <span class="fw-600" style="font-size:12px;line-height:20px;">Announce Legal Entity Head Change?  </span></label>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div>
+                        <label class="rd-form-select-label mb-2"><input type="checkbox" id="1" class="form-check-input" name="checkboxName">  <span class="fw-600" style="font-size:12px;line-height:20px;">Are Week-Offs Payable?  </span></label>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div>
+                        <label class="rd-form-select-label mb-2"><input type="checkbox" id="1" class="form-check-input" name="checkboxName">  <span class="fw-600" style="font-size:12px;line-height:20px;">Are Holidays Payable? </span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </div>
