@@ -30757,7 +30757,10 @@ body {
     .mat-card.mat-card-flat:not([class*=mat-elevation-z]) {
         box-shadow: 0 0 #0003,0 0 #00000024,0 0 #0000001f
     }
-
+.commts {
+    border-left: #50a5f1 4px solid;
+    box-shadow: #63636333 0 2px 8px;
+}
 .mat-card-subtitle {
     color: #000000d9
 }
@@ -39558,7 +39561,12 @@ tr.mat-row, tr.mat-footer-row {
 .mat-header-cell {
     padding: 4px 16px !important
 }
-
+.mat-row .mat-cell img {
+    cursor: pointer;
+}
+.mat-row .mat-cell:last-child img {
+    width: 18px;
+}
 .topbarbelowContent {
     padding: 16px
 }
@@ -39733,13 +39741,14 @@ tr.mat-row, tr.mat-footer-row {
     font-size: 11px;
     letter-spacing: .8px;
     color: #363636;
-    margin-bottom: 0 !important;
+    /*margin-bottom: 0 !important;*/
 }
 
     .rd-form-select-label span {
         font-size: 14px;
         color: #000;
         padding-left: 5px;
+        cursor: pointer;
     }
     .rd-form-select-label .form-check-input[type=radio] {
         border-radius: 50%;
@@ -40607,7 +40616,7 @@ input.mat-input-element:read-only {
 
 .form-select {
     box-shadow: unset;
-    padding: 6px 8px;
+    padding: 7px 8px;
     font-size: 13px;
     color: #202020;
 }

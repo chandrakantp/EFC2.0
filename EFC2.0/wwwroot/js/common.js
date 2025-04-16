@@ -69,6 +69,9 @@ $(document).ready(function () {
     $("#employeeAddPage").hide();
     $("#empCards").hide();
     $("#addCandidateDetails").hide();
+    $("#addCandidateOnboard").hide();
+    $("#addRequisitionDetails").hide();
+    $("#manageDataPage").hide();
 });
 function addEmployee() {
     $("#employeeDetailPage").hide();
@@ -92,8 +95,31 @@ function copyEmailText() {
 function addCandidate() {
     $("#CandidateDetailPage").hide();
     $("#addCandidateDetails").show();
+    $("#addCandidateOnboard").hide();
+}
+function addBulkCandidateViaMail() {
+    $("#CandidateDetailPage").hide();
+    $("#addCandidateDetails").hide();
+    $("#addCandidateOnboard").show();
 }
 function backToCanDetails() {
     $("#CandidateDetailPage").show();
     $("#addCandidateDetails").hide();
+    $("#addCandidateOnboard").hide();
+}
+function addRequisitionBox() {
+    $("#requisitionPage").hide();
+    $("#addRequisitionDetails").show();
+}
+function backToRequisition() {
+    $("#requisitionPage").show();
+    $("#addRequisitionDetails").hide();
+}
+function manageData() {
+    $("#NoticePeriodDetailPage").hide();
+    $("#manageDataPage").show();
+}
+function backToNoticePeriod() {
+    $("#NoticePeriodDetailPage").show();
+    $("#manageDataPage").hide();
 }

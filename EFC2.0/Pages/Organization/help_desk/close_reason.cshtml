@@ -1,0 +1,168 @@
+﻿@page
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<div class="app-container" dir="ltr">
+    <div class="container-fluid px-0 main-content-page h-100">
+        <partial name="Organization_Tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="summary">
+                <ul class="topnav-child-1">
+                    <li><a href="/organization/help_desk/help_summary"> Summary</a> </li>
+                    <li><a href="/organization/help_desk/question_category_view"> Categories</a> </li>
+                    <li><a href="/organization/help_desk/question_view"> Grievance</a> </li>
+                    <li><a href="/organization/help_desk/help_tickets"> Tickets</a></li>
+                    <li class="nav-active-top"><a href="/organization/help_desk/close_reason"> Close Reasons</a></li>
+                    <li><a href="/organization/help_desk/KnowledgeBase"> Knowledge Base</a></li>
+                    <li><a href="/organization/help_desk/sla"> SLA Config</a></li>
+                    <li><a href="/organization/help_desk/team"> Help-Desk Team</a></li>
+                </ul>
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div id="NoticePeriodDetailPage" class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">Close Reasons</h4>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="container-fluid py-0">
+                                    <div class="d-flex justify-content-end tabcol mb-1">
+                                        <div style="position: relative;">
+                                            <input type="text" class="grid-search-box" placeholder="Search">
+                                            <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color">search</mat-icon>
+                                        </div>
+                                        <button type="button" class="mat-ripple p-element rd-round-button ng-star-inserted" tabindex="0" fdprocessedid="pkdnq"><img src="/images/upload_file.svg"></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#addCloseReseaonModal" type="button" class="mat-ripple p-element rd-round-button ng-star-inserted" title="Add"><img src="/images/add.svg" alt="Add"></button>
+                                    </div>
+                                    <div class="col-12 px-0">
+                                        <div class="ng-star-inserted">
+                                            <div class="example-table-container rd-table-wrapper">
+                                                <table class="mat-table cdk-table">
+                                                    <thead role="rowgroup">
+                                                        <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                                            <th class="mat-header-cell cdk-header-cell">Reasons</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Description</th>
+                                                            <th class="mat-header-cell cdk-header-cell">created By</th>
+                                                            <th class="mat-header-cell cdk-header-cell">modified By</th>
+                                                            <th class="mat-header-cell cdk-header-cell"> Actions </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody role="rowgroup">
+                                                        <tr class="mat-row cdk-row ng-star-inserted">
+                                                            <td class="mat-cell cdk-cell">Issue resolved</td>
+                                                            <td class="mat-cell cdk-cell">The reported issue has been successfully resolved</td>
+                                                            <td class="mat-cell cdk-cell">HR DBMR</td>
+                                                            <td class="mat-cell cdk-cell">-</td>
+                                                            <td class="mat-cell cdk-cell">
+                                                                <img src="/images/edit1.svg" alt="Edit" title="Edit" class="img-fluid me-2" data-bs-toggle="modal" data-bs-target="#addCloseReseaonModal">
+                                                                <img src="/images/trash.svg" alt="Delete" title="Delete" class="img-fluid">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mat-paginator">
+                                        <div class="mat-paginator-outer-container">
+                                            <div class="mat-paginator-container">
+                                                <div class="mat-paginator-page-size ng-star-inserted">
+                                                    <div class="mat-paginator-page-size-label"> Items per page: </div>
+                                                    <mat-form-field class="mat-form-field mat-paginator-page-size-select mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-should-float mat-form-field-hide-placeholder ng-star-inserted">
+                                                        <div class="mat-form-field-wrapper">
+                                                            <div class="mat-form-field-flex">
+
+                                                                <div class="mat-form-field-infix">
+                                                                    <mat-select role="combobox" aria-autocomplete="none" aria-haspopup="true" class="mat-select ng-star-inserted" id="mat-select-38" tabindex="0" aria-expanded="false" aria-label="Items per page:" aria-required="false" aria-disabled="false" aria-invalid="false">
+                                                                        <div class="mat-select-trigger">
+                                                                            <div class="mat-select-value" id="mat-select-value-39">
+
+                                                                                <span class="mat-select-value-text ng-star-inserted">
+                                                                                    <span class="mat-select-min-line ng-star-inserted">12</span>
+                                                                                </span>
+
+                                                                            </div>
+                                                                            <div class="mat-select-arrow-wrapper">
+                                                                                <div class="mat-select-arrow"></div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </mat-select>
+                                                                    <span class="mat-form-field-label-wrapper">
+
+                                                                    </span>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="mat-form-field-underline ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+
+                                                            <div class="mat-form-field-subscript-wrapper">
+
+                                                                <div class="mat-form-field-hint-wrapper ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+
+                                                                    <div class="mat-form-field-hint-spacer"></div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </mat-form-field>
+
+                                                </div>
+
+                                                <div class="mat-paginator-range-actions">
+                                                    <div class="mat-paginator-range-label"> 1 - 1 of 1 </div>
+
+                                                    <button type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-previous mat-icon-button mat-button-base mat-button-disabled" aria-label="Previous page" disabled="true">
+                                                        <span class="mat-button-wrapper">
+                                                            <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                    </button>
+
+                                                    <button type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-next mat-icon-button mat-button-base mat-button-disabled" aria-label="Next page" disabled="true">
+                                                        <span class="mat-button-wrapper">
+                                                            <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addCloseReseaonModal">
+    <div class="modal-dialog efcModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">Add Close Reason</div>
+            <div class="row">
+                <div class="col-md-12 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Name *</label>
+                    <input type="text" class="form-control" placeholder="Enter Name" />
+                </div>
+                <div class="col-md-12 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Description *</label>
+                    <input type="text" class="form-control" placeholder="Enter Description" />
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
