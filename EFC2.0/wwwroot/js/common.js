@@ -72,6 +72,46 @@ $(document).ready(function () {
     $("#addCandidateOnboard").hide();
     $("#addRequisitionDetails").hide();
     $("#manageDataPage").hide();
+
+    //Add Policeies page modal box
+    $('#manualPolicyDiv').show();
+    $('#uploadPolicyDiv').hide();
+    $('input[name="radioboxName"]').change(function () {
+        if ($('#radioManual').is(':checked')) {
+            $('#manualPolicyDiv').show();
+            $('#uploadPolicyDiv').hide();
+        } else if ($('#radioUpload').is(':checked')) {
+            $('#manualPolicyDiv').hide();
+            $('#uploadPolicyDiv').show();
+        }
+    });
+
+    ClassicEditor
+    .create(document.querySelector('#createLetters'), {
+        height: 300,
+        width: '100%'
+    })
+    .catch(error => {
+        console.error(error);
+    });
+
+    ClassicEditor
+    .create(document.querySelector('#createManualPolicy'), {
+        height: 300,
+        width: '100%'
+    })
+    .catch(error => {
+        console.error(error);
+    });
+
+    ClassicEditor
+        .create(document.querySelector('#announcementEditor'), {
+            height: 300,
+            width: '100%'
+        })
+        .catch(error => {
+            console.error(error);
+        });
 });
 function addEmployee() {
     $("#employeeDetailPage").hide();

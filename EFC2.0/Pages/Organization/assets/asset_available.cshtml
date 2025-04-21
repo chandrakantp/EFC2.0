@@ -6,30 +6,65 @@
     <div class="container-fluid px-0 main-content-page h-100">
         <partial name="Organization_Tabs" />
         <div class="aos-init aos-animate">
-            <div class="child-content nav-active-top" id="org-structure">
+            <div class="child-content nav-active-top" id="summary">
                 <ul class="topnav-child-1">
-                    <li class="nav-active-top"><a href="/organization/announcement/category"> Categories</a> </li>
-                    <li><a href="/organization/announcement/announcementlist"> All Announcements</a> </li>
+                    <li><a href="/organization/assets/asset_dashboard"> Summary</a> </li>
+                    <li><a href="/organization/assets/asset_store"> Asset Categories</a> </li>
+                    <li class="nav-active-top"><a href="/organization/assets/asset_available"> Asset availability</a> </li>
+                    <li><a href="/organization/assets/asset_repair"> Repair Team</a></li>
+                    <li><a href="/organization/assets/purchase_order"> Purchase Order</a></li>
                 </ul>
                 <div class="container-fluid p-3">
                     <div class="grand-child nav-active-top">
-                        <div class="ng-star-inserted">
+                        <div id="NoticePeriodDetailPage" class="ng-star-inserted">
                             <div class="page-title-h">
                                 <div class="d-flex justify-content-start align-items-center">
                                     <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
-                                    <h4 class="card-title m-0 card-heading">Categories</h4>
+                                    <h4 class="card-title m-0 card-heading">Asset Available Records</h4>
                                 </div>
                             </div>
                             <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
                                 <div class="container-fluid py-0">
-                                    <div class="d-flex justify-content-end tabcol mb-1">
-                                        <div style="position: relative;">
-                                            <input type="text" class="grid-search-box" placeholder="Search" fdprocessedid="xdmbl">
-                                            <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color">search</mat-icon>
+                                    <div class="row align-items-end  justify-content-between">
+                                        <div class="col-md-9 tab-col-width2">
+                                            <div class="row align-items-end">
+                                                <div class="col-md-3 tab-col-width2">
+                                                    <label class="rd-form-select-label mb-1">Asset Availability</label>
+                                                    <select class="form-select">
+                                                        <option selected>All</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3 tab-col-width2">
+                                                    <label class="rd-form-select-label mb-1">Is Assigned</label>
+                                                    <select class="form-select">
+                                                        <option selected>All</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3 tab-col-width2">
+                                                    <label class="rd-form-select-label mb-1">Employee</label>
+                                                    <select class="form-select">
+                                                        <option selected>Select Employee</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2 d-flex align-items-end tab-col-width2"><button type="button" class="mx-2 rd-btn-tertairy-sm rd-text-secondary-1" fdprocessedid="guvp67">Reset</button><button type="button" class="mx-2 rd-btn-primary-sm rd-text-primary-1" fdprocessedid="y4qkfa">Submit</button></div>
+                                            </div>
                                         </div>
-                                        <button type="button" class="mat-ripple p-element rd-round-button ng-star-inserted" tabindex="0" fdprocessedid="w5el6u"><img src="/images/upload_file.svg"></button>
-                                        <button data-bs-toggle="modal" data-bs-target="#addEditAnnouncementCatModal" type="button" class="mat-ripple p-element rd-round-button ng-star-inserted"><img src="/images/add.svg"></button>
-                                        <button type="button" ptooltip="Download" tooltipposition="top" class="mat-ripple p-element mat-menu-trigger rd-round-button"><img src="/images/download.svg"></button>
+                                        <div class="col-md-3 d-flex justify-content-end align-items-center tabcol mb-1">
+                                            <div style="position: relative;">
+                                                <input type="text" class="grid-search-box" placeholder="Search" fdprocessedid="d4j0ak">
+                                                <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color">search</mat-icon>
+                                            </div>
+                                            <button type="button" ptooltip="Download" tooltipposition="top" class="mat-ripple p-element mat-menu-trigger rd-round-button" fdprocessedid="i2w73"><img src="/images/download.svg"></button>
+                                        </div>
                                     </div>
                                     <div class="col-12 px-0">
                                         <div class="ng-star-inserted">
@@ -38,22 +73,27 @@
                                                     <thead role="rowgroup">
                                                         <tr class="mat-header-row cdk-header-row ng-star-inserted">
                                                             <th class="mat-header-cell cdk-header-cell">Category</th>
-                                                            <th class="mat-header-cell cdk-header-cell">Added By</th>
-                                                            <th class="mat-header-cell cdk-header-cell">Modified By</th>
-                                                            <th class="mat-header-cell cdk-header-cell">Manage Popup Config</th>
-                                                            <th class="mat-header-cell cdk-header-cell"> Actions </th>
+                                                            <th class="mat-header-cell cdk-header-cell">Asset Name</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Asset Item Name</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Code</th>
+                                                            <th class="mat-header-cell cdk-header-cell text-center">Available For Use</th>
+                                                            <th class="mat-header-cell cdk-header-cell text-center">Assigned To	</th>
+                                                            <th class="mat-header-cell cdk-header-cell text-center">Defect</th>
+                                                            <th class="mat-header-cell cdk-header-cell text-center">Repaired</th>
+                                                            <th class="mat-header-cell cdk-header-cell text-center">Warranty Date</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody role="rowgroup">
                                                         <tr class="mat-row cdk-row ng-star-inserted">
-                                                            <td class="mat-cell cdk-cell">Policy Changes</td>
-                                                            <td class="mat-cell cdk-cell">HR DBMR</td>
-                                                            <td class="mat-cell cdk-cel"></td>
-                                                            <td class="mat-cell cdk-cel"><img data-bs-toggle="modal" data-bs-target="#addConfigAnnouncementCatModal" src="/images/external.png" alt="Config" title="Manage Policy Changes Popup Configurations" width="22" class="img-fluid"></td>
-                                                            <td class="mat-cell cdk-cell">
-                                                                <img data-bs-toggle="modal" data-bs-target="#addEditAnnouncementCatModal" src="/images/edit1.svg" alt="Edit" title="Edit" width="16" class="img-fluid me-2">
-                                                                <img src="/images/trash.svg" alt="Delete" title="Delete" width="16" class="img-fluid">
-                                                            </td>
+                                                            <td class="mat-cell cdk-cell">Software</td>
+                                                            <td class="mat-cell cdk-cell">Design Software</td>
+                                                            <td class="mat-cell cdk-cell">AutoCAD</td>
+                                                            <td class="mat-cell cdk-cell">AD987</td>
+                                                            <td class="mat-cell cdk-cell text-center"><img src="/images/circle-check-green.svg" alt="Check" width="16" class="img-fluid"></td>
+                                                            <td class="mat-cell cdk-cell text-center">HR DBMR</td>
+                                                            <td class="mat-cell cdk-cell text-center"><img src="/images/circle-xmark-red.svg" alt="Check" width="16" class="img-fluid"></td>
+                                                            <td class="mat-cell cdk-cell text-center"><img src="/images/circle-xmark-red.svg" alt="Check" width="16" class="img-fluid"></td>
+                                                            <td class="mat-cell cdk-cell text-center"></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -136,45 +176,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="addEditAnnouncementCatModal">
-    <div class="modal-dialog efcModal">
-        <div class="modal-content">
-            <div class="rd-dialog-heading p-0">
-                Add Category
-            </div>
-            <div class="row">
-                <div class="col-md-12 rd-form-select my-2">
-                    <label class="rd-form-select-label mb-1">Category *</label>
-                    <input type="text" class="form-control" placeholder="Category" />
-                </div>
-            </div>
-            <div class="modal-footer mt-2">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Submit</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="addConfigAnnouncementCatModal">
-    <div class="modal-dialog efcModal">
-        <div class="modal-content">
-            <div class="rd-dialog-heading p-0">
-                Announcement Popup Config
-            </div>
-            <div class="row">
-                <div class="col-md-12 rd-form-select my-2">
-                    <label class="rd-form-select-label mb-1">How many times popup will show to the user *</label>
-                    <input type="text" class="form-control" placeholder="No of Times" />
-                </div>
-            </div>
-            <div class="modal-footer mt-2">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </div>

@@ -1,0 +1,289 @@
+﻿@page
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<div class="app-container" dir="ltr">
+    <div class="container-fluid px-0 main-content-page h-100">
+        <partial name="Organization_Tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="summary">
+                <ul class="topnav-child-1">
+                    <li class="nav-active-top"><a href="/organization/assets/asset_dashboard"> Summary</a> </li>
+                    <li><a href="/organization/assets/asset_store"> Asset Categories</a> </li>
+                    <li><a href="/organization/assets/asset_available"> Asset availability</a> </li>
+                    <li><a href="/organization/assets/asset_repair"> Repair Team</a></li>
+                    <li><a href="/organization/assets/purchase_order"> Purchase Order</a></li>
+                </ul>
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div class="ng-star-inserted">
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-6 ps-0 basic-inf">
+                                            <div class="basic-con">
+                                                <div class="personal-head">
+                                                    <h2 class="rd-dialog-heading">Asset Count</h2>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="h-100">
+                                                            <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                                                                <div id="chartTotalAssets"></div>
+                                                                <div style="display: flex; gap: 8px;">
+                                                                    <div class="statusSectionName rd-mb-1">Total Assets</div>
+                                                                    <div class="statusSectionCount"> 10 </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 d-flex justify-content-center flex-column colgap">
+                                                        <div class="statuswrap assetAssign">
+                                                            <div class="statusSectionborder">
+                                                                <div>
+                                                                    <div class="statusSectionName rd-mb-1">Assets Assigned</div>
+                                                                    <div class="statusSectionCount"> 3 </div>
+                                                                </div>
+                                                                <mat-icon role="img" class="mat-icon notranslate assetsum material-icons mat-icon-no-color" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">chevron_right </mat-icon>
+                                                            </div>
+                                                        </div>
+                                                        <div class="statuswrap assetAvail">
+                                                            <div class="statusSectionborder">
+                                                                <div>
+                                                                    <div class="statusSectionName rd-mb-1">Assets Available</div>
+                                                                    <div class="statusSectionCount"> 4 </div>
+                                                                </div>
+                                                                <mat-icon role="img" class="mat-icon notranslate assetsum material-icons mat-icon-no-color" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">chevron_right </mat-icon>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 ps-0 basic-inf">
+                                            <div class="basic-con">
+                                                <div class="personal-head">
+                                                    <h2 class="rd-dialog-heading">Asset Faulty Statistics</h2>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="h-100">
+                                                            <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                                                                <div id="chartTotalFaultyAssets"></div>
+                                                                <div style="display: flex; gap: 8px;">
+                                                                    <div class="statusSectionName rd-mb-1">Total Faulty Assets</div>
+                                                                    <div class="statusSectionCount"> 10 </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 d-flex justify-content-center flex-column colgap">
+                                                        <div class="statuswrap repairedAsset">
+                                                            <div class="statusSectionborder">
+                                                                <div>
+                                                                    <div class="statusSectionName rd-mb-1">Repaired Asset</div>
+                                                                    <div class="statusSectionCount"> 3 </div>
+                                                                </div>
+                                                                <mat-icon role="img" class="mat-icon notranslate assetsum material-icons mat-icon-no-color" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">chevron_right </mat-icon>
+                                                            </div>
+                                                        </div>
+                                                        <div class="statuswrap unrepairedAsset">
+                                                            <div class="statusSectionborder">
+                                                                <div>
+                                                                    <div class="statusSectionName rd-mb-1">Unrepaired Asset</div>
+                                                                    <div class="statusSectionCount"> 4 </div>
+                                                                </div>
+                                                                <mat-icon role="img" class="mat-icon notranslate assetsum material-icons mat-icon-no-color" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">chevron_right </mat-icon>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 ps-0 rd-mt-2 basic-inf">
+                                            <mat-card class="mat-card mat-focus-indicator b-shadow-none b-border-0 basic-con">
+                                                <div class="personal-head">
+                                                    <h2 class="rd-dialog-heading">Asset Statistics</h2>
+                                                </div>
+                                                <div class="d-flex justify-content-end">
+                                                    <div style="cursor: pointer;"><span style="cursor: pointer;" class="workingAssets secondry-heading" onclick="workingAssets()">Working Assets</span> | <span class="faultyAssets text-muted" onclick="faultyAssets()">Faulty Assets</span></div>
+                                                </div>
+                                                <div id="workingAssets" class="p-3">
+                                                    <div id="chartWorkingAssets"></div>
+                                                </div>
+                                                <div id="faultyAssets" class="p-3">
+                                                    <div id="chartFaultyAssets"></div>
+                                                </div>
+                                            </mat-card>
+                                        </div>
+                                        <div class="col-md-6 ps-0 rd-mt-2 basic-inf">
+                                            <mat-card class="mat-card mat-focus-indicator b-shadow-none b-border-0 basic-con">
+                                                <div class="personal-head">
+                                                    <h2 class="rd-dialog-heading">Asset Request Statistics</h2>
+                                                </div>
+                                                <div class="p-3">
+                                                    <div id="chartWorkingAssets"></div>
+                                                </div>
+                                            </mat-card>
+                                        </div>
+                                        <div class="col-md-6 ps-0 rd-mt-2 basic-inf">
+                                            <mat-card class="mat-card mat-focus-indicator b-shadow-none b-border-0 basic-con">
+                                                <div class="personal-head">
+                                                    <h2 class="rd-dialog-heading">Asset Request Statistics</h2>
+                                                </div>
+                                                <div class="p-3">
+                                                    <div id="chartWorkingAssets"></div>
+                                                </div>
+                                            </mat-card>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/apexcharts@3.22.1/dist/apexcharts.min.js"></script>
+<script>
+    var options = {
+        series: [3, 4],
+        chart: {
+            type: 'donut',
+        },
+        labels: ['Assets Assigned', 'Assets Available'],
+        colors: ['#ee661e', '#1b4e75'],
+        legend: {
+            show: false
+        },
+        dataLabels: {
+            enabled: false
+        },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                }
+            }
+        }]
+    };
+    var chart = new ApexCharts(document.querySelector("#chartTotalAssets"), options);
+    chart.render();
+
+    var optionsFaulty = {
+        series: [3, 4],
+        chart: {
+            type: 'donut',
+        },
+        labels: ['Repaired Asset', 'Unrepaired Asset'],
+        colors: ['#13af08', '#f93c3c'],
+        legend: {
+            show: false
+        },
+        dataLabels: {
+            enabled: false
+        },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                }
+            }
+        }]
+    };
+    var chart = new ApexCharts(document.querySelector("#chartTotalFaultyAssets"), optionsFaulty);
+    chart.render();
+
+    var optionsWorkingAssets = {
+        series: [{
+            name: "Working Assets",
+            data: [120, 80]
+        }],
+        chart: {
+            type: 'bar',
+            height: 300,
+            toolbar: {
+                show: false
+            }
+        },
+        colors: ['#bcbcbc'],
+        legend: {
+            show: true,
+            position: 'top'
+        },
+        plotOptions: {
+            bar: {
+                columnWidth: '10%',
+            }
+        },
+        xaxis: {
+            categories: ['Software', 'Mouse'],
+        },
+        tooltip: {
+            x: {
+                formatter: function (val) {
+                    return val;
+                }
+            }
+        }
+    };
+    var chart = new ApexCharts(document.querySelector("#chartWorkingAssets"), optionsWorkingAssets);
+    chart.render();
+
+    var optionsFaultyAssets = {
+        series: [{
+            name: "Faulty Assets",
+            data: [100, 30]
+        }],
+        chart: {
+            type: 'bar',
+            height: 300,
+            toolbar: {
+                show: false
+            }
+        },
+        colors: ['#bcbcbc'],
+        legend: {
+            show: true,
+            position: 'top'
+        },
+        plotOptions: {
+            bar: {
+                columnWidth: '10%',
+            }
+        },
+        xaxis: {
+            categories: ['Software', 'Mouse'],
+        },
+        tooltip: {
+            x: {
+                formatter: function (val) {
+                    return val;
+                }
+            }
+        }
+    };
+    var chart = new ApexCharts(document.querySelector("#chartFaultyAssets"), optionsFaultyAssets);
+    chart.render();
+
+    $(document).ready(function () {
+        $('#workingAssets').show();
+        $('#faultyAssets').hide();
+    });
+
+    function workingAssets() {
+        $('#workingAssets').show();
+        $('#faultyAssets').hide();
+    }
+
+    function faultyAssets() {
+        $('#workingAssets').hide();
+        $('#faultyAssets').show();
+    }
+</script>
+

@@ -6,10 +6,13 @@
     <div class="container-fluid px-0 main-content-page h-100">
         <partial name="Organization_Tabs" />
         <div class="aos-init aos-animate">
-            <div class="child-content nav-active-top" id="org-structure">
+            <div class="child-content nav-active-top" id="summary">
                 <ul class="topnav-child-1">
-                    <li><a href="/organization/announcement/category"> Categories</a> </li>
-                    <li class="nav-active-top"><a href="/organization/announcement/announcementlist"> All Announcements</a> </li>
+                    <li><a href="/organization/assets/asset_dashboard"> Summary</a> </li>
+                    <li><a href="/organization/assets/asset_store"> Asset Categories</a> </li>
+                    <li><a href="/organization/assets/asset_available"> Asset availability</a> </li>
+                    <li class="nav-active-top"><a href="/organization/assets/asset_repair"> Repair Team</a></li>
+                    <li><a href="/organization/assets/purchase_order"> Purchase Order</a></li>
                 </ul>
                 <div class="container-fluid p-3">
                     <div class="grand-child nav-active-top">
@@ -17,7 +20,7 @@
                             <div class="page-title-h">
                                 <div class="d-flex justify-content-start align-items-center">
                                     <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
-                                    <h4 class="card-title m-0 card-heading">Announcements</h4>
+                                    <h4 class="card-title m-0 card-heading">Asset Repair Team Manager</h4>
                                 </div>
                             </div>
                             <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
@@ -27,8 +30,9 @@
                                             <input type="text" class="grid-search-box" placeholder="Search" fdprocessedid="xdmbl">
                                             <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color">search</mat-icon>
                                         </div>
-                                        <button data-bs-toggle="modal" data-bs-target="#addEditAnnouncementModal" type="button" class="mat-ripple p-element rd-round-button ng-star-inserted"><img src="/images/add.svg"></button>
-                                        <button type="button" ptooltip="Download" tooltipposition="top" class="mat-ripple p-element mat-menu-trigger rd-round-button"><img src="/images/download.svg"></button>
+                                        <button type="button" class="mat-ripple p-element rd-round-button ng-star-inserted" tabindex="0" fdprocessedid="w5el6u"><img src="/images/upload_file.svg"></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#addEditAssetRepairTeamModal" type="button" class="mat-ripple p-element rd-round-button ng-star-inserted" fdprocessedid="q13ruj"><img src="/images/add.svg"></button>
+                                        <button type="button" ptooltip="Download" tooltipposition="top" class="mat-ripple p-element mat-menu-trigger rd-round-button" fdprocessedid="i2w73"><img src="/images/download.svg"></button>
                                     </div>
                                     <div class="col-12 px-0">
                                         <div class="ng-star-inserted">
@@ -36,42 +40,22 @@
                                                 <table class="mat-table cdk-table">
                                                     <thead role="rowgroup">
                                                         <tr class="mat-header-row cdk-header-row ng-star-inserted">
-                                                            <th class="mat-header-cell cdk-header-cell">Subject</th>
-                                                            <th class="mat-header-cell cdk-header-cell">Category</th>
-                                                            <th class="mat-header-cell cdk-header-cell">Priority</th>
-                                                            <th class="mat-header-cell cdk-header-cell">Added By</th>
-                                                            <th class="mat-header-cell cdk-header-cell"> Actions </th>
+                                                            <th class="mat-header-cell cdk-header-cell">Manager Name</th>
+                                                            <th class="mat-header-cell cdk-header-cell text-center">Created By</th>
+                                                            <th class="mat-header-cell cdk-header-cell text-center">Modified By</th>
+                                                            <th class="mat-header-cell cdk-header-cell text-center"> Actions </th>
                                                         </tr>
                                                     </thead>
                                                     <tbody role="rowgroup">
                                                         <tr class="mat-row cdk-row ng-star-inserted">
-                                                            <td class="mat-cell cdk-cell">Updated Employee Handbook</td>
-                                                            <td class="mat-cell cdk-cell">Policy Changes</td>
-                                                            <td class="mat-cell cdk-cel"><span class="badge rounded-pill bg-danger">High</span></td>
-                                                            <td class="mat-cell cdk-cel">HR DBMR</td>
                                                             <td class="mat-cell cdk-cell">
-                                                                <img data-bs-toggle="modal" data-bs-target="#addEditAnnouncementModal" src="/images/edit1.svg" alt="Edit" title="Edit" width="16px" class="img-fluid me-2">
-                                                                <img src="/images/trash.svg" alt="Delete" title="Delete" width="16px" class="img-fluid">
+                                                                <a href="/organization/assets/asset_repair_team" class="morePageLink">HR DBMR</a>
                                                             </td>
-                                                        </tr>
-                                                        <tr class="mat-row cdk-row ng-star-inserted">
-                                                            <td class="mat-cell cdk-cell">Updated Employee Handbook</td>
-                                                            <td class="mat-cell cdk-cell">Policy Changes</td>
-                                                            <td class="mat-cell cdk-cel"><span class="badge rounded-pill bg-warning">Medium</span></td>
-                                                            <td class="mat-cell cdk-cel">HR DBMR</td>
-                                                            <td class="mat-cell cdk-cell">
-                                                                <img data-bs-toggle="modal" data-bs-target="#addEditAnnouncementModal" src="/images/edit1.svg" alt="Edit" title="Edit" width="16px" class="img-fluid me-2">
-                                                                <img src="/images/trash.svg" alt="Delete" title="Delete" width="16px" class="img-fluid">
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="mat-row cdk-row ng-star-inserted">
-                                                            <td class="mat-cell cdk-cell">Updated Employee Handbook</td>
-                                                            <td class="mat-cell cdk-cell">Policy Changes</td>
-                                                            <td class="mat-cell cdk-cel"><span class="badge rounded-pill bg-success">Low</span></td>
-                                                            <td class="mat-cell cdk-cel">HR DBMR</td>
-                                                            <td class="mat-cell cdk-cell">
-                                                                <img data-bs-toggle="modal" data-bs-target="#addEditAnnouncementModal" src="/images/edit1.svg" alt="Edit" title="Edit" width="16px" class="img-fluid me-2">
-                                                                <img src="/images/trash.svg" alt="Delete" title="Delete" width="16px" class="img-fluid">
+                                                            <td class="mat-cell cdk-cell text-center">HR DBMR</td>
+                                                            <td class="mat-cell cdk-cell text-center">-</td>
+                                                            <td class="mat-cell cdk-cell text-center">
+                                                                <img data-bs-toggle="modal" data-bs-target="#addEditAssetRepairTeamModal" src="/images/edit1.svg" alt="Right Arrow" title="Edit" class="img-fluid me-2">
+                                                                <img src="/images/trash.svg" alt="Chat" title="Delete" class="img-fluid">
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -159,71 +143,42 @@
         </div>
     </div>
 </div>
-
-<div class="modal fade" id="addEditAnnouncementModal">
-    <div class="modal-dialog efcModal efcMaxModal">
+<div class="modal fade" id="addEditAssetRepairTeamModal">
+    <div class="modal-dialog efcModal">
         <div class="modal-content">
-            <div class="rd-dialog-heading p-0">New Announcement</div>
+            <div class="rd-dialog-heading p-0">
+                Add Asset Repair Team Manager
+            </div>
             <div class="row">
-                <div class="col-md-6 rd-form-select my-2">
-                    <label class="rd-form-select-label mb-1">Category *</label>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Legal Entity *</label>
                     <select class="form-select">
-                        <option selected>Select Category</option>
-                        <option value="1">1</option>
+                        <option selected>Select Legal Entity</option>
                     </select>
                 </div>
-                <div class="col-md-6 rd-form-select my-2">
-                    <label class="rd-form-select-label mb-1">Priority *</label>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Department</label>
                     <select class="form-select">
-                        <option selected>Select Priority</option>
-                        <option value="1">1</option>
+                        <option selected>Select Department</option>
                     </select>
                 </div>
-                <div class="col-md-12 my-2">
-                    <div>
-                        <label class="rd-form-select-label mb-2 me-2">
-                            <input type="radio" id="radioManual" class="form-check-input" name="radioboxName" checked="">
-                            <span>Notify All Employees</span>
-                        </label>
-                        <label class="rd-form-select-label mb-2 me-2">
-                            <input type="radio" id="radioUpload" class="form-check-input" name="radioboxName">
-                            <span>Notify Selected Employees</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-6 rd-form-select my-2">
-                    <label class="rd-form-select-label mb-1">CC *</label>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Designation</label>
                     <select class="form-select">
-                        <option selected>Select CC</option>
-                        <option value="1">1</option>
+                        <option selected>Select Designation</option>
                     </select>
                 </div>
-                <div class="col-md-6 rd-form-select my-2">
-                    <label class="rd-form-select-label mb-1">BCC *</label>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">
+                        Manager *
+                    </label>
                     <select class="form-select">
-                        <option selected>Select BCC</option>
-                        <option value="1">1</option>
+                        <option selected>Select Manager</option>
                     </select>
-                </div>
-                <div class="col-md-12 my-2">
-                    <div>
-                        <label class="rd-form-select-label align-items-center mb-2"><input type="checkbox" id="1" class="form-check-input" name="checkboxName"> <span>Notify Other Emails</span></label>
-                    </div>
-                </div>
-                <div class="col-md-12 rd-form-select my-2">
-                    <label class="rd-form-select-label mb-1">Subject *</label>
-                    <input type="text" class="form-control" placeholder="Enter Subject" />
-                </div>
-                <div class="col-md-12 rd-form-select my-2">
-                    <textarea type="text" id="announcementEditor"></textarea>
-                </div>
-                <div class="col-md-12 rd-form-select my-2">
-                    <label class="rd-form-select-label mb-1">Upload Attachments </label>
-                    <input type="file" class="form-control" placeholder="Upload Attachments" />
                 </div>
             </div>
             <div class="modal-footer mt-2">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Submit</button>
             </div>
         </div>

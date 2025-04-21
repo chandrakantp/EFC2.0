@@ -1198,3 +1198,125 @@ a.canvasjs-chart-credit {
     border: 2px solid #0d6efd;
     cursor: pointer;
 }
+.example-box.banner {
+    padding: 12px 10px !important;
+    border-bottom: solid 1px #e6e6e6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: move;
+    background-color: #eef4fa;
+    color: #777;
+    font-size: 14px;
+}
+.example-container .search-dynamic-input {
+    background-color: #f3f3f4;
+    font-size: 15px;
+    color: #000;
+    border: none;
+    outline: none;
+    padding: 12px 12px 12px 12px;
+    border-radius: 3px;
+    position: relative;
+    width: 100%;
+}
+.example-container .list {
+    max-height: 30vh;
+    overflow: auto;
+}
+.example-container .list .example-list {
+    width: 100%;
+    max-width: 100%;
+    border: solid 1px #ccc;
+    min-height: 40px;
+    display: block;
+    background: white;
+    border-radius: 0;
+    border-bottom: 0;
+}
+.example-container .list .example-list:last-child {
+    border-bottom: solid 1px #ccc;
+}
+.example-container .list .example-list .example-box {
+    display: block;
+    width: 100%;
+    font-size: 13px;
+}
+.card-edit {
+    background-color: #ebf3fb;
+    border-radius: 5px;
+    color: #0081c9;
+}
+.mat-row .mat-cell .morePageLink {
+    display: block;
+    line-height: 14px;
+    font-weight: 600;
+}
+.mat-row .mat-cell .morePageLink span {
+    display: block;
+    font-size: 11px;
+    color: #585757;
+    font-weight: 400;
+}
+.basic-con {
+    border: 1px solid #E4E6E9;
+    border-radius: 4px;
+    padding: 16px;
+}
+.personal-head h2 {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+.rd-dialog-heading {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 0 4px;
+    margin-bottom: 16px;
+    text-align: start;
+    letter-spacing: .5px;
+}
+.colgap {
+    gap: 18px;
+}
+.statuswrap {
+    padding: 4px 12px;
+}
+.assetAssign {
+    border-left: 4px solid #ee661e;
+}
+.assetAvail {
+    border-left: 4px solid #1b4e75;
+}
+.statusSectionborder {
+    display: flex;
+    gap: 32px;
+    justify-content: space-around;
+}
+.statusSectionName {
+    font-size: 16px;
+    font-weight: 500;
+}
+.statusSectionCount {
+    font-size: 16px;
+    font-weight: 700;
+}
+.assetsum {
+    color: #5991c9;
+}
+.repairedAsset {
+    border-left: 4px solid #13af08;
+}
+.unrepairedAsset {
+    border-left: 4px solid #f93c3c;
+}
+.secondry-heading {
+    color: #5991c9;
+    font-size: 12px;
+}
+.text-muted {
+    font-size: 12px !important;
+}
