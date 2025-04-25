@@ -44,7 +44,7 @@
                                                                     <div class="statusSectionName rd-mb-1">Assets Assigned</div>
                                                                     <div class="statusSectionCount"> 3 </div>
                                                                 </div>
-                                                                <mat-icon role="img" class="mat-icon notranslate assetsum material-icons mat-icon-no-color" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">chevron_right </mat-icon>
+                                                                <mat-icon data-bs-toggle="modal" data-bs-target="#assignedAssetsModal" role="img" class="mat-icon notranslate assetsum material-icons mat-icon-no-color" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">chevron_right </mat-icon>
                                                             </div>
                                                         </div>
                                                         <div class="statuswrap assetAvail">
@@ -53,7 +53,7 @@
                                                                     <div class="statusSectionName rd-mb-1">Assets Available</div>
                                                                     <div class="statusSectionCount"> 4 </div>
                                                                 </div>
-                                                                <mat-icon role="img" class="mat-icon notranslate assetsum material-icons mat-icon-no-color" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">chevron_right </mat-icon>
+                                                                <mat-icon data-bs-toggle="modal" data-bs-target="#availableAssetsModal" role="img" class="mat-icon notranslate assetsum material-icons mat-icon-no-color" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">chevron_right </mat-icon>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -84,7 +84,7 @@
                                                                     <div class="statusSectionName rd-mb-1">Repaired Asset</div>
                                                                     <div class="statusSectionCount"> 3 </div>
                                                                 </div>
-                                                                <mat-icon role="img" class="mat-icon notranslate assetsum material-icons mat-icon-no-color" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">chevron_right </mat-icon>
+                                                                <mat-icon data-bs-toggle="modal" data-bs-target="#repairedAssetsModal" role="img" class="mat-icon notranslate assetsum material-icons mat-icon-no-color" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">chevron_right </mat-icon>
                                                             </div>
                                                         </div>
                                                         <div class="statuswrap unrepairedAsset">
@@ -93,7 +93,7 @@
                                                                     <div class="statusSectionName rd-mb-1">Unrepaired Asset</div>
                                                                     <div class="statusSectionCount"> 4 </div>
                                                                 </div>
-                                                                <mat-icon role="img" class="mat-icon notranslate assetsum material-icons mat-icon-no-color" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">chevron_right </mat-icon>
+                                                                <mat-icon data-bs-toggle="modal" data-bs-target="#unRepairedAssetsModal" role="img" class="mat-icon notranslate assetsum material-icons mat-icon-no-color" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">chevron_right </mat-icon>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -106,7 +106,10 @@
                                                     <h2 class="rd-dialog-heading">Asset Statistics</h2>
                                                 </div>
                                                 <div class="d-flex justify-content-end">
-                                                    <div style="cursor: pointer;"><span style="cursor: pointer;" class="workingAssets secondry-heading" onclick="workingAssets()">Working Assets</span> | <span class="faultyAssets text-muted" onclick="faultyAssets()">Faulty Assets</span></div>
+                                                    <div style="cursor: pointer;">
+                                                        <span class="workingAssets secondrybtn" onclick="workingAssets()">Working Assets</span> |
+                                                        <span class="faultyAssets secondrybtn" onclick="faultyAssets()">Faulty Assets</span>
+                                                    </div>
                                                 </div>
                                                 <div id="workingAssets" class="p-3">
                                                     <div id="chartWorkingAssets"></div>
@@ -118,21 +121,40 @@
                                         </div>
                                         <div class="col-md-6 ps-0 rd-mt-2 basic-inf">
                                             <mat-card class="mat-card mat-focus-indicator b-shadow-none b-border-0 basic-con">
-                                                <div class="personal-head">
-                                                    <h2 class="rd-dialog-heading">Asset Request Statistics</h2>
+                                                <div class="personal-head row">
+                                                    <div class="col-md-6">
+                                                        <h2 class="rd-dialog-heading">Asset Request Statistics</h2>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <select class="form-select form-select-sm">
+                                                            <option selected>2025</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <select class="form-select form-select-sm">
+                                                            <option selected>Select Asset ...</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                                 <div class="p-3">
-                                                    <div id="chartWorkingAssets"></div>
+                                                    <div id="chartRequestStatistics"></div>
                                                 </div>
                                             </mat-card>
                                         </div>
                                         <div class="col-md-6 ps-0 rd-mt-2 basic-inf">
                                             <mat-card class="mat-card mat-focus-indicator b-shadow-none b-border-0 basic-con">
-                                                <div class="personal-head">
-                                                    <h2 class="rd-dialog-heading">Asset Request Statistics</h2>
+                                                <div class="personal-head row">
+                                                    <div class="col-md-10">
+                                                        <h2 class="rd-dialog-heading">Asset Repair Status</h2>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <select class="form-select form-select-sm">
+                                                            <option selected>2025</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                                 <div class="p-3">
-                                                    <div id="chartWorkingAssets"></div>
+                                                    <div id="chartRepairStatus"></div>
                                                 </div>
                                             </mat-card>
                                         </div>
@@ -146,6 +168,150 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="assignedAssetsModal">
+    <div class="modal-dialog efcModal efcMaxModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Assigned Asset
+            </div>
+            <div class="row">
+                <div class="table-responsive">
+                    <div class="example-table-container rd-table-wrapper">
+                        <table class="mat-table cdk-table">
+                            <thead role="rowgroup">
+                                <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                    <th class="mat-header-cell cdk-header-cell">Employee Name</th>
+                                    <th class="mat-header-cell cdk-header-cell">Asset Name</th>
+                                    <th class="mat-header-cell cdk-header-cell">Item Name</th>
+                                    <th class="mat-header-cell cdk-header-cell">Item Code</th>
+                                    <th class="mat-header-cell cdk-header-cell">Count</th>
+                                </tr>
+                            </thead>
+                            <tbody role="rowgroup">
+                                <tr class="mat-row cdk-row ng-star-inserted">
+                                    <td class="mat-cell cdk-cell">HR DBMR</td>
+                                    <td class="mat-cell cdk-cell">Design Software</td>
+                                    <td class="mat-cell cdk-cell">AutoCAD</td>
+                                    <td class="mat-cell cdk-cell">AD987</td>
+                                    <td class="mat-cell cdk-cell">1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="availableAssetsModal">
+    <div class="modal-dialog efcModal efcMaxModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Available Asset
+            </div>
+            <div class="row">
+                <div class="table-responsive">
+                    <div class="example-table-container rd-table-wrapper">
+                        <table class="mat-table cdk-table">
+                            <thead role="rowgroup">
+                                <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                    <th class="mat-header-cell cdk-header-cell">Asset Name</th>
+                                    <th class="mat-header-cell cdk-header-cell">Item Name</th>
+                                    <th class="mat-header-cell cdk-header-cell">Item Code</th>
+                                    <th class="mat-header-cell cdk-header-cell">Count</th>
+                                </tr>
+                            </thead>
+                            <tbody role="rowgroup">
+                                <tr class="mat-row cdk-row ng-star-inserted">
+                                    <td class="mat-cell cdk-cell">Design Software</td>
+                                    <td class="mat-cell cdk-cell">AutoCAD</td>
+                                    <td class="mat-cell cdk-cell">AD987</td>
+                                    <td class="mat-cell cdk-cell">1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="repairedAssetsModal">
+    <div class="modal-dialog efcModal efcMaxModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Repaired Asset
+            </div>
+            <div class="row">
+                <div class="table-responsive">
+                    <div class="example-table-container rd-table-wrapper">
+                        <table class="mat-table cdk-table">
+                            <thead role="rowgroup">
+                                <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                    <th class="mat-header-cell cdk-header-cell">Asset Name</th>
+                                    <th class="mat-header-cell cdk-header-cell">Item Name</th>
+                                    <th class="mat-header-cell cdk-header-cell">Item Code</th>
+                                </tr>
+                            </thead>
+                            <tbody role="rowgroup">
+                                <tr class="mat-row cdk-row ng-star-inserted">
+                                    <td class="mat-cell cdk-cell">Design Software</td>
+                                    <td class="mat-cell cdk-cell">AutoCAD</td>
+                                    <td class="mat-cell cdk-cell">AD987</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="unRepairedAssetsModal">
+    <div class="modal-dialog efcModal efcMaxModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Unrepaired Asset
+            </div>
+            <div class="row">
+                <div class="table-responsive">
+                    <div class="example-table-container rd-table-wrapper">
+                        <table class="mat-table cdk-table">
+                            <thead role="rowgroup">
+                                <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                    <th class="mat-header-cell cdk-header-cell">Asset Name</th>
+                                    <th class="mat-header-cell cdk-header-cell">Item Name</th>
+                                    <th class="mat-header-cell cdk-header-cell">Item Code</th>
+                                </tr>
+                            </thead>
+                            <tbody role="rowgroup">
+                                <tr class="mat-row cdk-row ng-star-inserted">
+                                    <td class="mat-cell cdk-cell">Design Software</td>
+                                    <td class="mat-cell cdk-cell">AutoCAD</td>
+                                    <td class="mat-cell cdk-cell">AD987</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://unpkg.com/apexcharts@3.22.1/dist/apexcharts.min.js"></script>
 <script>
@@ -271,17 +437,116 @@
     var chart = new ApexCharts(document.querySelector("#chartFaultyAssets"), optionsFaultyAssets);
     chart.render();
 
+    var optionsRequestStatistics = {
+        series: [
+            {
+                name: "Approved",
+                data: [120, 80, 95, 110, 130, 90, 100, 115, 105, 95, 85, 100]
+            },
+            {
+                name: "Pending",
+                data: [30, 45, 35, 40, 50, 55, 60, 50, 45, 40, 35, 30]
+            },
+            {
+                name: "Rejected",
+                data: [10, 5, 10, 5, 15, 10, 5, 10, 15, 10, 5, 10]
+            }
+        ],
+        chart: {
+            type: 'bar',
+            height: 300,
+            toolbar: {
+                show: false
+            }
+        },
+        colors: ['#95f57d', '#ffd771', '#76c8ff'],
+        legend: {
+            show: true,
+            position: 'top'
+        },
+        plotOptions: {
+            bar: {
+                columnWidth: '90%',
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        xaxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        tooltip: {
+            x: {
+                formatter: function (val) {
+                    return val;
+                }
+            }
+        }
+    };
+    var chart = new ApexCharts(document.querySelector("#chartRequestStatistics"), optionsRequestStatistics);
+    chart.render();
+
+    var optionsRepairStatus = {
+        series: [
+            {
+                name: "Repaired",
+                data: [80, 20]
+            },
+            {
+                name: "Pending",
+                data: [60, 40]
+            }
+        ],
+        chart: {
+            type: 'bar',
+            height: 300,
+            toolbar: {
+                show: false
+            }
+        },
+        colors: ['#8fff73', '#ffbc8c'],
+        legend: {
+            show: true,
+            position: 'top'
+        },
+        plotOptions: {
+            bar: {
+                columnWidth: '50%',
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        xaxis: {
+            categories: ['Software', 'Office Supplies'],
+        },
+        tooltip: {
+            x: {
+                formatter: function (val) {
+                    return val;
+                }
+            }
+        }
+    };
+    var chart = new ApexCharts(document.querySelector("#chartRepairStatus"), optionsRepairStatus);
+    chart.render();
+
     $(document).ready(function () {
+        $('.workingAssets').addClass('active');
         $('#workingAssets').show();
         $('#faultyAssets').hide();
     });
 
     function workingAssets() {
+        $('.workingAssets').addClass('active');
+        $('.faultyAssets').removeClass('active');
         $('#workingAssets').show();
         $('#faultyAssets').hide();
     }
 
     function faultyAssets() {
+        $('.workingAssets').removeClass('active');
+        $('.faultyAssets').addClass('active');
         $('#workingAssets').hide();
         $('#faultyAssets').show();
     }

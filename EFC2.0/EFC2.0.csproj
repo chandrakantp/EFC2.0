@@ -7,4 +7,18 @@
     <RootNamespace>EFC2._0</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\self_service\attendance\" />
+    <Folder Include="Pages\self_service\finance\" />
+    <Folder Include="Pages\self_service\assets\" />
+    <Folder Include="Pages\self_service\exit\" />
+    <Folder Include="Pages\self_service\help_requests\" />
+    <Folder Include="Pages\self_service\myforms\" />
+    <Folder Include="Pages\self_service\my_letters\" />
+    <Folder Include="Pages\self_service\survey\" />
+    <Folder Include="Pages\self_service\tasks\" />
+    <Folder Include="Pages\self_service\probation\" />
+    <Folder Include="Pages\self_service\performance\" />
+  </ItemGroup>
+
 </Project>

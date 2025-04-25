@@ -1,0 +1,222 @@
+﻿@page
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<div class="app-container" dir="ltr">
+    <div class="container-fluid px-0 main-content-page h-100">
+        <partial name="Organization_Tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="org-structure">
+                <ul class="topnav-child-1">
+                    <li><a href="/organization/empsurvey/questions"> Questiions</a> </li>
+                    <li><a href="/organization/empsurvey/category"> Category</a> </li>
+                    <li class="nav-active-top"><a href="/organization/empsurvey/survay"> All Surveys</a> </li>
+                    <li><a href="/organization/empsurvey/analyze"> Analyze Surveys</a></li>
+                </ul>
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">All Surveys</h4>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="container-fluid py-0">
+                                    <div class="row">
+                                        <div class="col-md-12 d-flex justify-content-end align-items-center tabcol mb-1">
+                                            <div style="position: relative;">
+                                                <input type="text" class="grid-search-box" placeholder="Search" fdprocessedid="d4j0ak">
+                                                <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color">search</mat-icon>
+                                            </div>
+                                            <button data-bs-toggle="modal" data-bs-target="#addEditSurvayModal" type="button" class="mat-ripple p-element rd-round-button ng-star-inserted"><img src="/images/add.svg"></button>
+                                            <button type="button" ptooltip="Download" tooltipposition="top" class="mat-ripple p-element mat-menu-trigger rd-round-button"><img src="/images/download.svg"></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 px-0">
+                                        <div class="ng-star-inserted">
+                                            <div class="example-table-container rd-table-wrapper">
+                                                <table class="mat-table cdk-table">
+                                                    <thead role="rowgroup">
+                                                        <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                                            <th class="mat-header-cell cdk-header-cell"> Survey Name</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Category Name</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Start Date</th>
+                                                            <th class="mat-header-cell cdk-header-cell"> End Date </th>
+                                                            <th class="mat-header-cell cdk-header-cell"> Survey Status </th>
+                                                            <th class="mat-header-cell cdk-header-cell"> Publication Status </th>
+                                                            <th class="mat-header-cell cdk-header-cell"> Added By </th>
+                                                            <th class="mat-header-cell cdk-header-cell"> External user upload </th>
+                                                            <th class="mat-header-cell cdk-header-cell"> Survey Questions </th>
+                                                            <th class="mat-header-cell cdk-header-cell"> Actions </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody role="rowgroup">
+                                                        @* <tr class="mat-row cdk-row ng-star-inserted">
+                                                        <td class="mat-cell cdk-cell">Product Manager</td>
+                                                        <td class="mat-cell cdk-cell">Finance Department</td>
+                                                        <td class="mat-cell cdk-cel">HR DBMR</td>
+                                                        <td class="mat-cell cdk-cel">HR DBMR</td>
+                                                        <td class="mat-cell cdk-cell">
+                                                        <img data-bs-toggle="modal" data-bs-target="#addEditSurvayModal" src="/images/edit1.svg" alt="Edit" title="Edit" width="16px" class="img-fluid me-2">
+                                                        <img src="/images/trash.svg" alt="Delete" title="Delete" width="16px" class="img-fluid">
+                                                        </td>
+                                                        </tr> *@
+                                                        <tr class="mat-row mat-no-data-row ng-star-inserted" role="row">
+                                                            <td colspan="9999" class="text-muted no-results ng-star-inserted"><img src="/images/No result found.svg" class="no-result-found"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mat-paginator">
+                                        <div class="mat-paginator-outer-container">
+                                            <div class="mat-paginator-container">
+                                                <div class="mat-paginator-page-size ng-star-inserted">
+                                                    <div class="mat-paginator-page-size-label"> Items per page: </div>
+                                                    <mat-form-field class="mat-form-field mat-paginator-page-size-select mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-should-float mat-form-field-hide-placeholder ng-star-inserted">
+                                                        <div class="mat-form-field-wrapper">
+                                                            <div class="mat-form-field-flex">
+
+                                                                <div class="mat-form-field-infix">
+                                                                    <mat-select role="combobox" aria-autocomplete="none" aria-haspopup="true" class="mat-select ng-star-inserted" id="mat-select-38" tabindex="0" aria-expanded="false" aria-label="Items per page:" aria-required="false" aria-disabled="false" aria-invalid="false">
+                                                                        <div class="mat-select-trigger">
+                                                                            <div class="mat-select-value" id="mat-select-value-39">
+
+                                                                                <span class="mat-select-value-text ng-star-inserted">
+                                                                                    <span class="mat-select-min-line ng-star-inserted">12</span>
+                                                                                </span>
+
+                                                                            </div>
+                                                                            <div class="mat-select-arrow-wrapper">
+                                                                                <div class="mat-select-arrow"></div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </mat-select>
+                                                                    <span class="mat-form-field-label-wrapper">
+
+                                                                    </span>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="mat-form-field-underline ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+
+                                                            <div class="mat-form-field-subscript-wrapper">
+
+                                                                <div class="mat-form-field-hint-wrapper ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+
+                                                                    <div class="mat-form-field-hint-spacer"></div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </mat-form-field>
+
+                                                </div>
+
+                                                <div class="mat-paginator-range-actions">
+                                                    <div class="mat-paginator-range-label"> 1 - 1 of 1 </div>
+
+                                                    <button type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-previous mat-icon-button mat-button-base mat-button-disabled" aria-label="Previous page" disabled="true">
+                                                        <span class="mat-button-wrapper">
+                                                            <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                    </button>
+
+                                                    <button type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-next mat-icon-button mat-button-base mat-button-disabled" aria-label="Next page" disabled="true">
+                                                        <span class="mat-button-wrapper">
+                                                            <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addEditSurvayModal">
+    <div class="modal-dialog efcModal efcMaxModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Add Survay
+            </div>
+            <div class="row">
+                <div class="col-md-6 rd-form-select my-2">
+                    <label class="rd-form-select-label mb-1">Survay Name *</label>
+                    <input type="text" class="form-control" placeholder="Enter Name" />
+                </div>
+                <div class="col-md-6 rd-form-select my-2">
+                    <label class="rd-form-select-label mb-1">Category*</label>
+                    <select class="form-select">
+                        <option selected>Select Category</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-md-6 rd-form-select my-2">
+                    <label class="rd-form-select-label mb-1">Start Date - End Date *</label>
+                    <input type="date" class="form-control" placeholder="Enter Name" />
+                    <label class="rd-form-select-label">
+                        These dates define the duration in which the survey is open for respondents.
+                    </label>
+                </div>
+                <div class="col-md-6 rd-form-select my-2">
+                    <label class="rd-form-select-label mb-1">Legal Entity*</label>
+                    <select class="form-select">
+                        <option selected>Select Legal Entity</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-md-6 rd-form-select my-2">
+                    <label class="rd-form-select-label mb-1">Department (Optional)</label>
+                    <select class="form-select">
+                        <option selected>Select Department</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-md-6 rd-form-select my-2">
+                    <label class="rd-form-select-label mb-1">Designation (Optional)</label>
+                    <select class="form-select">
+                        <option selected>Select Designation</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-md-6 rd-form-select my-2">
+                    <label class="rd-form-select-label mb-1">Employees *</label>
+                    <select class="form-select">
+                        <option selected>Select Employees</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-md-12 my-2">
+                    <div>
+                        <label class="rd-form-select-label mb-2"><input type="checkbox" id="1" class="form-check-input" name="checkboxName">  <span>Is Anonymous </span></label>
+                    </div>
+                    <div>
+                        <label class="rd-form-select-label mb-2"><input type="checkbox" id="1" class="form-check-input" name="checkboxName">  <span>Allow external users </span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

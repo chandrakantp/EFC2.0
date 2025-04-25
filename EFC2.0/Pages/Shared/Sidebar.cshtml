@@ -1,622 +1,601 @@
 ﻿<nav class="left-nav navbar navbar-light nav-collapse left-nav-sticky">
-        <div id="nav-body-element" class="left-nav-body navbar-inner left-nav-fixed-top">
-            <ul class="navbar-nav">
-                <li routerlinkactive="menu-1-active" routerlink="home" class="nav-item menu-1-active" tabindex="0">
+    <div id="nav-body-element" class="left-nav-body navbar-inner left-nav-fixed-top">
+        <ul class="navbar-nav">
+            <li routerlinkactive="menu-1-active" routerlink="home" class="nav-item menu-1-active">
                 <a href="/dashboard">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.5 16.5449H11.5C10.67 16.5449 10 17.2149 10 18.0449V21.5449H15V18.0449C15 17.2149 14.33 16.5449 13.5 16.5449Z" stroke="#325080" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round" />
-                            <path d="M10.5732 2.86477L3.64319 8.41477C2.86319 9.03477 2.36319 10.3448 2.53319 11.3248L3.86319 19.2848C4.10319 20.7048 5.46319 21.8548 6.90319 21.8548H18.1032C19.5332 21.8548 20.9032 20.6948 21.1432 19.2848L22.4732 11.3248C22.6332 10.3448 22.1332 9.03477 21.3632 8.41477L14.4332 2.87477C13.3632 2.01477 11.6332 2.01477 10.5732 2.86477Z" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <p>Home</p>
-                    </a>
-                </li>
-                <li routerlinkactive="menu-1-active" class="nav-item ng-star-inserted">
-                    <a>
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="8" y="1.54492" width="9" height="9" rx="4.5" stroke="#325080" stroke-width="2" />
-                            <path d="M22.7454 20.5663C23.0251 21.6348 22.1066 22.5449 21.002 22.5449C19.0936 22.5449 15.9964 22.5449 12.5 22.5449C9.00363 22.5449 5.90639 22.5449 3.998 22.5449C2.89343 22.5449 1.97489 21.6348 2.25457 20.5663C3.30639 16.5476 7.4941 13.5449 12.5 13.5449C17.5059 13.5449 21.6936 16.5476 22.7454 20.5663Z" stroke="#325080" stroke-width="2" />
-                        </svg>
-                        <p>Self Service</p>
-                    </a>
-                    <div class="sidebar-dropdown">
-                        <ul class="sidebar-dropdown-list">
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label"> My Profile </span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/my-profile/basic" href="#/self-service-all/my-profile/basic"><span class="sidebar-dropdown-label">Basic Details</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/my-profile/experience" href="#/self-service-all/my-profile/experience"><span class="sidebar-dropdown-label">My Experience</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/my-profile/contract" href="#/self-service-all/my-profile/contract"><span class="sidebar-dropdown-label">My Contracts</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/my-profile/my-documents" href="#/self-service-all/my-profile/my-documents"><span class="sidebar-dropdown-label">My Documents</span></a></li>
-                                        <li routerlinkactive="menu-3-active"><a routerlink="/self-service-all/my-profile/reporting-manager" href="#/self-service-all/my-profile/reporting-manager"><span class="sidebar-dropdown-label">Reporting Manager</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label"> Attendance </span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active"><a routerlink="/self-service-all/attendance/leave-balance-emp" href="#/self-service-all/attendance/leave-balance-emp"><span class="sidebar-dropdown-label">Summary</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/attendance/daily-attendance" href="#/self-service-all/attendance/daily-attendance"><span class="sidebar-dropdown-label">Daily Attendance</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/attendance/my-holiday-list" href="#/self-service-all/attendance/my-holiday-list"><span class="sidebar-dropdown-label">Holiday</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/attendance/leaves/leave-history" href="#/self-service-all/attendance/leaves/leave-history"><span class="sidebar-dropdown-label">Leave</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/attendance/mp/list" href="#/self-service-all/attendance/mp/list"><span class="sidebar-dropdown-label">Missed Punch</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/attendance/comp-offs/compOff-grid" href="#/self-service-all/attendance/comp-offs/compOff-grid"><span class="sidebar-dropdown-label">Comp-Off</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/attendance/overtime-history" href="#/self-service-all/attendance/overtime-history"><span class="sidebar-dropdown-label">Overtime</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/attendance/wfh-history" href="#/self-service-all/attendance/wfh-history"><span class="sidebar-dropdown-label"> WFH </span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/attendance/optional-holiday" href="#/self-service-all/attendance/optional-holiday"><span class="sidebar-dropdown-label"> Optional Holiday</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="ng-star-inserted"><a routerlink="/self-service-all/my-review" href="#/self-service-all/my-review"><span class="sidebar-dropdown-label">Performance</span></a></li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a href="#/self-service-all/probation/probation-feedback-grid"><span class="sidebar-dropdown-label"> Probation</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/probation/probation-feedback-grid" href="#/self-service-all/probation/probation-feedback-grid"><span class="sidebar-dropdown-label">Reviewer Feedback</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/probation/emp-feedback-grid" href="#/self-service-all/probation/emp-feedback-grid"><span class="sidebar-dropdown-label">Employee Feedback</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label"> My Finances </span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/finance/my-salary" href="#/self-service-all/finance/my-salary"><span class="sidebar-dropdown-label">My Salary</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/finance/my-payslip" href="#/self-service-all/finance/my-payslip"><span class="sidebar-dropdown-label">Payslips</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/finance/reimbursement-list" href="#/self-service-all/finance/reimbursement-list"><span class="sidebar-dropdown-label">Reimbursements</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/finance/employee-loan-Grid" href="#/self-service-all/finance/employee-loan-Grid"><span class="sidebar-dropdown-label">Loan</span></a></li>
-                                        <li class="ng-star-inserted"><a href="#/self-service-all/finance/employee-cheques"><span class="sidebar-dropdown-label">Cheques</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/finance/usa-tax" href="#/self-service-all/finance/usa-tax"><span class="sidebar-dropdown-label">USA Tax Forms</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/finance/poi/yearwise-poi" href="#/self-service-all/finance/poi/yearwise-poi"><span class="sidebar-dropdown-label"> Proof Of Investments </span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/finance/salary-advance" href="#/self-service-all/finance/salary-advance"><span class="sidebar-dropdown-label">Salary Advance</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Asset </span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/assets/my-assets" href="#/self-service-all/assets/my-assets"><span class="sidebar-dropdown-label">My Assets</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/assets/request" href="#/self-service-all/assets/request"><span class="sidebar-dropdown-label">Asset Request</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/assets/repair" href="#/self-service-all/assets/repair"><span class="sidebar-dropdown-label">Repair Request</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/assets/shipment" href="#/self-service-all/assets/shipment"><span class="sidebar-dropdown-label">Shipment Request</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="ng-star-inserted"><a href="#/self-service-all/exit"><span class="sidebar-dropdown-label"> Resignation</span></a></li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Tasks </span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/self-service-all/task/grid" href="#/self-service-all/task/grid"><span class="sidebar-dropdown-label">My Tasks</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a href="#/self-service-all/help-requests"><span class="sidebar-dropdown-label"> Help Desk</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="self-service-all/help-requests/tickets" href="#/self-service-all/help-requests/tickets"><span class="sidebar-dropdown-label">My Tickets</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="self-service-all/help-requests/articles" href="#/self-service-all/help-requests/articles"><span class="sidebar-dropdown-label">Articles</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="ng-star-inserted"><a href="#/self-service-all/myForms"><span class="sidebar-dropdown-label"> My Forms</span></a></li>
-                            <li class="ng-star-inserted"><a href="#/self-service-all/letter-request"><span class="sidebar-dropdown-label"> My Letters</span></a></li>
-                            <li class="ng-star-inserted"><a href="#/self-service-all/survey/grid"><span class="sidebar-dropdown-label"> My Survey</span></a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li routerlinkactive="menu-1-active" class="nav-item ng-star-inserted">
-                    <a>
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.5 22.0449H15.5C20.5 22.0449 22.5 20.0449 22.5 15.0449V9.04492C22.5 4.04492 20.5 2.04492 15.5 2.04492H9.5C4.5 2.04492 2.5 4.04492 2.5 9.04492V15.0449C2.5 20.0449 4.5 22.0449 9.5 22.0449Z" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M2.5 13.0452H6.26C7.02 13.0452 7.71 13.4752 8.05 14.1552L8.94 15.9452C9.5 17.0452 10.5 17.0452 10.74 17.0452H14.27C15.03 17.0452 15.72 16.6152 16.06 15.9352L16.95 14.1452C17.29 13.4652 17.98 13.0352 18.74 13.0352H22.48" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>                        <p>Inbox</p>
-                    </a>
-                    <div class="sidebar-dropdown">
-                        <ul class="sidebar-dropdown-list">
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label"> Attendance </span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/attendance/leave-requests" href="#/requests-all/attendance/leave-requests"><span class="sidebar-dropdown-label">Leave Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/attendance/missed-punch-workflow" href="#/requests-all/attendance/missed-punch-workflow"><span class="sidebar-dropdown-label">Missed Punch Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/attendance/compoff-workflow" href="#/requests-all/attendance/compoff-workflow"><span class="sidebar-dropdown-label">Comp-Off Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/attendance/overtime-requests" href="#/requests-all/attendance/overtime-requests"><span class="sidebar-dropdown-label">Overtime Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/attendance/wfh-requests" href="#/requests-all/attendance/wfh-requests"><span class="sidebar-dropdown-label"> WFH Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/attendance/optional-holiday-requests" href="#/requests-all/attendance/optional-holiday-requests"><span class="sidebar-dropdown-label">Optional Holiday Requests</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label"> Finance </span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/finance/reimbursement-workflow-requests" href="#/requests-all/finance/reimbursement-workflow-requests"><span class="sidebar-dropdown-label">Reimbursement Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/finance/loan-request-grid-workflow" href="#/requests-all/finance/loan-request-grid-workflow"><span class="sidebar-dropdown-label">Loan Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/finance/loan-repayment-grid" href="#/requests-all/finance/loan-repayment-grid"><span class="sidebar-dropdown-label">Loan Repayment Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/finance/salary-advance/workflow" href="#/requests-all/finance/salary-advance/workflow"><span class="sidebar-dropdown-label">Salary Advance Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/finance/salary-advance-repayment/workflow" href="#/requests-all/finance/salary-advance-repayment/workflow"><span class="sidebar-dropdown-label">Salary Advance Repayments Requests</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li routerlinkactive="menu-3-active" class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a routerlink="/requests-all/assetReq/assets-workflow-grid" href="#/requests-all/assetReq/assets-workflow-grid"><span class="sidebar-dropdown-label">Employee Requests</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/assetReq/exit-requests" href="#/requests-all/assetReq/exit-requests"><span class="sidebar-dropdown-label">Resignation Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/assetReq/exit-tasks/exit-employees" href="#/requests-all/assetReq/exit-tasks/exit-employees"><span class="sidebar-dropdown-label">Resignation Tasks Employees</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/assetReq/letters" href="#/requests-all/assetReq/letters"><span class="sidebar-dropdown-label">Letter Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/assetReq/assets-workflow-grid" href="#/requests-all/assetReq/assets-workflow-grid"><span class="sidebar-dropdown-label">Asset Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/assetReq/assetShipmentsReq" href="#/requests-all/assetReq/assetShipmentsReq"><span class="sidebar-dropdown-label">Asset Shipment Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/assetReq/Repairs" href="#/requests-all/assetReq/Repairs"><span class="sidebar-dropdown-label">Asset Repair Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/assetReq/probation" href="#/requests-all/assetReq/probation"><span class="sidebar-dropdown-label">Probation</span></a></li>
-                                        <li routerlinkactive="menu-3-active"><a routerlink="/requests-all/assetReq/reporting-manager" href="#/requests-all/assetReq/reporting-manager"><span class="sidebar-dropdown-label">Reporting Manager Change Request</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li routerlinkactive="menu-3-active" class="sidebar-dropdown-list-item ng-star-inserted"><a routerlink="/requests-all/help-requests" href="#/requests-all/help-requests"><span class="sidebar-dropdown-label">Help Desk Tickets</span></a></li>
-                            <li routerlinkactive="menu-3-active" class="sidebar-dropdown-list-item ng-star-inserted"><a routerlink="/requests-all/forms-approval-grid" href="#/requests-all/forms-approval-grid"><span class="sidebar-dropdown-label">Smart Form Requests</span></a></li>
-                            <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/requests-all/pending-requisition" href="#/requests-all/pending-requisition"><span class="sidebar-dropdown-label"> Requisition Requests </span></a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li routerlinkactive="menu-1-active" class="nav-item ng-star-inserted">
-                    <a>
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke="#325080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M15.2511 11.9241C13.3945 11.924 11.681 12.4375 10.4085 13.4659C9.13609 14.4944 8.33591 16.0566 8.33594 17.9752V17.9768V17.9783C8.33612 18.0069 8.33903 19.6986 8.33903 19.6986L8.33594 21.9993H21.9849L21.9964 19.6986C21.9964 19.6986 21.9987 18.8673 21.9995 18.5482C22.0002 18.2291 22.0033 17.9639 22.0025 17.9874V17.9812V17.975C22.0025 15.8642 21.0384 14.29 19.7169 13.3161C18.3955 12.3421 16.7444 11.9238 15.2523 11.9238L15.2511 11.9241ZM15.2511 13.085C16.5239 13.085 17.9609 13.4619 19.0349 14.2535C20.1089 15.0451 20.8496 16.2072 20.8496 17.9752C20.848 18.059 20.8472 18.2309 20.8465 18.5436C20.8457 18.8629 20.845 19.2797 20.8434 19.6955C20.8419 20.109 20.8396 20.5207 20.8373 20.8383H9.49494C9.4934 20.5207 9.49106 20.1085 9.4903 19.6955C9.48799 18.8661 9.48802 18.066 9.48725 17.9752C9.48722 16.3709 10.1059 15.1975 11.1279 14.3714C12.15 13.5454 13.6064 13.085 15.2511 13.085Z" fill="#325080" />
-                            <path stroke="#325080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M15.2469 2C12.8217 2 10.8438 3.99035 10.8438 6.43216C10.8438 8.87396 12.8217 10.8658 15.2469 10.8658C17.6721 10.8658 19.6516 8.87396 19.6516 6.43216C19.6516 3.99035 17.6721 2 15.2469 2ZM15.2469 3.16095C17.0507 3.16095 18.4998 4.6189 18.4998 6.43216C18.4998 8.24543 17.0507 9.70488 15.2469 9.70488C13.4431 9.70488 11.9955 8.24543 11.9955 6.43216C11.9955 4.6189 13.4431 3.16095 15.2469 3.16095Z" fill="#325080" />
-                            <path stroke="#325080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M8.02586 12.3867C6.29534 12.3867 4.78343 12.8712 3.69918 13.8485C2.61492 14.8258 1.99978 16.2837 2 18.0509V18.0524V18.054C2.00015 18.0848 2.00309 19.7365 2.00309 19.7365L2.01467 22.0009H6.72888H7.36772V20.84H6.72888H3.15806C3.15653 20.5306 3.15578 20.1348 3.15502 19.7349C3.15348 18.9199 3.15269 18.1247 3.15192 18.0479C3.15247 16.5451 3.63923 15.4611 4.46717 14.7148C5.29514 13.9684 6.50654 13.5483 8.023 13.5478C8.19436 13.5493 8.70227 13.5994 8.70227 13.5994C8.70227 13.5994 9.28847 12.8941 9.55421 12.553L8.98582 12.4639C8.6695 12.4142 8.34927 12.3886 8.029 12.3868H8.02745L8.02586 12.3867Z" fill="#325080" />
-                            <path stroke="#325080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M7.97135 3.49815C5.78374 3.48267 3.98352 5.26698 3.96884 7.46925C3.95395 9.67152 5.73007 11.4802 7.91769 11.4946C8.86406 11.5 9.77701 11.1647 10.496 10.5568C10.5834 10.483 10.6671 10.4056 10.7481 10.3242L11.0405 10.028L10.3424 9.09243L10.0336 9.41512C9.97701 9.47426 9.81829 9.61532 9.75662 9.66743C9.24604 10.0991 8.59643 10.3378 7.92397 10.3337C6.35758 10.3234 5.10998 9.05045 5.12062 7.47709C5.13114 5.90373 6.39569 4.64797 7.96207 4.65905C8.43963 4.66214 8.90965 4.78685 9.32587 5.02208L9.8279 5.30669C9.8279 5.30669 10.188 4.35825 10.2387 4.21169L9.88911 4.01008C9.30318 3.67892 8.64327 3.50301 7.97135 3.49815Z" fill="#325080" />
-                        </svg>                       <p>My Team</p>
-                    </a>
-                    <div class="sidebar-dropdown">
-                        <ul class="sidebar-dropdown-list">
-                            <li class="ng-star-inserted"><a routerlink="/my-team/summary" href="#/my-team/summary"><span class="sidebar-dropdown-label">Summary</span></a></li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Attendance</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li class="ng-star-inserted"><a routerlink="/my-team/attendance/tracking" href="#/my-team/attendance/tracking"><span class="sidebar-dropdown-label">Tracking</span></a></li>
-                                        <li class="ng-star-inserted"><a routerlink="/my-team/attendance/employee-assingment" href="#/my-team/attendance/employee-assingment"><span class="sidebar-dropdown-label">Employee Assignments</span></a></li>
-                                        <li class="ng-star-inserted"><a routerlink="/my-team/attendance/leave-overview" href="#/my-team/attendance/leave-overview"><span class="sidebar-dropdown-label">Leaves Overview</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Performance</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li class="ng-star-inserted"><a routerlink="/my-team/performance/kra-insights" href="#/my-team/performance/kra-insights"><span class="sidebar-dropdown-label">KRA Insights </span></a></li>
-                                        <li class="ng-star-inserted"><a routerlink="/my-team/performance/comp-insights" href="#/my-team/performance/comp-insights"><span class="sidebar-dropdown-label">Competency Insights </span></a></li>
-                                        <li class="ng-star-inserted"><a routerlink="/my-team/performance/skillset-matrix" href="#/my-team/performance/skillset-matrix"><span class="sidebar-dropdown-label">Skillset Matrix </span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Task</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li class="ng-star-inserted"><a routerlink="/my-team/task/task" href="#/my-team/task/task"><span class="sidebar-dropdown-label">Assigned Tasks </span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item org-main ng-star-inserted">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.5 16.5449H11.5C10.67 16.5449 10 17.2149 10 18.0449V21.5449H15V18.0449C15 17.2149 14.33 16.5449 13.5 16.5449Z" stroke="#325080" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round" />
+                        <path d="M10.5732 2.86477L3.64319 8.41477C2.86319 9.03477 2.36319 10.3448 2.53319 11.3248L3.86319 19.2848C4.10319 20.7048 5.46319 21.8548 6.90319 21.8548H18.1032C19.5332 21.8548 20.9032 20.6948 21.1432 19.2848L22.4732 11.3248C22.6332 10.3448 22.1332 9.03477 21.3632 8.41477L14.4332 2.87477C13.3632 2.01477 11.6332 2.01477 10.5732 2.86477Z" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p>Home</p>
+                </a>
+            </li>
+            <li routerlinkactive="menu-1-active" class="nav-item ng-star-inserted">
+                <a href="/self_service/my_profile/basic">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="1.54492" width="9" height="9" rx="4.5" stroke="#325080" stroke-width="2" />
+                        <path d="M22.7454 20.5663C23.0251 21.6348 22.1066 22.5449 21.002 22.5449C19.0936 22.5449 15.9964 22.5449 12.5 22.5449C9.00363 22.5449 5.90639 22.5449 3.998 22.5449C2.89343 22.5449 1.97489 21.6348 2.25457 20.5663C3.30639 16.5476 7.4941 13.5449 12.5 13.5449C17.5059 13.5449 21.6936 16.5476 22.7454 20.5663Z" stroke="#325080" stroke-width="2" />
+                    </svg>
+                    <p>Self Service</p>
+                </a>
+                <div class="sidebar-dropdown">
+                    <ul class="sidebar-dropdown-list">
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a href="/self_service/my_profile/basic"><span class="sidebar-dropdown-label"> My Profile </span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/self_service/my_profile/basic"><span class="sidebar-dropdown-label">Basic Details</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/my-profile/experience"><span class="sidebar-dropdown-label">My Experience</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/my-profile/contract"><span class="sidebar-dropdown-label">My Contracts</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/my-profile/my-documents"><span class="sidebar-dropdown-label">My Documents</span></a></li>
+                                    <li><a routerlink="/self_service/my-profile/reporting-manager" href="/self_service/my-profile/reporting-manager"><span class="sidebar-dropdown-label">Reporting Manager</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label"> Attendance </span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li><a href="/self_service/attendance/leave-balance-emp"><span class="sidebar-dropdown-label">Summary</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/attendance/daily-attendance"><span class="sidebar-dropdown-label">Daily Attendance</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/attendance/my-holiday-list"><span class="sidebar-dropdown-label">Holiday</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/attendance/leaves/leave-history"><span class="sidebar-dropdown-label">Leave</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/attendance/mp/list"><span class="sidebar-dropdown-label">Missed Punch</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/attendance/comp-offs/compOff-grid"><span class="sidebar-dropdown-label">Comp-Off</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/attendance/overtime-history"><span class="sidebar-dropdown-label">Overtime</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/attendance/wfh-history"><span class="sidebar-dropdown-label"> WFH </span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/attendance/optional-holiday"><span class="sidebar-dropdown-label"> Optional Holiday</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="ng-star-inserted"><a href="/self_service/my-review"><span class="sidebar-dropdown-label">Performance</span></a></li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a href="/self_service/probation/probation-feedback-grid"><span class="sidebar-dropdown-label"> Probation</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/self_service/probation/probation-feedback-grid"><span class="sidebar-dropdown-label">Reviewer Feedback</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/probation/emp-feedback-grid"><span class="sidebar-dropdown-label">Employee Feedback</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label"> My Finances </span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/self_service/finance/my-salary"><span class="sidebar-dropdown-label">My Salary</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/finance/my-payslip"><span class="sidebar-dropdown-label">Payslips</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/finance/reimbursement-list"><span class="sidebar-dropdown-label">Reimbursements</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/finance/employee-loan-Grid"><span class="sidebar-dropdown-label">Loan</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/finance/employee-cheques"><span class="sidebar-dropdown-label">Cheques</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/finance/usa-tax"><span class="sidebar-dropdown-label">USA Tax Forms</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/finance/poi/yearwise-poi"><span class="sidebar-dropdown-label"> Proof Of Investments </span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/finance/salary-advance"><span class="sidebar-dropdown-label">Salary Advance</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Asset </span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/self_service/assets/my-assets"><span class="sidebar-dropdown-label">My Assets</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/assets/request"><span class="sidebar-dropdown-label">Asset Request</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/assets/repair"><span class="sidebar-dropdown-label">Repair Request</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/assets/shipment"><span class="sidebar-dropdown-label">Shipment Request</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="ng-star-inserted"><a href="/self_service/exit"><span class="sidebar-dropdown-label"> Resignation</span></a></li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Tasks </span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/self_service/task/grid"><span class="sidebar-dropdown-label">My Tasks</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a href="/self_service/help-requests"><span class="sidebar-dropdown-label"> Help Desk</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/self_service/help-requests/tickets"><span class="sidebar-dropdown-label">My Tickets</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/self_service/help-requests/articles"><span class="sidebar-dropdown-label">Articles</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="ng-star-inserted"><a href="/self_service/myForms"><span class="sidebar-dropdown-label"> My Forms</span></a></li>
+                        <li class="ng-star-inserted"><a href="/self_service/letter-request"><span class="sidebar-dropdown-label"> My Letters</span></a></li>
+                        <li class="ng-star-inserted"><a href="/self_service/survey/grid"><span class="sidebar-dropdown-label"> My Survey</span></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li routerlinkactive="menu-1-active" class="nav-item ng-star-inserted">
+                <a>
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.5 22.0449H15.5C20.5 22.0449 22.5 20.0449 22.5 15.0449V9.04492C22.5 4.04492 20.5 2.04492 15.5 2.04492H9.5C4.5 2.04492 2.5 4.04492 2.5 9.04492V15.0449C2.5 20.0449 4.5 22.0449 9.5 22.0449Z" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M2.5 13.0452H6.26C7.02 13.0452 7.71 13.4752 8.05 14.1552L8.94 15.9452C9.5 17.0452 10.5 17.0452 10.74 17.0452H14.27C15.03 17.0452 15.72 16.6152 16.06 15.9352L16.95 14.1452C17.29 13.4652 17.98 13.0352 18.74 13.0352H22.48" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>                        <p>Inbox</p>
+                </a>
+                <div class="sidebar-dropdown">
+                    <ul class="sidebar-dropdown-list">
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label"> Attendance </span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/attendance/leave-requests" href="#/requests-all/attendance/leave-requests"><span class="sidebar-dropdown-label">Leave Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/attendance/missed-punch-workflow" href="#/requests-all/attendance/missed-punch-workflow"><span class="sidebar-dropdown-label">Missed Punch Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/attendance/compoff-workflow" href="#/requests-all/attendance/compoff-workflow"><span class="sidebar-dropdown-label">Comp-Off Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/attendance/overtime-requests" href="#/requests-all/attendance/overtime-requests"><span class="sidebar-dropdown-label">Overtime Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/attendance/wfh-requests" href="#/requests-all/attendance/wfh-requests"><span class="sidebar-dropdown-label"> WFH Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/attendance/optional-holiday-requests" href="#/requests-all/attendance/optional-holiday-requests"><span class="sidebar-dropdown-label">Optional Holiday Requests</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label"> Finance </span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/finance/reimbursement-workflow-requests" href="#/requests-all/finance/reimbursement-workflow-requests"><span class="sidebar-dropdown-label">Reimbursement Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/finance/loan-request-grid-workflow" href="#/requests-all/finance/loan-request-grid-workflow"><span class="sidebar-dropdown-label">Loan Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/finance/loan-repayment-grid" href="#/requests-all/finance/loan-repayment-grid"><span class="sidebar-dropdown-label">Loan Repayment Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/finance/salary-advance/workflow" href="#/requests-all/finance/salary-advance/workflow"><span class="sidebar-dropdown-label">Salary Advance Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/finance/salary-advance-repayment/workflow" href="#/requests-all/finance/salary-advance-repayment/workflow"><span class="sidebar-dropdown-label">Salary Advance Repayments Requests</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a routerlink="/requests-all/assetReq/assets-workflow-grid" href="#/requests-all/assetReq/assets-workflow-grid"><span class="sidebar-dropdown-label">Employee Requests</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/assetReq/exit-requests" href="#/requests-all/assetReq/exit-requests"><span class="sidebar-dropdown-label">Resignation Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/assetReq/exit-tasks/exit-employees" href="#/requests-all/assetReq/exit-tasks/exit-employees"><span class="sidebar-dropdown-label">Resignation Tasks Employees</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/assetReq/letters" href="#/requests-all/assetReq/letters"><span class="sidebar-dropdown-label">Letter Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/assetReq/assets-workflow-grid" href="#/requests-all/assetReq/assets-workflow-grid"><span class="sidebar-dropdown-label">Asset Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/assetReq/assetShipmentsReq" href="#/requests-all/assetReq/assetShipmentsReq"><span class="sidebar-dropdown-label">Asset Shipment Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/assetReq/Repairs" href="#/requests-all/assetReq/Repairs"><span class="sidebar-dropdown-label">Asset Repair Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/requests-all/assetReq/probation" href="#/requests-all/assetReq/probation"><span class="sidebar-dropdown-label">Probation</span></a></li>
+                                    <li><a routerlink="/requests-all/assetReq/reporting-manager" href="#/requests-all/assetReq/reporting-manager"><span class="sidebar-dropdown-label">Reporting Manager Change Request</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted"><a routerlink="/requests-all/help-requests" href="#/requests-all/help-requests"><span class="sidebar-dropdown-label">Help Desk Tickets</span></a></li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted"><a routerlink="/requests-all/forms-approval-grid" href="#/requests-all/forms-approval-grid"><span class="sidebar-dropdown-label">Smart Form Requests</span></a></li>
+                        <li class="ng-star-inserted"><a routerlink="/requests-all/pending-requisition" href="#/requests-all/pending-requisition"><span class="sidebar-dropdown-label"> Requisition Requests </span></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li routerlinkactive="menu-1-active" class="nav-item ng-star-inserted">
+                <a>
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke="#325080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M15.2511 11.9241C13.3945 11.924 11.681 12.4375 10.4085 13.4659C9.13609 14.4944 8.33591 16.0566 8.33594 17.9752V17.9768V17.9783C8.33612 18.0069 8.33903 19.6986 8.33903 19.6986L8.33594 21.9993H21.9849L21.9964 19.6986C21.9964 19.6986 21.9987 18.8673 21.9995 18.5482C22.0002 18.2291 22.0033 17.9639 22.0025 17.9874V17.9812V17.975C22.0025 15.8642 21.0384 14.29 19.7169 13.3161C18.3955 12.3421 16.7444 11.9238 15.2523 11.9238L15.2511 11.9241ZM15.2511 13.085C16.5239 13.085 17.9609 13.4619 19.0349 14.2535C20.1089 15.0451 20.8496 16.2072 20.8496 17.9752C20.848 18.059 20.8472 18.2309 20.8465 18.5436C20.8457 18.8629 20.845 19.2797 20.8434 19.6955C20.8419 20.109 20.8396 20.5207 20.8373 20.8383H9.49494C9.4934 20.5207 9.49106 20.1085 9.4903 19.6955C9.48799 18.8661 9.48802 18.066 9.48725 17.9752C9.48722 16.3709 10.1059 15.1975 11.1279 14.3714C12.15 13.5454 13.6064 13.085 15.2511 13.085Z" fill="#325080" />
+                        <path stroke="#325080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M15.2469 2C12.8217 2 10.8438 3.99035 10.8438 6.43216C10.8438 8.87396 12.8217 10.8658 15.2469 10.8658C17.6721 10.8658 19.6516 8.87396 19.6516 6.43216C19.6516 3.99035 17.6721 2 15.2469 2ZM15.2469 3.16095C17.0507 3.16095 18.4998 4.6189 18.4998 6.43216C18.4998 8.24543 17.0507 9.70488 15.2469 9.70488C13.4431 9.70488 11.9955 8.24543 11.9955 6.43216C11.9955 4.6189 13.4431 3.16095 15.2469 3.16095Z" fill="#325080" />
+                        <path stroke="#325080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M8.02586 12.3867C6.29534 12.3867 4.78343 12.8712 3.69918 13.8485C2.61492 14.8258 1.99978 16.2837 2 18.0509V18.0524V18.054C2.00015 18.0848 2.00309 19.7365 2.00309 19.7365L2.01467 22.0009H6.72888H7.36772V20.84H6.72888H3.15806C3.15653 20.5306 3.15578 20.1348 3.15502 19.7349C3.15348 18.9199 3.15269 18.1247 3.15192 18.0479C3.15247 16.5451 3.63923 15.4611 4.46717 14.7148C5.29514 13.9684 6.50654 13.5483 8.023 13.5478C8.19436 13.5493 8.70227 13.5994 8.70227 13.5994C8.70227 13.5994 9.28847 12.8941 9.55421 12.553L8.98582 12.4639C8.6695 12.4142 8.34927 12.3886 8.029 12.3868H8.02745L8.02586 12.3867Z" fill="#325080" />
+                        <path stroke="#325080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M7.97135 3.49815C5.78374 3.48267 3.98352 5.26698 3.96884 7.46925C3.95395 9.67152 5.73007 11.4802 7.91769 11.4946C8.86406 11.5 9.77701 11.1647 10.496 10.5568C10.5834 10.483 10.6671 10.4056 10.7481 10.3242L11.0405 10.028L10.3424 9.09243L10.0336 9.41512C9.97701 9.47426 9.81829 9.61532 9.75662 9.66743C9.24604 10.0991 8.59643 10.3378 7.92397 10.3337C6.35758 10.3234 5.10998 9.05045 5.12062 7.47709C5.13114 5.90373 6.39569 4.64797 7.96207 4.65905C8.43963 4.66214 8.90965 4.78685 9.32587 5.02208L9.8279 5.30669C9.8279 5.30669 10.188 4.35825 10.2387 4.21169L9.88911 4.01008C9.30318 3.67892 8.64327 3.50301 7.97135 3.49815Z" fill="#325080" />
+                    </svg>                       <p>My Team</p>
+                </a>
+                <div class="sidebar-dropdown">
+                    <ul class="sidebar-dropdown-list">
+                        <li class="ng-star-inserted"><a routerlink="/my-team/summary" href="#/my-team/summary"><span class="sidebar-dropdown-label">Summary</span></a></li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Attendance</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/my-team/attendance/tracking" href="#/my-team/attendance/tracking"><span class="sidebar-dropdown-label">Tracking</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/my-team/attendance/employee-assingment" href="#/my-team/attendance/employee-assingment"><span class="sidebar-dropdown-label">Employee Assignments</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/my-team/attendance/leave-overview" href="#/my-team/attendance/leave-overview"><span class="sidebar-dropdown-label">Leaves Overview</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Performance</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/my-team/performance/kra-insights" href="#/my-team/performance/kra-insights"><span class="sidebar-dropdown-label">KRA Insights </span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/my-team/performance/comp-insights" href="#/my-team/performance/comp-insights"><span class="sidebar-dropdown-label">Competency Insights </span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/my-team/performance/skillset-matrix" href="#/my-team/performance/skillset-matrix"><span class="sidebar-dropdown-label">Skillset Matrix </span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Task</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/my-team/task/task" href="#/my-team/task/task"><span class="sidebar-dropdown-label">Assigned Tasks </span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item org-main ng-star-inserted">
                 <a href="/organization/org_dashboard/org_summary">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 20.293H23" stroke="#325080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M14 20.293V3.79297C14 3.59406 13.921 3.40329 13.7803 3.26264C13.6397 3.12199 13.4489 3.04297 13.25 3.04297H4.25C4.05109 3.04297 3.86032 3.12199 3.71967 3.26264C3.57902 3.40329 3.5 3.59406 3.5 3.79297V20.293" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M21.5 20.293V9.79297C21.5 9.59406 21.421 9.40329 21.2803 9.26264C21.1397 9.12199 20.9489 9.04297 20.75 9.04297H14" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M6.5 6.79297H9.5" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M8 12.793H11" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M17 12.793H18.5" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>                        <p>Organization</p>
-                    </a>
-                    <div class="sidebar-dropdown middle-set">
-                        <ul class="sidebar-dropdown-list">
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 20.293H23" stroke="#325080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14 20.293V3.79297C14 3.59406 13.921 3.40329 13.7803 3.26264C13.6397 3.12199 13.4489 3.04297 13.25 3.04297H4.25C4.05109 3.04297 3.86032 3.12199 3.71967 3.26264C3.57902 3.40329 3.5 3.59406 3.5 3.79297V20.293" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M21.5 20.293V9.79297C21.5 9.59406 21.421 9.40329 21.2803 9.26264C21.1397 9.12199 20.9489 9.04297 20.75 9.04297H14" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M6.5 6.79297H9.5" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8 12.793H11" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M17 12.793H18.5" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>                        <p>Organization</p>
+                </a>
+                <div class="sidebar-dropdown middle-set">
+                    <ul class="sidebar-dropdown-list">
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
                             <a href="/organization/org_dashboard/org_summary"><span class="sidebar-dropdown-label">Dashboard</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
                                     <li class="ng-star-inserted"><a href="/organization/org_dashboard/org_summary"><span class="sidebar-dropdown-label">Summary</span></a></li>
-                                    <li class="ng-star-inserted"><a href="/organization/org_dashboard/reports"><span class="sidebar-dropdown-label">Reports</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
+                                    <li class="ng-star-inserted"><a href="/organization/org_dashboard/org_reports"><span class="sidebar-dropdown-label">Reports</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
                             <a href="/organization/org_employees/employee_view"><span class="sidebar-dropdown-label">Employees</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
                                     <li class="ng-star-inserted"><a href="/organization/org_employees/employee_view"><span class="sidebar-dropdown-label">Directory</span></a></li>
                                     <li class="ng-star-inserted"><a href="/organization/org_employees/organization_tree"><span class="sidebar-dropdown-label">Organization Tree</span></a></li>
                                     <li class="ng-star-inserted"><a href="/organization/org_employees/login_history"><span class="sidebar-dropdown-label">Login Overview</span></a></li>
-                                    <li class="ng-star-inserted"><a href="/organization/org_employees/probation/in-probation"><span class="sidebar-dropdown-label">Probation</span></a></li>
-                                    <li class="ng-star-inserted"><a href="/organization/org_employees/contingent-staff"><span class="sidebar-dropdown-label">Contingent Staff</span></a></li>
-                                    <li class="ng-star-inserted"><a href="/organization/org_employees/insurance/health-insurance"><span class="sidebar-dropdown-label">Insurances</span></a></li>
-                                    <li class="ng-star-inserted"><a href="/organization/org_employees/contract"><span class="sidebar-dropdown-label">Contracts</span></a></li>
-                                    <li class="ng-star-inserted"><a href="/organization/org_employees/employee-code/grid"><span class="sidebar-dropdown-label">Employee Code Setup</span></a></li>
-                                    <li class="ng-star-inserted"><a href="/organization/org_employees/bulk-ops/lists"><span class="sidebar-dropdown-label">Bulk Operations</span></a></li>
-                                    <li class="ng-star-inserted"><a href="/organization/org_employees/audit-logs"><span class="sidebar-dropdown-label">Audit Logs</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Organization Structure</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown bottom-set">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-structure/location-view" href="#/organization/org-structure/location-view"><span class="sidebar-dropdown-label">Legal Entity</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-structure/department-grid" href="#/organization/org-structure/department-grid"><span class="sidebar-dropdown-label">Department</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-structure/designation-view" href="#/organization/org-structure/designation-view"><span class="sidebar-dropdown-label">Designation</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-structure/work-location-grid" href="#/organization/org-structure/work-location-grid"><span class="sidebar-dropdown-label">Work Location</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a><span routerlink="/organization/org-structure/cost-center" class="sidebar-dropdown-label" tabindex="0">Cost Center</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a><span routerlink="/organization/org-structure/salary-Structure" class="sidebar-dropdown-label" tabindex="0">Salary Structures</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a><span routerlink="/organization/org-structure/country-based-dynamicfields-grid" class="sidebar-dropdown-label" tabindex="0">Custom Fields</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a><span routerlink="/organization/org-structure/pay-band" class="sidebar-dropdown-label" tabindex="0">Pay Bands</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a><span routerlink="/organization/org-structure/bulk-ops/lists" class="sidebar-dropdown-label" tabindex="0">Bulk Operations</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a><span routerlink="/organization/org-structure/fy-grid" class="sidebar-dropdown-label" tabindex="0">Financial Year Configuration</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a><span routerlink="/organization/org-structure/business-unit" class="sidebar-dropdown-label" tabindex="0"> Business Unit</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Onboarding</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/onboard/hiring/all-requisition" href="#/organization/onboard/hiring/all-requisition"><span class="sidebar-dropdown-label">Requisitions</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/onboard/candidate-view" href="#/organization/onboard/candidate-view"><span class="sidebar-dropdown-label">Candidates</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a href="#/organization/onboard/outsourcing/onboard-agency-grid"><span class="sidebar-dropdown-label">Outsources</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a href="#/organization/onboard/candidate-task"><span class="sidebar-dropdown-label">Onboarding Tasks</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a href="#/organization/onboard/groups"><span class="sidebar-dropdown-label">Onboarding Groups</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a href="#/organization/onboard/outsourcing/outsourcing-employee-grid"><span class="sidebar-dropdown-label">Onboarding Employees</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a href="#/organization/onboard/task-category"><span class="sidebar-dropdown-label">Task Category</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a href="#/organization/onboard/outsourcing/outsourcing-config"><span class="sidebar-dropdown-label">Agency Employee Page Configuration</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Exit</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-exit/notice-period/config-grid" href="#/organization/org-exit/notice-period/config-grid"><span class="sidebar-dropdown-label">Notice Period</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-exit/direct-exit-employee" href="#/organization/org-exit/direct-exit-employee"><span class="sidebar-dropdown-label">Resignation Process Employees</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-exit/exit-tasks/task-category" href="#/organization/org-exit/exit-tasks/task-category"><span class="sidebar-dropdown-label">Resignation Tasks</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-exit/exit-reason" href="#/organization/org-exit/exit-reason"><span class="sidebar-dropdown-label">Resignation Reason</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Help Desk</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown bottom-set">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlink="/organization/help-desk/help-summary" tabindex="0" class="ng-star-inserted"><a><span class="sidebar-dropdown-label">Summary</span></a></li>
-                                        <li routerlink="/organization/help-desk/question-category-view" tabindex="0" class="ng-star-inserted"><a><span class="sidebar-dropdown-label">Categories</span></a></li>
-                                        <li routerlink="/organization/help-desk/question-view" tabindex="0" class="ng-star-inserted"><a><span class="sidebar-dropdown-label">Grievance</span></a></li>
-                                        <li routerlink="/organization/help-desk/help-requests" tabindex="0" class="ng-star-inserted"><a><span class="sidebar-dropdown-label">Tickets</span></a></li>
-                                        <li routerlink="/organization/help-desk/close-reason" tabindex="0" class="ng-star-inserted"><a><span class="sidebar-dropdown-label">Close Reasons</span></a></li>
-                                        <li routerlink="/organization/help-desk/KnowledgeBase" tabindex="0" class="ng-star-inserted"><a><span class="sidebar-dropdown-label">Knowledge Base</span></a></li>
-                                        <li routerlink="/organization/help-desk/sla" tabindex="0" class="ng-star-inserted"><a><span class="sidebar-dropdown-label">SLA Config</span></a></li>
-                                        <li routerlink="/organization/help-desk/team" tabindex="0" class="ng-star-inserted"><a><span class="sidebar-dropdown-label">Help-Desk Team</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Documents</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-documents/org-letters" href="#/organization/org-documents/org-letters"><span class="sidebar-dropdown-label">HR Letters</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-documents/org-emp-doc" href="#/organization/org-documents/org-emp-doc"><span class="sidebar-dropdown-label"> Employee Documents</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-documents/bulk-doc-upload" href="#/organization/org-documents/bulk-doc-upload"><span class="sidebar-dropdown-label">Bulk Data Upload</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-documents/cp" href="#/organization/org-documents/cp"><span class="sidebar-dropdown-label"> Policies</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a><span routerlink="/organization/org-documents/document-type-grid" class="sidebar-dropdown-label" tabindex="0">Document Type</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Announcements</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li class="ng-star-inserted"><a routerlink="/organization/announcement/announcement-list" href="#/organization/announcement/announcement-list"><span class="sidebar-dropdown-label"> All Announcements</span></a></li>
-                                        <li class="ng-star-inserted"><a routerlink="/organization/announcement/category" href="#/organization/announcement/category"><span class="sidebar-dropdown-label"> Categories</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Asset</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown bottom-set">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlink="/organization/Asset/Asset-dashboard" tabindex="0" class="ng-star-inserted"><a><span class="sidebar-dropdown-label">Summary</span></a></li>
-                                        <li routerlink="/organization/Asset/Asset-store" tabindex="0" class="ng-star-inserted"><a><span class="sidebar-dropdown-label">Asset Categories</span></a></li>
-                                        <li routerlink="/organization/Asset/asset-available" tabindex="0" class="ng-star-inserted"><a><span class="sidebar-dropdown-label">Asset Availability</span></a></li>
-                                        <li routerlink="/organization/Asset/Asset-Repair/Team" tabindex="0" class="ng-star-inserted"><a><span class="sidebar-dropdown-label">Repair Team</span></a></li>
-                                        <li routerlink="/organization/Asset/Purchase" tabindex="0" class="ng-star-inserted"><a><span class="sidebar-dropdown-label">Purchase Order</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Employee Pulse Survey</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown bottom-set">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/emp-survey/questions" href="#/organization/emp-survey/questions"><span class="sidebar-dropdown-label">Questions</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/emp-survey/category" href="#/organization/emp-survey/category"><span class="sidebar-dropdown-label">Category</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/emp-survey/all-survey" href="#/organization/emp-survey/all-survey"><span class="sidebar-dropdown-label">All Surveys</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/emp-survey/analyze" href="#/organization/emp-survey/analyze"><span class="sidebar-dropdown-label">Analyze Surveys</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Settings</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown bottom-set">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-settings/workflow-setup/self-service-workflow-grid" href="#/organization/org-settings/workflow-setup/self-service-workflow-grid"><span class="sidebar-dropdown-label"> Approval configuration</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-settings/smart-forms/category-list" href="#/organization/org-settings/smart-forms/category-list"><span class="sidebar-dropdown-label"> Smart Forms &amp; Workflows</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/organization/org-settings/work-anniversary-config/grid" href="#/organization/org-settings/work-anniversary-config/grid"><span class="sidebar-dropdown-label"> Customizable Appreciation email</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a><span routerlink="/organization/org-settings/smtp" class="sidebar-dropdown-label" tabindex="0"> SMTP Configuration</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li routerlinkactive="menu-1-active" class="nav-item ng-star-inserted">
-                    <a>
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 9.54492L12.8 13.7449L11.2 11.3449L8 14.5449" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M15 9.54492H17V11.5449" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M9.5 22.0449H15.5C20.5 22.0449 22.5 20.0449 22.5 15.0449V9.04492C22.5 4.04492 20.5 2.04492 15.5 2.04492H9.5C4.5 2.04492 2.5 4.04492 2.5 9.04492V15.0449C2.5 20.0449 4.5 22.0449 9.5 22.0449Z" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>                        <p>Performance</p>
-                    </a>
-                    <div class="sidebar-dropdown">
-                        <ul class="sidebar-dropdown-list">
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a routerlink="/performance/appraisals/appraisal" href="#/performance/appraisals/appraisal"><span class="sidebar-dropdown-label">Appraisals</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li class="ng-star-inserted"><a routerlink="/performance/appraisals/appraisal/list" href="#/performance/appraisals/appraisal/list"><span class="sidebar-dropdown-label">Cycle Configuration</span></a></li>
-                                        <li class="ng-star-inserted"><a routerlink="/performance/appraisals/my-team/appraisee-list" href="#/performance/appraisals/my-team/appraisee-list"><span class="sidebar-dropdown-label">Appraisee View</span></a></li>
-                                        <li class="ng-star-inserted"><a routerlink="/performance/appraisals/salary-hike" href="#/performance/appraisals/salary-hike"><span class="sidebar-dropdown-label">Salary Hike</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a routerlink="/performance/settings" href="#/performance/settings"><span class="sidebar-dropdown-label">Settings</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li class="ng-star-inserted"><a routerlink="/performance/settings/kra" href="#/performance/settings/kra"><span class="sidebar-dropdown-label"> KRA Summary</span></a></li>
-                                        <li class="ng-star-inserted"><a routerlink="/performance/settings/competency" href="#/performance/settings/competency"><span class="sidebar-dropdown-label"> Competency Summary</span></a></li>
-                                        <li class="ng-star-inserted"><a routerlink="/performance/settings/skill" href="#/performance/settings/skill"><span class="sidebar-dropdown-label"> Skill Summary</span></a></li>
-                                        <li class="ng-star-inserted"><a routerlink="/performance/settings/review-questions" href="#/performance/settings/review-questions"><span class="sidebar-dropdown-label"> Review Questions</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li routerlinkactive="menu-1-active" class="nav-item ng-star-inserted">
-                    <a>
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.5 2.04492V5.04492" stroke="#325080" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M16.5 2.04492V5.04492" stroke="#325080" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M4 9.13477H21" stroke="#325080" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M21.5 8.54492V17.0449C21.5 20.0449 20 22.0449 16.5 22.0449H8.5C5 22.0449 3.5 20.0449 3.5 17.0449V8.54492C3.5 5.54492 5 3.54492 8.5 3.54492H16.5C20 3.54492 21.5 5.54492 21.5 8.54492Z" stroke="#325080" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M16.1976 13.7441H16.2066" stroke="#325080" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M16.1976 16.7441H16.2066" stroke="#325080" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M12.4945 13.7441H12.5035" stroke="#325080" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M12.4945 16.7441H12.5035" stroke="#325080" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M8.79138 13.7441H8.80036" stroke="#325080" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M8.79138 16.7441H8.80036" stroke="#325080" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>                        <p>Attendance</p>
-                    </a>
-                    <div class="sidebar-dropdown bottom-set">
-                        <ul class="sidebar-dropdown-list">
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Dashboard</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-dashboard/summary" href="#/attendance/attendance-dashboard/summary"><span class="sidebar-dropdown-label">Summary</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-dashboard/attendance-reports" href="#/attendance/attendance-dashboard/attendance-reports"><span class="sidebar-dropdown-label">Reports</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Daily Attendance</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/daily-attendance/consistent-attendees" href="#/attendance/daily-attendance/consistent-attendees"><span class="sidebar-dropdown-label">Consistent-Attendees</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/daily-attendance/tracking" href="#/attendance/daily-attendance/tracking"><span class="sidebar-dropdown-label">Tracking</span></a></li>
-                                        <li routerlinkactive="menu-3-active"><a routerlink="/attendance/daily-attendance/geo-tracking" href="#/attendance/daily-attendance/geo-tracking"><span class="sidebar-dropdown-label">Geo Tracking</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/daily-attendance/geo-fencing" href="#/attendance/daily-attendance/geo-fencing"><span class="sidebar-dropdown-label">Geo-Fencing</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/daily-attendance/bulk/bio-metric-tracking" href="#/attendance/daily-attendance/bulk/bio-metric-tracking"><span class="sidebar-dropdown-label">Biometric Tracking</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Requests</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-request/leave-workflow" href="#/attendance/attendance-request/leave-workflow"><span class="sidebar-dropdown-label">Leave </span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-request/missed-punch-workflow" href="#/attendance/attendance-request/missed-punch-workflow"><span class="sidebar-dropdown-label">Missed Punch</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-request/compoff-workflow" href="#/attendance/attendance-request/compoff-workflow"><span class="sidebar-dropdown-label">Comp Off</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-request/overtime-requests" href="#/attendance/attendance-request/overtime-requests"><span class="sidebar-dropdown-label"> Overtime </span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-request/wfh-requests" href="#/attendance/attendance-request/wfh-requests"><span class="sidebar-dropdown-label">WFH</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-request/optional-holiday-requests" href="#/attendance/attendance-request/optional-holiday-requests"><span class="sidebar-dropdown-label"> Optional Holiday </span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label"> Work Schedule </span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/shift-weekly-off/shifts" href="#/attendance/shift-weekly-off/shifts"><span class="sidebar-dropdown-label">Work Shifts</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/shift-weekly-off/dynamic-weekoff" href="#/attendance/shift-weekly-off/dynamic-weekoff"><span class="sidebar-dropdown-label">Dynamic Week-Offs</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/shift-weekly-off/weekly-off" href="#/attendance/shift-weekly-off/weekly-off"><span class="sidebar-dropdown-label">Week-Offs</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/shift-weekly-off/shift-allowance" href="#/attendance/shift-weekly-off/shift-allowance"><span class="sidebar-dropdown-label">Shift Allowance</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/shift-weekly-off/shift-rotation" href="#/attendance/shift-weekly-off/shift-rotation"><span class="sidebar-dropdown-label">Shift Rotation</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/shift-weekly-off/leaveBlockList" href="#/attendance/shift-weekly-off/leaveBlockList"><span class="sidebar-dropdown-label">Block Leaves</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/shift-weekly-off/manage-leave-balance" href="#/attendance/shift-weekly-off/manage-leave-balance"><span class="sidebar-dropdown-label">Manage Leave Balance</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted"><a><span routerlink="/attendance/overtime" class="sidebar-dropdown-label" tabindex="0">Overtime </span></a></li>
-                            <li routerlinkactive="menu-3-active" class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a routerlink="/attendance/attendance-leave/leave-types" href="#/attendance/attendance-leave/leave-types"><span class="sidebar-dropdown-label"> Leaves </span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-leave/leave-types" href="#/attendance/attendance-leave/leave-types"><span class="sidebar-dropdown-label"> Leave Types </span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-leave/leave-plan" href="#/attendance/attendance-leave/leave-plan"><span class="sidebar-dropdown-label"> Leave Plans </span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a routerlink="/attendance/attendance-settings" href="#/attendance/attendance-settings"><span class="sidebar-dropdown-label">Settings </span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-settings/settings" href="#/attendance/attendance-settings/settings"><span class="sidebar-dropdown-label"> Attendance Settings</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-settings/time-rules" href="#/attendance/attendance-settings/time-rules"><span class="sidebar-dropdown-label"> Time Rules</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-settings/reminder-setting" href="#/attendance/attendance-settings/reminder-setting"><span class="sidebar-dropdown-label"> Reminder Settings</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-settings/holiday-types" href="#/attendance/attendance-settings/holiday-types"><span class="sidebar-dropdown-label"> Holiday Types </span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-settings/paycode" href="#/attendance/attendance-settings/paycode"><span class="sidebar-dropdown-label"> Pay Code Configuration </span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/attendance/attendance-settings/workflow-setup" href="#/attendance/attendance-settings/workflow-setup"><span class="sidebar-dropdown-label"> Approval configuration </span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li routerlinkactive="menu-1-active" class="nav-item ng-star-inserted">
-                    <a>
-                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke="#325080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd" d="M11.5 1.79492C6.39137 1.79492 2.25 5.93629 2.25 11.0449C2.25 16.1535 6.39137 20.2949 11.5 20.2949C16.6086 20.2949 20.75 16.1535 20.75 11.0449C20.75 5.93629 16.6086 1.79492 11.5 1.79492ZM0.75 11.0449C0.75 5.10786 5.56294 0.294922 11.5 0.294922C17.4371 0.294922 22.25 5.10786 22.25 11.0449C22.25 16.982 17.4371 21.7949 11.5 21.7949C5.56294 21.7949 0.75 16.982 0.75 11.0449ZM11.5 4.29492C11.9142 4.29492 12.25 4.63071 12.25 5.04492V5.36165C13.8804 5.65359 15.25 6.87853 15.25 8.54492C15.25 8.95913 14.9142 9.29492 14.5 9.29492C14.0858 9.29492 13.75 8.95913 13.75 8.54492C13.75 7.70065 12.8765 6.79492 11.5 6.79492C10.1235 6.79492 9.25 7.70065 9.25 8.54492C9.25 9.38922 10.1235 10.2949 11.5 10.2949C13.4372 10.2949 15.25 11.6277 15.25 13.5449C15.25 15.2113 13.8804 16.4362 12.25 16.7282V17.0449C12.25 17.4591 11.9142 17.7949 11.5 17.7949C11.0858 17.7949 10.75 17.4591 10.75 17.0449V16.7282C9.11957 16.4362 7.75 15.2113 7.75 13.5449C7.75 13.1307 8.08579 12.7949 8.5 12.7949C8.91421 12.7949 9.25 13.1307 9.25 13.5449C9.25 14.3892 10.1235 15.2949 11.5 15.2949C12.8765 15.2949 13.75 14.3892 13.75 13.5449C13.75 12.7006 12.8765 11.7949 11.5 11.7949C9.5628 11.7949 7.75 10.4621 7.75 8.54492C7.75 6.87853 9.11957 5.65359 10.75 5.36165V5.04492C10.75 4.63071 11.0858 4.29492 11.5 4.29492Z" fill="#325080" />
-                        </svg>                      <p>Payroll</p>
-                    </a>
-                    <div class="sidebar-dropdown bottom-set">
-                        <ul class="sidebar-dropdown-list">
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Dashboard</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/dashboard/analytics" href="#/payroll/dashboard/analytics"><span class="sidebar-dropdown-label">Analytics</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/dashboard/budget-estimation" href="#/payroll/dashboard/budget-estimation"><span class="sidebar-dropdown-label">Budget Estimation</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/dashboard/reports" href="#/payroll/dashboard/reports"><span class="sidebar-dropdown-label">Reports</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="ng-star-inserted"><a routerlink="/payroll/run-payroll" href="#/payroll/run-payroll"><span class="sidebar-dropdown-label">Run Payroll</span></a></li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Payroll Admin</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/manage-payroll-status" href="#/payroll/payroll-admin/manage-payroll-status"><span class="sidebar-dropdown-label"> Employee Payroll Status</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/employee-salary" href="#/payroll/payroll-admin/employee-salary"><span class="sidebar-dropdown-label">Employee Salary Revisions</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/hold-salary" href="#/payroll/payroll-admin/hold-salary"><span class="sidebar-dropdown-label">Hold Employee Salary</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/arrears" href="#/payroll/payroll-admin/arrears"><span class="sidebar-dropdown-label">Arrears</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/lop" href="#/payroll/payroll-admin/lop"><span class="sidebar-dropdown-label">LOP</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/dataCapture/variable-salary-policy" href="#/payroll/payroll-admin/dataCapture/variable-salary-policy"><span class="sidebar-dropdown-label">Variable Salary Policy</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/dataCapture/variable-deduction" href="#/payroll/payroll-admin/dataCapture/variable-deduction"><span class="sidebar-dropdown-label">Variable Deduction</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/manage-cheques" href="#/payroll/payroll-admin/manage-cheques"><span class="sidebar-dropdown-label">Manage Cheques</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/yearly-tax-deduction" href="#/payroll/payroll-admin/yearly-tax-deduction"><span class="sidebar-dropdown-label">Yearly Tax Deduction</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/form16/grid" href="#/payroll/payroll-admin/form16/grid"><span class="sidebar-dropdown-label"> Form 16 </span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/salescommission" href="#/payroll/payroll-admin/salescommission"><span class="sidebar-dropdown-label"> Sales Commission </span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Reimbursements</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/reimbursement/all-reimbursement-grid" href="#/payroll/reimbursement/all-reimbursement-grid"><span class="sidebar-dropdown-label">All</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/reimbursement/reimbursement-grid" href="#/payroll/reimbursement/reimbursement-grid"><span class="sidebar-dropdown-label">Manage Employees</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/reimbursement/reimbursement-workflow-requests" href="#/payroll/reimbursement/reimbursement-workflow-requests"><span class="sidebar-dropdown-label">Requests</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Salary Advance</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/salary-policy/policy" href="#/payroll/salary-policy/policy"><span class="sidebar-dropdown-label">Policies</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/salary-policy/salary-advance/workflow" href="#/payroll/salary-policy/salary-advance/workflow"><span class="sidebar-dropdown-label">Salary Advance Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/salary-policy/salary-advance-repayment/workflow" href="#/payroll/salary-policy/salary-advance-repayment/workflow"><span class="sidebar-dropdown-label">Salary Advance Repayments Requests</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Loan</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/loan/loan-type-Grid" href="#/payroll/loan/loan-type-Grid"><span class="sidebar-dropdown-label">Loan Types</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/loan/employee-loan-Grid" href="#/payroll/loan/employee-loan-Grid"><span class="sidebar-dropdown-label">Loan Requests</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/loan/loan-repayment-grid" href="#/payroll/loan/loan-repayment-grid"><span class="sidebar-dropdown-label"> Loan Repayment</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">TDS</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/tds/regime-grid" href="#/payroll/tds/regime-grid"><span class="sidebar-dropdown-label">Tax Regime</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/tds/slab-grid" href="#/payroll/tds/slab-grid"><span class="sidebar-dropdown-label">Tax Slab</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/tds/sf/section-grid" href="#/payroll/tds/sf/section-grid"><span class="sidebar-dropdown-label">Tax Section</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/tds/sf/form-grid" href="#/payroll/tds/sf/form-grid"><span class="sidebar-dropdown-label">Tax Form</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/tds/sf/tax-deduction" href="#/payroll/tds/sf/tax-deduction"><span class="sidebar-dropdown-label">Tax Deduction</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/tds/tc/tax-config-grid" href="#/payroll/tds/tc/tax-config-grid"><span class="sidebar-dropdown-label">Tax Configuration</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Payroll Pro (US)</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/pro/tax" href="#/payroll/pro/tax"><span class="sidebar-dropdown-label">Tax Components</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/pro/tax-slabs" href="#/payroll/pro/tax-slabs"><span class="sidebar-dropdown-label">Tax Slabs</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/pro/tax-deductions" href="#/payroll/pro/tax-deductions"><span class="sidebar-dropdown-label">Tax Deduction</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/pro/tax-withholding" href="#/payroll/pro/tax-withholding"><span class="sidebar-dropdown-label">Tax Withhold</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/pro/tax-withholding-logs" href="#/payroll/pro/tax-withholding-logs"><span class="sidebar-dropdown-label">Tax Withhold Logs</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/pro/us-tax" href="#/payroll/pro/us-tax"><span class="sidebar-dropdown-label">US Tax Forms</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/pro/setup" href="#/payroll/pro/setup"><span class="sidebar-dropdown-label">Setup</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Proof Of Investments</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/poi-admin/submitted-poi" href="#/payroll/poi-admin/submitted-poi"><span class="sidebar-dropdown-label">Submitted POI</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="sidebar-dropdown-list-item ng-star-inserted">
-                                <a><span class="sidebar-dropdown-label">Settings</span><span class="side-arr">›</span></a>
-                                <div class="sidebar-sub-dropdown bottom-set">
-                                    <ul class="sidebar-dropdown-list">
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/salary-components/salary-components/salary-view" href="#/payroll/payroll-settings/salary-components/salary-components/salary-view"><span class="sidebar-dropdown-label">Salary Components</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/salary-deductions" href="#/payroll/payroll-settings/salary-deductions"><span class="sidebar-dropdown-label">Salary Deductions</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/adhoc/grid/components" href="#/payroll/payroll-settings/adhoc/grid/components"><span class="sidebar-dropdown-label">Ad-hoc</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/esi" href="#/payroll/payroll-settings/esi"><span class="sidebar-dropdown-label">ESI </span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/epf" href="#/payroll/payroll-settings/epf"><span class="sidebar-dropdown-label">PF</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/bonus" href="#/payroll/payroll-settings/bonus"><span class="sidebar-dropdown-label">Statutory Bonus </span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/profTax" href="#/payroll/payroll-settings/profTax"><span class="sidebar-dropdown-label">Prof. Tax </span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/gratuity" href="#/payroll/payroll-settings/gratuity"><span class="sidebar-dropdown-label">Gratuity</span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/labour-welfare" href="#/payroll/payroll-settings/labour-welfare"><span class="sidebar-dropdown-label">LWF </span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/workflow-setup/self-service-workflow-grid" href="#/payroll/payroll-settings/workflow-setup/self-service-workflow-grid"><span class="sidebar-dropdown-label"> Approval Configuration </span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/payslip-encrypt/config" href="#/payroll/payroll-settings/payslip-encrypt/config"><span class="sidebar-dropdown-label">Payslip Encryption Configuration </span></a></li>
-                                        <li routerlinkactive="menu-3-active" class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/payslip-config" href="#/payroll/payroll-settings/payslip-config"><span class="sidebar-dropdown-label">Payslip Template Configuration </span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li routerlinkactive="menu-1-active" class="nav-item ng-star-inserted">
-                    <a>
-                        <svg fill="#325080" width="24px" height="24px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg"><path stroke="#325080" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" d="M226.39648,100.56006A12.02757,12.02757,0,0,0,236,88.80957V64a12.01312,12.01312,0,0,0-12-12H32A12.01312,12.01312,0,0,0,20,64V88.80957a12.02757,12.02757,0,0,0,9.60352,11.75049,28.00781,28.00781,0,0,1,0,54.87988A12.02757,12.02757,0,0,0,20,167.19043V192a12.01312,12.01312,0,0,0,12,12H224a12.01312,12.01312,0,0,0,12-12V167.19043a12.02757,12.02757,0,0,0-9.60352-11.75049,28.00781,28.00781,0,0,1,0-54.87988ZM28,192V167.19043a4.00211,4.00211,0,0,1,3.19531-3.91016,36.00816,36.00816,0,0,0,0-70.56054A4.00211,4.00211,0,0,1,28,88.80957V64a4.00427,4.00427,0,0,1,4-4H92V196H32A4.00427,4.00427,0,0,1,28,192Zm168-64a36.0982,36.0982,0,0,0,28.80469,35.28027A4.00211,4.00211,0,0,1,228,167.19043V192a4.00427,4.00427,0,0,1-4,4H100V60H224a4.00427,4.00427,0,0,1,4,4V88.80957a4.00211,4.00211,0,0,1-3.19531,3.91016A36.0982,36.0982,0,0,0,196,128Z"></path></svg>
-                        <p>Hiregynee</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                                    <li class="ng-star-inserted"><a href="/organization/org_employees/in_probation"><span class="sidebar-dropdown-label">Probation</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a href="/organization/org_structure/legal_entities"><span class="sidebar-dropdown-label">Organization Structure</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/organization/org_structure/legal_entities"><span class="sidebar-dropdown-label">Legal Entity</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/org_structure/department_grid"><span class="sidebar-dropdown-label">Department</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/org_structure/designation_view"><span class="sidebar-dropdown-label">Designation</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/org_structure/work_location"><span class="sidebar-dropdown-label">Work Location</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/org_structure/salary_structure"><span class="sidebar-dropdown-label">Salary Structures</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a href="/organization/onboarding/candidate_view"><span class="sidebar-dropdown-label">Onboarding</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/organization/onboarding/candidate_view"><span class="sidebar-dropdown-label">Candidates</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/onboarding/all_requisition"><span class="sidebar-dropdown-label">Requisitions</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a href="/organization/org_exit/notice_period"><span class="sidebar-dropdown-label">Exit</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/organization/org_exit/notice_period"><span class="sidebar-dropdown-label">Notice Period</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/org_exit/direct_exit_employee"><span class="sidebar-dropdown-label">Resignation Process Employees</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/org_exit/exit_reason"><span class="sidebar-dropdown-label">Resignation Reason</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a href="/organization/help_desk/help_summary"><span class="sidebar-dropdown-label">Help Desk</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown bottom-set">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/organization/help_desk/help_summary"><span class="sidebar-dropdown-label">Summary</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/help_desk/question_category_view"><span class="sidebar-dropdown-label">Categories</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/help_desk/question_view"><span class="sidebar-dropdown-label">Grievance</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/help_desk/help_tickets"><span class="sidebar-dropdown-label">Tickets</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/help_desk/close_reason"><span class="sidebar-dropdown-label">Close Reasons</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/help_desk/KnowledgeBase"><span class="sidebar-dropdown-label">Knowledge Base</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/help_desk/sla"><span class="sidebar-dropdown-label">SLA Config</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/help_desk/team"><span class="sidebar-dropdown-label">Help-Desk Team</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a href="/organization/org_documents/letters"><span class="sidebar-dropdown-label">Documents</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/organization/org_documents/letters"><span class="sidebar-dropdown-label">HR Letters</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/org_documents/empdoc"><span class="sidebar-dropdown-label"> Employee Documents</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/org_documents/policygrid"><span class="sidebar-dropdown-label"> Policies</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/org-documents/documenttype" class="sidebar-dropdown-label">Document Type</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a href="/organization/announcement/announcementlist"><span class="sidebar-dropdown-label">Announcements</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/organization/announcement/announcementlist"><span class="sidebar-dropdown-label"> All Announcements</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/announcement/category"><span class="sidebar-dropdown-label"> Categories</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a href="/organization/assets/asset_dashboard"><span class="sidebar-dropdown-label">Asset</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown bottom-set">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/organization/assets/asset_dashboard"><span class="sidebar-dropdown-label">Summary</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/assets/asset_store"><span class="sidebar-dropdown-label">Asset Categories</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/assets/asset_available"><span class="sidebar-dropdown-label">Asset Availability</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/assets/asset_repair"><span class="sidebar-dropdown-label">Repair Team</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/assets/purchase_order"><span class="sidebar-dropdown-label">Purchase Order</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a href="/organization/empsurvey/questions"><span class="sidebar-dropdown-label">Employee Pulse Survey</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown bottom-set">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/organization/empsurvey/questions"><span class="sidebar-dropdown-label">Questions</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/empsurvey/category"><span class="sidebar-dropdown-label">Category</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/empsurvey/survey"><span class="sidebar-dropdown-label">All Surveys</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/empsurvey/analyze"><span class="sidebar-dropdown-label">Analyze Surveys</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a href="/organization/orgsettings/workflow_setup"><span class="sidebar-dropdown-label">Settings</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown bottom-set">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a href="/organization/orgsettings/workflow_setup"><span class="sidebar-dropdown-label"> Approval configuration</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/orgsettings/smartforms"><span class="sidebar-dropdown-label"> Smart Forms &amp; Workflows</span></a></li>
+                                    <li class="ng-star-inserted"><a href="/organization/orgsettings/work_anniversary_config"><span class="sidebar-dropdown-label"> Customizable Appreciation email</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li routerlinkactive="menu-1-active" class="nav-item ng-star-inserted">
+                <a>
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 9.54492L12.8 13.7449L11.2 11.3449L8 14.5449" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M15 9.54492H17V11.5449" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9.5 22.0449H15.5C20.5 22.0449 22.5 20.0449 22.5 15.0449V9.04492C22.5 4.04492 20.5 2.04492 15.5 2.04492H9.5C4.5 2.04492 2.5 4.04492 2.5 9.04492V15.0449C2.5 20.0449 4.5 22.0449 9.5 22.0449Z" stroke="#325080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>                        <p>Performance</p>
+                </a>
+                <div class="sidebar-dropdown">
+                    <ul class="sidebar-dropdown-list">
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a routerlink="/performance/appraisals/appraisal" href="#/performance/appraisals/appraisal"><span class="sidebar-dropdown-label">Appraisals</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/performance/appraisals/appraisal/list" href="#/performance/appraisals/appraisal/list"><span class="sidebar-dropdown-label">Cycle Configuration</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/performance/appraisals/my-team/appraisee-list" href="#/performance/appraisals/my-team/appraisee-list"><span class="sidebar-dropdown-label">Appraisee View</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/performance/appraisals/salary-hike" href="#/performance/appraisals/salary-hike"><span class="sidebar-dropdown-label">Salary Hike</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a routerlink="/performance/settings" href="#/performance/settings"><span class="sidebar-dropdown-label">Settings</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/performance/settings/kra" href="#/performance/settings/kra"><span class="sidebar-dropdown-label"> KRA Summary</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/performance/settings/competency" href="#/performance/settings/competency"><span class="sidebar-dropdown-label"> Competency Summary</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/performance/settings/skill" href="#/performance/settings/skill"><span class="sidebar-dropdown-label"> Skill Summary</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/performance/settings/review-questions" href="#/performance/settings/review-questions"><span class="sidebar-dropdown-label"> Review Questions</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li routerlinkactive="menu-1-active" class="nav-item ng-star-inserted">
+                <a>
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.5 2.04492V5.04492" stroke="#325080" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M16.5 2.04492V5.04492" stroke="#325080" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4 9.13477H21" stroke="#325080" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M21.5 8.54492V17.0449C21.5 20.0449 20 22.0449 16.5 22.0449H8.5C5 22.0449 3.5 20.0449 3.5 17.0449V8.54492C3.5 5.54492 5 3.54492 8.5 3.54492H16.5C20 3.54492 21.5 5.54492 21.5 8.54492Z" stroke="#325080" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M16.1976 13.7441H16.2066" stroke="#325080" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M16.1976 16.7441H16.2066" stroke="#325080" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M12.4945 13.7441H12.5035" stroke="#325080" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M12.4945 16.7441H12.5035" stroke="#325080" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8.79138 13.7441H8.80036" stroke="#325080" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8.79138 16.7441H8.80036" stroke="#325080" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>                        <p>Attendance</p>
+                </a>
+                <div class="sidebar-dropdown bottom-set">
+                    <ul class="sidebar-dropdown-list">
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Dashboard</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-dashboard/summary" href="#/attendance/attendance-dashboard/summary"><span class="sidebar-dropdown-label">Summary</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-dashboard/attendance-reports" href="#/attendance/attendance-dashboard/attendance-reports"><span class="sidebar-dropdown-label">Reports</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Daily Attendance</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/daily-attendance/consistent-attendees" href="#/attendance/daily-attendance/consistent-attendees"><span class="sidebar-dropdown-label">Consistent-Attendees</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/daily-attendance/tracking" href="#/attendance/daily-attendance/tracking"><span class="sidebar-dropdown-label">Tracking</span></a></li>
+                                    <li><a routerlink="/attendance/daily-attendance/geo-tracking" href="#/attendance/daily-attendance/geo-tracking"><span class="sidebar-dropdown-label">Geo Tracking</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/daily-attendance/geo-fencing" href="#/attendance/daily-attendance/geo-fencing"><span class="sidebar-dropdown-label">Geo-Fencing</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/daily-attendance/bulk/bio-metric-tracking" href="#/attendance/daily-attendance/bulk/bio-metric-tracking"><span class="sidebar-dropdown-label">Biometric Tracking</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Requests</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-request/leave-workflow" href="#/attendance/attendance-request/leave-workflow"><span class="sidebar-dropdown-label">Leave </span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-request/missed-punch-workflow" href="#/attendance/attendance-request/missed-punch-workflow"><span class="sidebar-dropdown-label">Missed Punch</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-request/compoff-workflow" href="#/attendance/attendance-request/compoff-workflow"><span class="sidebar-dropdown-label">Comp Off</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-request/overtime-requests" href="#/attendance/attendance-request/overtime-requests"><span class="sidebar-dropdown-label"> Overtime </span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-request/wfh-requests" href="#/attendance/attendance-request/wfh-requests"><span class="sidebar-dropdown-label">WFH</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-request/optional-holiday-requests" href="#/attendance/attendance-request/optional-holiday-requests"><span class="sidebar-dropdown-label"> Optional Holiday </span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label"> Work Schedule </span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/shift-weekly-off/shifts" href="#/attendance/shift-weekly-off/shifts"><span class="sidebar-dropdown-label">Work Shifts</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/shift-weekly-off/dynamic-weekoff" href="#/attendance/shift-weekly-off/dynamic-weekoff"><span class="sidebar-dropdown-label">Dynamic Week-Offs</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/shift-weekly-off/weekly-off" href="#/attendance/shift-weekly-off/weekly-off"><span class="sidebar-dropdown-label">Week-Offs</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/shift-weekly-off/shift-allowance" href="#/attendance/shift-weekly-off/shift-allowance"><span class="sidebar-dropdown-label">Shift Allowance</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/shift-weekly-off/shift-rotation" href="#/attendance/shift-weekly-off/shift-rotation"><span class="sidebar-dropdown-label">Shift Rotation</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/shift-weekly-off/leaveBlockList" href="#/attendance/shift-weekly-off/leaveBlockList"><span class="sidebar-dropdown-label">Block Leaves</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/shift-weekly-off/manage-leave-balance" href="#/attendance/shift-weekly-off/manage-leave-balance"><span class="sidebar-dropdown-label">Manage Leave Balance</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted"><a href="/attendance/overtime" class="sidebar-dropdown-label">Overtime </span></a></li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a routerlink="/attendance/attendance-leave/leave-types" href="#/attendance/attendance-leave/leave-types"><span class="sidebar-dropdown-label"> Leaves </span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-leave/leave-types" href="#/attendance/attendance-leave/leave-types"><span class="sidebar-dropdown-label"> Leave Types </span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-leave/leave-plan" href="#/attendance/attendance-leave/leave-plan"><span class="sidebar-dropdown-label"> Leave Plans </span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a routerlink="/attendance/attendance-settings" href="#/attendance/attendance-settings"><span class="sidebar-dropdown-label">Settings </span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-settings/settings" href="#/attendance/attendance-settings/settings"><span class="sidebar-dropdown-label"> Attendance Settings</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-settings/time-rules" href="#/attendance/attendance-settings/time-rules"><span class="sidebar-dropdown-label"> Time Rules</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-settings/reminder-setting" href="#/attendance/attendance-settings/reminder-setting"><span class="sidebar-dropdown-label"> Reminder Settings</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-settings/holiday-types" href="#/attendance/attendance-settings/holiday-types"><span class="sidebar-dropdown-label"> Holiday Types </span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-settings/paycode" href="#/attendance/attendance-settings/paycode"><span class="sidebar-dropdown-label"> Pay Code Configuration </span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/attendance/attendance-settings/workflow-setup" href="#/attendance/attendance-settings/workflow-setup"><span class="sidebar-dropdown-label"> Approval configuration </span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li routerlinkactive="menu-1-active" class="nav-item ng-star-inserted">
+                <a>
+                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke="#325080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd" d="M11.5 1.79492C6.39137 1.79492 2.25 5.93629 2.25 11.0449C2.25 16.1535 6.39137 20.2949 11.5 20.2949C16.6086 20.2949 20.75 16.1535 20.75 11.0449C20.75 5.93629 16.6086 1.79492 11.5 1.79492ZM0.75 11.0449C0.75 5.10786 5.56294 0.294922 11.5 0.294922C17.4371 0.294922 22.25 5.10786 22.25 11.0449C22.25 16.982 17.4371 21.7949 11.5 21.7949C5.56294 21.7949 0.75 16.982 0.75 11.0449ZM11.5 4.29492C11.9142 4.29492 12.25 4.63071 12.25 5.04492V5.36165C13.8804 5.65359 15.25 6.87853 15.25 8.54492C15.25 8.95913 14.9142 9.29492 14.5 9.29492C14.0858 9.29492 13.75 8.95913 13.75 8.54492C13.75 7.70065 12.8765 6.79492 11.5 6.79492C10.1235 6.79492 9.25 7.70065 9.25 8.54492C9.25 9.38922 10.1235 10.2949 11.5 10.2949C13.4372 10.2949 15.25 11.6277 15.25 13.5449C15.25 15.2113 13.8804 16.4362 12.25 16.7282V17.0449C12.25 17.4591 11.9142 17.7949 11.5 17.7949C11.0858 17.7949 10.75 17.4591 10.75 17.0449V16.7282C9.11957 16.4362 7.75 15.2113 7.75 13.5449C7.75 13.1307 8.08579 12.7949 8.5 12.7949C8.91421 12.7949 9.25 13.1307 9.25 13.5449C9.25 14.3892 10.1235 15.2949 11.5 15.2949C12.8765 15.2949 13.75 14.3892 13.75 13.5449C13.75 12.7006 12.8765 11.7949 11.5 11.7949C9.5628 11.7949 7.75 10.4621 7.75 8.54492C7.75 6.87853 9.11957 5.65359 10.75 5.36165V5.04492C10.75 4.63071 11.0858 4.29492 11.5 4.29492Z" fill="#325080" />
+                    </svg>                      <p>Payroll</p>
+                </a>
+                <div class="sidebar-dropdown bottom-set">
+                    <ul class="sidebar-dropdown-list">
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Dashboard</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/dashboard/analytics" href="#/payroll/dashboard/analytics"><span class="sidebar-dropdown-label">Analytics</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/dashboard/budget-estimation" href="#/payroll/dashboard/budget-estimation"><span class="sidebar-dropdown-label">Budget Estimation</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/dashboard/reports" href="#/payroll/dashboard/reports"><span class="sidebar-dropdown-label">Reports</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="ng-star-inserted"><a routerlink="/payroll/run-payroll" href="#/payroll/run-payroll"><span class="sidebar-dropdown-label">Run Payroll</span></a></li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Payroll Admin</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/manage-payroll-status" href="#/payroll/payroll-admin/manage-payroll-status"><span class="sidebar-dropdown-label"> Employee Payroll Status</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/employee-salary" href="#/payroll/payroll-admin/employee-salary"><span class="sidebar-dropdown-label">Employee Salary Revisions</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/hold-salary" href="#/payroll/payroll-admin/hold-salary"><span class="sidebar-dropdown-label">Hold Employee Salary</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/arrears" href="#/payroll/payroll-admin/arrears"><span class="sidebar-dropdown-label">Arrears</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/lop" href="#/payroll/payroll-admin/lop"><span class="sidebar-dropdown-label">LOP</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/dataCapture/variable-salary-policy" href="#/payroll/payroll-admin/dataCapture/variable-salary-policy"><span class="sidebar-dropdown-label">Variable Salary Policy</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/dataCapture/variable-deduction" href="#/payroll/payroll-admin/dataCapture/variable-deduction"><span class="sidebar-dropdown-label">Variable Deduction</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/manage-cheques" href="#/payroll/payroll-admin/manage-cheques"><span class="sidebar-dropdown-label">Manage Cheques</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/yearly-tax-deduction" href="#/payroll/payroll-admin/yearly-tax-deduction"><span class="sidebar-dropdown-label">Yearly Tax Deduction</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/form16/grid" href="#/payroll/payroll-admin/form16/grid"><span class="sidebar-dropdown-label"> Form 16 </span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-admin/salescommission" href="#/payroll/payroll-admin/salescommission"><span class="sidebar-dropdown-label"> Sales Commission </span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Reimbursements</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/reimbursement/all-reimbursement-grid" href="#/payroll/reimbursement/all-reimbursement-grid"><span class="sidebar-dropdown-label">All</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/reimbursement/reimbursement-grid" href="#/payroll/reimbursement/reimbursement-grid"><span class="sidebar-dropdown-label">Manage Employees</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/reimbursement/reimbursement-workflow-requests" href="#/payroll/reimbursement/reimbursement-workflow-requests"><span class="sidebar-dropdown-label">Requests</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Salary Advance</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/salary-policy/policy" href="#/payroll/salary-policy/policy"><span class="sidebar-dropdown-label">Policies</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/salary-policy/salary-advance/workflow" href="#/payroll/salary-policy/salary-advance/workflow"><span class="sidebar-dropdown-label">Salary Advance Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/salary-policy/salary-advance-repayment/workflow" href="#/payroll/salary-policy/salary-advance-repayment/workflow"><span class="sidebar-dropdown-label">Salary Advance Repayments Requests</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Loan</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/loan/loan-type-Grid" href="#/payroll/loan/loan-type-Grid"><span class="sidebar-dropdown-label">Loan Types</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/loan/employee-loan-Grid" href="#/payroll/loan/employee-loan-Grid"><span class="sidebar-dropdown-label">Loan Requests</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/loan/loan-repayment-grid" href="#/payroll/loan/loan-repayment-grid"><span class="sidebar-dropdown-label"> Loan Repayment</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">TDS</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/tds/regime-grid" href="#/payroll/tds/regime-grid"><span class="sidebar-dropdown-label">Tax Regime</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/tds/slab-grid" href="#/payroll/tds/slab-grid"><span class="sidebar-dropdown-label">Tax Slab</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/tds/sf/section-grid" href="#/payroll/tds/sf/section-grid"><span class="sidebar-dropdown-label">Tax Section</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/tds/sf/form-grid" href="#/payroll/tds/sf/form-grid"><span class="sidebar-dropdown-label">Tax Form</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/tds/sf/tax-deduction" href="#/payroll/tds/sf/tax-deduction"><span class="sidebar-dropdown-label">Tax Deduction</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/tds/tc/tax-config-grid" href="#/payroll/tds/tc/tax-config-grid"><span class="sidebar-dropdown-label">Tax Configuration</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Payroll Pro (US)</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/pro/tax" href="#/payroll/pro/tax"><span class="sidebar-dropdown-label">Tax Components</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/pro/tax-slabs" href="#/payroll/pro/tax-slabs"><span class="sidebar-dropdown-label">Tax Slabs</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/pro/tax-deductions" href="#/payroll/pro/tax-deductions"><span class="sidebar-dropdown-label">Tax Deduction</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/pro/tax-withholding" href="#/payroll/pro/tax-withholding"><span class="sidebar-dropdown-label">Tax Withhold</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/pro/tax-withholding-logs" href="#/payroll/pro/tax-withholding-logs"><span class="sidebar-dropdown-label">Tax Withhold Logs</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/pro/us-tax" href="#/payroll/pro/us-tax"><span class="sidebar-dropdown-label">US Tax Forms</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/pro/setup" href="#/payroll/pro/setup"><span class="sidebar-dropdown-label">Setup</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Proof Of Investments</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/poi-admin/submitted-poi" href="#/payroll/poi-admin/submitted-poi"><span class="sidebar-dropdown-label">Submitted POI</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown-list-item ng-star-inserted">
+                            <a><span class="sidebar-dropdown-label">Settings</span><span class="side-arr">›</span></a>
+                            <div class="sidebar-sub-dropdown bottom-set">
+                                <ul class="sidebar-dropdown-list">
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/salary-components/salary-components/salary-view" href="#/payroll/payroll-settings/salary-components/salary-components/salary-view"><span class="sidebar-dropdown-label">Salary Components</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/salary-deductions" href="#/payroll/payroll-settings/salary-deductions"><span class="sidebar-dropdown-label">Salary Deductions</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/adhoc/grid/components" href="#/payroll/payroll-settings/adhoc/grid/components"><span class="sidebar-dropdown-label">Ad-hoc</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/esi" href="#/payroll/payroll-settings/esi"><span class="sidebar-dropdown-label">ESI </span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/epf" href="#/payroll/payroll-settings/epf"><span class="sidebar-dropdown-label">PF</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/bonus" href="#/payroll/payroll-settings/bonus"><span class="sidebar-dropdown-label">Statutory Bonus </span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/profTax" href="#/payroll/payroll-settings/profTax"><span class="sidebar-dropdown-label">Prof. Tax </span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/gratuity" href="#/payroll/payroll-settings/gratuity"><span class="sidebar-dropdown-label">Gratuity</span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/labour-welfare" href="#/payroll/payroll-settings/labour-welfare"><span class="sidebar-dropdown-label">LWF </span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/workflow-setup/self-service-workflow-grid" href="#/payroll/payroll-settings/workflow-setup/self-service-workflow-grid"><span class="sidebar-dropdown-label"> Approval Configuration </span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/payslip-encrypt/config" href="#/payroll/payroll-settings/payslip-encrypt/config"><span class="sidebar-dropdown-label">Payslip Encryption Configuration </span></a></li>
+                                    <li class="ng-star-inserted"><a routerlink="/payroll/payroll-settings/payslip-config" href="#/payroll/payroll-settings/payslip-config"><span class="sidebar-dropdown-label">Payslip Template Configuration </span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li routerlinkactive="menu-1-active" class="nav-item ng-star-inserted">
+                <a>
+                    <svg fill="#325080" width="24px" height="24px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg"><path stroke="#325080" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" d="M226.39648,100.56006A12.02757,12.02757,0,0,0,236,88.80957V64a12.01312,12.01312,0,0,0-12-12H32A12.01312,12.01312,0,0,0,20,64V88.80957a12.02757,12.02757,0,0,0,9.60352,11.75049,28.00781,28.00781,0,0,1,0,54.87988A12.02757,12.02757,0,0,0,20,167.19043V192a12.01312,12.01312,0,0,0,12,12H224a12.01312,12.01312,0,0,0,12-12V167.19043a12.02757,12.02757,0,0,0-9.60352-11.75049,28.00781,28.00781,0,0,1,0-54.87988ZM28,192V167.19043a4.00211,4.00211,0,0,1,3.19531-3.91016,36.00816,36.00816,0,0,0,0-70.56054A4.00211,4.00211,0,0,1,28,88.80957V64a4.00427,4.00427,0,0,1,4-4H92V196H32A4.00427,4.00427,0,0,1,28,192Zm168-64a36.0982,36.0982,0,0,0,28.80469,35.28027A4.00211,4.00211,0,0,1,228,167.19043V192a4.00427,4.00427,0,0,1-4,4H100V60H224a4.00427,4.00427,0,0,1,4,4V88.80957a4.00211,4.00211,0,0,1-3.19531,3.91016A36.0982,36.0982,0,0,0,196,128Z"></path></svg>
+                    <p>Hiregynee</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,87 @@
+﻿@page
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<div class="app-container" dir="ltr">
+    <div class="container-fluid px-0 main-content-page h-100">
+        <partial name="Organization_Tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="org-structure">
+                <ul class="topnav-child-1">
+                    <li><a href="/organization/empsurvey/questions"> Questiions</a> </li>
+                    <li><a href="/organization/empsurvey/category"> Category</a> </li>
+                    <li><a href="/organization/empsurvey/survay"> All Surveys</a> </li>
+                    <li class="nav-active-top"><a href="/organization/empsurvey/analyze"> Analyze Surveys</a></li>
+                </ul>
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">Analyze Surveys</h4>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="container-fluid py-0">
+                                    <div class="row align-items-end  justify-content-between">
+                                        <div class="col-md-5 tab-col-width2">
+                                            <div class="row align-items-end">
+                                                <div class="col-md-8 tab-col-width2">
+                                                    <label class="rd-form-select-label mb-1">
+                                                        Survey
+                                                    </label>
+                                                    <select class="form-select">
+                                                        <option selected>Select Survay</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 px-0">
+                                        <div class="ng-star-inserted">
+                                            <div class="row example-table-container rd-table-wrapper px-2 py-3">
+                                                <div class="col-md-3">
+                                                    <div class="cardLabelBox">
+                                                        <p class="text-muted">Survey Name</p>
+                                                        <p class="text-muted">Start - End Date</p>
+                                                        <p class="text-muted">Survey Type</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="cardLabelBox">
+                                                        <p></p>
+                                                        <p>-</p>
+                                                        <p>Non - Anonymous</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="cardLabelBox">
+                                                        <p class="text-muted">Survey Category</p>
+                                                        <p class="text-muted">Status</p>
+                                                        <p class="text-muted">Total Questions</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="cardLabelBox">
+                                                        <p></p>
+                                                        <p></p>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </div
+                                            <p>Respondents : of</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

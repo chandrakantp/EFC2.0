@@ -72,6 +72,7 @@ $(document).ready(function () {
     $("#addCandidateOnboard").hide();
     $("#addRequisitionDetails").hide();
     $("#manageDataPage").hide();
+    $('#OrganizationApprovalSteps').hide()
 
     //Add Policeies page modal box
     $('#manualPolicyDiv').show();
@@ -105,11 +106,20 @@ $(document).ready(function () {
     });
 
     ClassicEditor
-        .create(document.querySelector('#announcementEditor'), {
+    .create(document.querySelector('#announcementEditor'), {
             height: 300,
             width: '100%'
         })
-        .catch(error => {
+    .catch(error => {
+            console.error(error);
+        });
+
+    ClassicEditor
+    .create(document.querySelector('#emailTemplate'), {
+            height: 300,
+            width: '100%'
+        })
+    .catch(error => {
             console.error(error);
         });
 });
@@ -162,4 +172,12 @@ function manageData() {
 function backToNoticePeriod() {
     $("#NoticePeriodDetailPage").show();
     $("#manageDataPage").hide();
+}
+function manageSteps() {
+    $('#OrganizationApproval').hide()
+    $('#OrganizationApprovalSteps').show()
+}
+function backToApproval() {
+    $('#OrganizationApproval').show()
+    $('#OrganizationApprovalSteps').hide()
 }
