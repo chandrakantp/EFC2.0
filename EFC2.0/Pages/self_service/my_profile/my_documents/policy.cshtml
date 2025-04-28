@@ -5,5 +5,153 @@
 <div class="app-container" dir="ltr">
     <div class="container-fluid px-0 main-content-page h-100">
         <partial name="self_service_tabs" />
+
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="summary">
+                <ul class="topnav-child-1">
+                    <li><a href="/self_service/my_profile/basic"> Basic Details</a> </li>
+                    <li><a href="/self_service/my_profile/experience"> My Experience</a> </li>
+                    <li><a href="/self_service/my_profile/contract"> My Contracts</a> </li>
+                    <li class="nav-active-top"><a href="/self_service/my_profile/my_documents/pro"> My Documents</a></li>
+                    <li><a href="/self_service/my_profile/reporting_manager"> Reporting Manager</a></li>
+                </ul>
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div id="employeeDetailPage" class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">My Documents</h4>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="mainContentHeightOrg2">
+                                    <div class="mat-tab-group mat-primary">
+                                        <div class="tabs">
+                                            <a class="tab-button" href="/self_service/my_profile/my_documents/pro">Pro</a>
+                                            <a class="tab-button mat-tab-body-active" href="/self_service/my_profile/my_documents/policy">HR Policy</a>
+                                            <a class="tab-button" href="/self_service/my_profile/my_documents/letters">Letters</a>
+                                            <a class="tab-button" href="/self_service/my_profile/my_documents/document">Documents</a>
+                                        </div>
+                                        <div class="mat-tab-body-wrapper">
+                                            <div class="mat-tab-body ng-star-inserted mat-tab-body-active">
+                                                <div class="mat-tab-body-content ng-tns-c182-628 ng-trigger ng-trigger-translateTab">
+                                                    <div class="container-fluid py-3">
+                                                        <div class="col-12 px-0">
+                                                            <div class="ng-star-inserted">
+                                                                <div class="example-table-container rd-table-wrapper">
+                                                                    <table class="mat-table cdk-table">
+                                                                        <thead role="rowgroup">
+                                                                            <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                                                                <th class="mat-header-cell cdk-header-cell"> Category Name	 </th>
+                                                                                <th class="mat-header-cell cdk-header-cell">Policy Name	</th>
+                                                                                <th class="mat-header-cell cdk-header-cell"> Actions </th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody role="rowgroup">
+                                                                            @* <tr class="mat-row cdk-row ng-star-inserted">
+                                                                            <td class="mat-cell cdk-cell">Permanent Account Number	</td>
+                                                                            <td class="mat-cell cdk-cell"> Test</td>
+                                                                            <td class="mat-cell cdk-cel"> 31/10/2026</td>
+                                                                            <td class="mat-cell cdk-cel"><span class="badge rounded-pill bg-success">Verified</span></td>
+                                                                            <td class="mat-cell cdk-cel"><button class="btn btn-info btn-sm">View</button> </td>
+                                                                            <td class="mat-cell cdk-cell">
+                                                                            <img src="~/images/edit1.svg" alt="Edit" title="Edit" width="16px" class="img-fluid me-2" />
+                                                                            <img src="~/images/trash.svg" alt="Delete" title="Delete" width="16px" class="img-fluid" />
+                                                                            </td>
+                                                                            </tr> *@
+
+                                                                            <tr class="mat-row mat-no-data-row ng-star-inserted" role="row">
+                                                                                <td colspan="9999" class="text-muted no-results ng-star-inserted"><img src="/images/No result found.svg" class="no-result-found"></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <mat-paginator role="group" aria-label="Select page" class="mat-paginator">
+                                                            <div class="mat-paginator-outer-container">
+                                                                <div class="mat-paginator-container">
+                                                                    <div class="mat-paginator-page-size ng-star-inserted">
+                                                                        <div class="mat-paginator-page-size-label"> Items per page: </div>
+                                                                        <div class="div mat-paginator-page-size-select ng-tns-c111-1083 mat-primary div-type-mat-select div-appearance-legacy div-can-float div-should-float div-hide-placeholder ng-star-inserted">
+                                                                            <div class="div-wrapper ng-tns-c111-1083">
+                                                                                <div class="div-flex ng-tns-c111-1083">
+
+                                                                                    <div class="div-infix ng-tns-c111-1083">
+                                                                                        <mat-select role="combobox" aria-autocomplete="none" aria-haspopup="true" class="mat-select ng-tns-c167-1084 ng-tns-c111-1083 ng-star-inserted" id="mat-select-124" tabindex="0" aria-expanded="false" aria-label="Items per page:" aria-required="false" aria-disabled="false" aria-invalid="false">
+                                                                                            <div cdk-overlay-origin="" class="mat-select-trigger ng-tns-c167-1084">
+                                                                                                <div class="mat-select-value ng-tns-c167-1084" id="mat-select-value-125">
+
+                                                                                                    <span class="mat-select-value-text ng-tns-c167-1084 ng-star-inserted">
+                                                                                                        <span class="mat-select-min-line ng-tns-c167-1084 ng-star-inserted">10</span>
+                                                                                                    </span>
+
+                                                                                                </div>
+                                                                                                <div class="mat-select-arrow-wrapper ng-tns-c167-1084">
+                                                                                                    <div class="mat-select-arrow ng-tns-c167-1084"></div>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                        </mat-select>
+                                                                                        <span class="div-label-wrapper ng-tns-c111-1083">
+
+                                                                                        </span>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="div-underline ng-tns-c111-1083 ng-star-inserted"><span class="div-ripple ng-tns-c111-1083"></span></div>
+
+                                                                                <div class="div-subscript-wrapper ng-tns-c111-1083">
+
+                                                                                    <div class="div-hint-wrapper ng-tns-c111-1083 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+
+                                                                                        <div class="div-hint-spacer ng-tns-c111-1083"></div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="mat-paginator-range-actions">
+                                                                        <div class="mat-paginator-range-label"> 0 of 0 </div>
+
+                                                                        <button mat-icon-button="" type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-previous mat-icon-button mat-button-base mat-button-disabled" aria-label="Previous page" disabled="true">
+                                                                            <span class="mat-button-wrapper">
+                                                                                <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                                                                </svg>
+                                                                            </span>
+                                                                            <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                                        </button>
+
+                                                                        <button mat-icon-button="" type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-next mat-icon-button mat-button-base mat-button-disabled" aria-label="Next page" disabled="true">
+                                                                            <span class="mat-button-wrapper">
+                                                                                <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                                                </svg>
+                                                                            </span>
+                                                                            <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                                        </button>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </mat-paginator>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

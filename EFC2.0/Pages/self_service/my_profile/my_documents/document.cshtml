@@ -5,5 +5,80 @@
 <div class="app-container" dir="ltr">
     <div class="container-fluid px-0 main-content-page h-100">
         <partial name="self_service_tabs" />
+
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="summary">
+                <ul class="topnav-child-1">
+                    <li><a href="/self_service/my_profile/basic"> Basic Details</a> </li>
+                    <li><a href="/self_service/my_profile/experience"> My Experience</a> </li>
+                    <li><a href="/self_service/my_profile/contract"> My Contracts</a> </li>
+                    <li class="nav-active-top"><a href="/self_service/my_profile/my_documents/pro"> My Documents</a></li>
+                    <li><a href="/self_service/my_profile/reporting_manager"> Reporting Manager</a></li>
+                </ul>
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div id="employeeDetailPage" class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">My Documents</h4>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="mainContentHeightOrg2">
+                                    <div class="mat-tab-group mat-primary">
+                                        <div class="tabs">
+                                            <a class="tab-button" href="/self_service/my_profile/my_documents/pro">Pro</a>
+                                            <a class="tab-button" href="/self_service/my_profile/my_documents/policy">HR Policy</a>
+                                            <a class="tab-button" href="/self_service/my_profile/my_documents/letters">Letters</a>
+                                            <a class="tab-button mat-tab-body-active" href="/self_service/my_profile/my_documents/document">Documents</a>
+                                        </div>
+                                        <div class="mat-tab-body-wrapper">
+                                            <div class="mat-tab-body ng-star-inserted mat-tab-body-active">
+                                                <div class="mat-tab-body-content ng-tns-c182-628 ng-trigger ng-trigger-translateTab">
+                                                    <div class="container-fluid py-3">
+                                                        <div class="row ng-star-inserted">
+                                                            <div class="col-md-8 tab-col-width">
+                                                                <mat-card class="mat-card mat-focus-indicator mb-2 rounded my-shadow ng-star-inserted">
+                                                                    <div class="row">
+                                                                        <div class="col-10">
+                                                                            <h4 class="mb-1 fw-bold text-capitalize text-e">Permanent Account Number</h4>
+                                                                            <span class="text-small small text-muted text-wrap">Test</span><br><span class="text-small small text-muted text-wrap">Expiry Date: 31/10/2026</span>
+                                                                        </div>
+                                                                        <div class="col-2">
+                                                                            <div class="d-flex align-items-center justify-content-end">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <hr class="my-2 text-muted">
+                                                                        </div>
+                                                                        <div class="col-10 d-flex align-items-center justify-content-start"></div>
+                                                                        <div class="col-2 d-flex align-items-center justify-content-end">
+                                                                            <button mat-icon-button="" color="primary" class="mat-focus-indicator mat-icon-button mat-button-base mat-primary ng-star-inserted">
+                                                                                <span class="mat-button-wrapper">
+                                                                                    <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">visibility</mat-icon>
+                                                                                </span>
+                                                                                <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                                            </button>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </mat-card>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

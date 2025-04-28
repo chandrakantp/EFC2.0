@@ -5,5 +5,89 @@
 <div class="app-container" dir="ltr">
     <div class="container-fluid px-0 main-content-page h-100">
         <partial name="self_service_tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="summary">
+                <ul class="topnav-child-1">
+                    <li><a href="/self_service/attendance/summary"> Summary</a> </li>
+                    <li><a href="/self_service/attendance/daily_attendance">Daily Attendance</a> </li>
+                    <li class="nav-active-top"><a href="/self_service/attendance/holidays">Holiday</a> </li>
+                    <li><a href="/self_service/attendance/leaves">Leave</a></li>
+                    <li><a href="/self_service/attendance/missed_punch">Missed Punch</a></li>
+                    <li><a href="/self_service/attendance/comp_offs">Comp-Off</a></li>
+                    <li><a href="/self_service/attendance/overtime">Overtime</a></li>
+                    <li><a href="/self_service/attendance/wfh">WFH</a></li>
+                    <li><a href="/self_service/attendance/optional_holidays">Optional Holiday</a></li>
+                </ul>
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">Holiday</h4>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="container-fluid py-0 px-0">
+                                    <div class="row mt-2 justify-content-end align-items-center tabcol mb-1">
+                                        <div class="col-md-3">
+                                            <select class="form-select">
+                                                <option selected>2025</option>
+                                                <option>2024</option>
+                                                <option>2023</option>
+                                                <option>2022</option>
+                                                <option>2021</option>
+                                                <option>2020</option>
+                                                <option>2019</option>
+                                                <option>2018</option>
+                                                <option>2017</option>
+                                                <option>2016</option>
+                                                <option>2015</option>
+                                                <option>2014</option>
+                                                <option>2013</option>
+                                                <option>2012</option>
+                                                <option>2011</option>
+                                                <option>2010</option>
+                                                <option>2009</option>
+                                                <option>2008</option>
+                                                <option>2007</option>
+                                                <option>2006</option>
+                                                <option>2005</option>
+                                                <option>2004</option>
+                                                <option>2003</option>
+                                                <option>2002</option>
+                                                <option>2001</option>
+                                                <option>2000</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 px-0">
+                                        <div class="ng-star-inserted">
+                                            <div class="example-table-container rd-table-wrapper">
+                                                <table class="mat-table cdk-table">
+                                                    <thead role="rowgroup">
+                                                        <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                                            <th class="mat-header-cell cdk-header-cell">Date</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Day</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Holiday</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Type of Holiday</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody role="rowgroup">
+                                                        <tr class="mat-row mat-no-data-row ng-star-inserted" role="row">
+                                                            <td colspan="9999" class="text-muted no-results ng-star-inserted"><img src="/images/No result found.svg" class="no-result-found"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

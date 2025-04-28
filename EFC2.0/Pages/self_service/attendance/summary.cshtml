@@ -5,5 +5,284 @@
 <div class="app-container" dir="ltr">
     <div class="container-fluid px-0 main-content-page h-100">
         <partial name="self_service_tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="summary">
+                <ul class="topnav-child-1">
+                    <li class="nav-active-top"><a href="/self_service/attendance/summary"> Summary</a> </li>
+                    <li><a href="/self_service/attendance/daily_attendance">Daily Attendance</a> </li>
+                    <li><a href="/self_service/attendance/holidays">Holiday</a> </li>
+                    <li><a href="/self_service/attendance/leaves">Leave</a></li>
+                    <li><a href="/self_service/attendance/missed_punch">Missed Punch</a></li>
+                    <li><a href="/self_service/attendance/comp_offs">Comp-Off</a></li>
+                    <li><a href="/self_service/attendance/overtime">Overtime</a></li>
+                    <li><a href="/self_service/attendance/wfh">WFH</a></li>
+                    <li><a href="/self_service/attendance/optional_holidays">Optional Holiday</a></li>
+                </ul>
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div class="ng-star-inserted">
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="container-fluid">
+                                    <div class="row mb-4">
+                                        <div class="col-md-9"></div>
+                                        <div class="col-md-3 mb-4 mt-2 justify-content-end">
+                                            <select class="form-select">
+                                                <option>2025</option>
+                                                <option>2024</option>
+                                                <option>2023</option>
+                                                <option>2022</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 ps-0 basic-inf">
+                                            <div class="basic-con">
+                                                <div class="personal-head row">
+                                                    <div class="col-md-9">
+                                                        <h2 class="rd-dialog-heading">Attendance Percentage</h2>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <select class="form-select">
+                                                            <option selected>Jan</option>
+                                                            <option>Feb</option>
+                                                            <option>Mar</option>
+                                                            <option>Apr</option>
+                                                            <option>May</option>
+                                                            <option>Jun</option>
+                                                            <option>Jul</option>
+                                                            <option>Aug</option>
+                                                            <option>Sep</option>
+                                                            <option>Oct</option>
+                                                            <option>Nov</option>
+                                                            <option>Dec</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="h-100">
+                                                    <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                                                        <div id="chartTotalAssets"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 ps-0 basic-inf">
+                                            <div class="basic-con">
+                                                <div class="personal-head">
+                                                    <h2 class="rd-dialog-heading">Leave Approval</h2>
+                                                </div>
+                                                <div class="h-100">
+                                                    <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                                                        <div id="chartTotalFaultyAssets"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="personal-head">
+                                        <h2>Leave Balance</h2>
+                                    </div>
+                                    <div class="col-12 px-0">
+                                        <div class="ng-star-inserted">
+                                            <div class="example-table-container rd-table-wrapper">
+                                                <table class="mat-table cdk-table">
+                                                    <thead role="rowgroup">
+                                                        <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                                            <th class="mat-header-cell cdk-header-cell"> Leave Type </th>
+                                                            <th class="mat-header-cell cdk-header-cell">Granted </th>
+                                                            <th class="mat-header-cell cdk-header-cell">Taken </th>
+                                                            <th class="mat-header-cell cdk-header-cell">Balance</th>
+
+                                                        </tr>
+
+                                                    </thead>
+                                                    <tbody role="rowgroup">
+                                                        <tr class="mat-row cdk-row ng-star-inserted">
+                                                            <td class="mat-cell cdk-cell">Casual Leave	</td>
+                                                            <td class="mat-cell cdk-cell">-</td>
+                                                            <td class="mat-cell cdk-cell">-</td>
+                                                            <td class="mat-cell cdk-cell">-</td>
+                                                        </tr>
+                                                        <tr class="mat-row cdk-row ng-star-inserted">
+                                                            <td class="mat-cell cdk-cell">Sick Leave	</td>
+                                                            <td class="mat-cell cdk-cell">-</td>
+                                                            <td class="mat-cell cdk-cell">-</td>
+                                                            <td class="mat-cell cdk-cell">-</td>
+                                                        </tr>
+                                                        <tr class="mat-row cdk-row ng-star-inserted">
+                                                            <td class="mat-cell cdk-cell">Vacation Leave	</td>
+                                                            <td class="mat-cell cdk-cell">-</td>
+                                                            <td class="mat-cell cdk-cell">-</td>
+                                                            <td class="mat-cell cdk-cell">-</td>
+                                                        </tr>
+                                                       @*  <tr class="mat-row mat-no-data-row ng-star-inserted" role="row">
+                                                            <td colspan="9999" class="text-muted no-results ng-star-inserted"><img src="/images/No result found.svg" class="no-result-found"></td>
+
+                                                        </tr> *@
+
+                                                    </tbody>
+                                                    <tfoot role="rowgroup" class="mat-table-sticky" style="display: none; bottom: 0px; z-index: 10;">
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <mat-paginator role="group" aria-label="Select page" class="mat-paginator">
+                                        <div class="mat-paginator-outer-container">
+                                            <div class="mat-paginator-container">
+                                                <div class="mat-paginator-page-size ng-star-inserted">
+                                                    <div class="mat-paginator-page-size-label"> Items per page: </div>
+                                                    <div class="div mat-paginator-page-size-select ng-tns-c111-1083 mat-primary div-type-mat-select div-appearance-legacy div-can-float div-should-float div-hide-placeholder ng-star-inserted">
+                                                        <div class="div-wrapper ng-tns-c111-1083">
+                                                            <div class="div-flex ng-tns-c111-1083">
+
+                                                                <div class="div-infix ng-tns-c111-1083">
+                                                                    <mat-select role="combobox" aria-autocomplete="none" aria-haspopup="true" class="mat-select ng-tns-c167-1084 ng-tns-c111-1083 ng-star-inserted" id="mat-select-124" tabindex="0" aria-expanded="false" aria-label="Items per page:" aria-required="false" aria-disabled="false" aria-invalid="false">
+                                                                        <div cdk-overlay-origin="" class="mat-select-trigger ng-tns-c167-1084">
+                                                                            <div class="mat-select-value ng-tns-c167-1084" id="mat-select-value-125">
+
+                                                                                <span class="mat-select-value-text ng-tns-c167-1084 ng-star-inserted">
+                                                                                    <span class="mat-select-min-line ng-tns-c167-1084 ng-star-inserted">10</span>
+                                                                                </span>
+
+                                                                            </div>
+                                                                            <div class="mat-select-arrow-wrapper ng-tns-c167-1084">
+                                                                                <div class="mat-select-arrow ng-tns-c167-1084"></div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </mat-select>
+                                                                    <span class="div-label-wrapper ng-tns-c111-1083">
+
+                                                                    </span>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="div-underline ng-tns-c111-1083 ng-star-inserted"><span class="div-ripple ng-tns-c111-1083"></span></div>
+
+                                                            <div class="div-subscript-wrapper ng-tns-c111-1083">
+
+                                                                <div class="div-hint-wrapper ng-tns-c111-1083 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+
+                                                                    <div class="div-hint-spacer ng-tns-c111-1083"></div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="mat-paginator-range-actions">
+                                                    <div class="mat-paginator-range-label"> 0 of 0 </div>
+
+                                                    <button mat-icon-button="" type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-previous mat-icon-button mat-button-base mat-button-disabled" aria-label="Previous page" disabled="true">
+                                                        <span class="mat-button-wrapper">
+                                                            <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                    </button>
+
+                                                    <button mat-icon-button="" type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-next mat-icon-button mat-button-base mat-button-disabled" aria-label="Next page" disabled="true">
+                                                        <span class="mat-button-wrapper">
+                                                            <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </mat-paginator>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/apexcharts@3.22.1/dist/apexcharts.min.js"></script>
+<script>
+    var options = {
+        series: [3, 4, 8, 3],
+        chart: {
+            type: 'donut',
+            width: 400
+        },
+        labels: ['Present', 'Partially Present', 'Absent', 'Leave'],
+        legend: {
+            show: false
+        },
+        legend: {
+            show: true,
+            position: 'right',
+            markers: {
+                shape: 'square'
+            }
+        },
+        plotOptions: {
+            pie: {
+                donut: {
+                    size: '50%'
+                }
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                }
+            }
+        }]
+    };
+    var chart = new ApexCharts(document.querySelector("#chartTotalAssets"), options);
+    chart.render();
+
+    var optionsFaulty = {
+        series: [3, 4, 9],
+        chart: {
+            type: 'donut',
+            width: 400
+        },
+        labels: ['Approved', 'Pending', 'Rejected'],
+        legend: {
+            show: false
+        },
+        dataLabels: {
+            enabled: false
+        },
+        plotOptions: {
+            pie: {
+                donut: {
+                    size: '50%'
+                }
+            }
+        },
+        legend: {
+            show: true,
+            position: 'right',
+            markers: {
+                shape: 'square'
+            }
+        },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                }
+            }
+        }]
+    };
+    var chart = new ApexCharts(document.querySelector("#chartTotalFaultyAssets"), optionsFaulty);
+    chart.render();
+</script>
