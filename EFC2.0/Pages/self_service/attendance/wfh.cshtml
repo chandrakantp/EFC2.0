@@ -14,8 +14,8 @@
                     <li><a href="/self_service/attendance/leaves">Leave</a></li>
                     <li><a href="/self_service/attendance/missed_punch">Missed Punch</a></li>
                     <li><a href="/self_service/attendance/comp_offs">Comp-Off</a></li>
-                    <li class="nav-active-top"><a href="/self_service/attendance/overtime">Overtime</a></li>
-                    <li><a href="/self_service/attendance/wfh">WFH</a></li>
+                    <li><a href="/self_service/attendance/overtime">Overtime</a></li>
+                    <li class="nav-active-top"><a href="/self_service/attendance/wfh">WFH</a></li>
                     <li><a href="/self_service/attendance/optional_holidays">Optional Holiday</a></li>
                 </ul>
 
@@ -25,7 +25,7 @@
                             <div class="page-title-h">
                                 <div class="d-flex justify-content-start align-items-center">
                                     <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
-                                    <h4 class="card-title m-0 card-heading">My Overtime Requests History</h4>
+                                    <h4 class="card-title m-0 card-heading">My WFH Request History</h4>
                                 </div>
                             </div>
                             <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
@@ -36,7 +36,7 @@
                                                 <div class="col-md-3 tab-col-width2">
                                                     <label class="rd-form-select-label mb-1">Status</label>
                                                     <select class="form-select">
-                                                        <option value="">Select Status</option>
+                                                        <option value="">All</option>
                                                         <option value="">Select Status</option>
                                                         <option value="">Select Status</option>
                                                     </select>
@@ -47,7 +47,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3 d-flex justify-content-end align-items-center tabcol mb-1">
-                                            <button data-bs-toggle="modal" data-bs-target="#addEditLeaveModal" type="button" title="Add" class="mat-ripple p-element rd-round-button ng-star-inserted"><img src="/images/add.svg"></button>
+                                            <button data-bs-toggle="modal" data-bs-target="#addEditWFHModal" type="button" title="Add" class="mat-ripple p-element rd-round-button ng-star-inserted"><img src="/images/add.svg"></button>
                                         </div>
                                     </div>
                                     <div class="col-12 px-0">
@@ -56,22 +56,25 @@
                                                 <table class="mat-table cdk-table">
                                                     <thead role="rowgroup">
                                                         <tr class="mat-header-row cdk-header-row ng-star-inserted">
-                                                            <th class="mat-header-cell cdk-header-cell">Overtime Name</th>
-                                                            <th class="mat-header-cell cdk-header-cell">Date</th>
-                                                            <th class="mat-header-cell cdk-header-cell">Requested Hours</th>
-                                                            <th class="mat-header-cell cdk-header-cell"> Approver </th>
+                                                            <th class="mat-header-cell cdk-header-cell">WFH Period	</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Reason</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Attachment</th>
                                                             <th class="mat-header-cell cdk-header-cell"> Status </th>
+                                                            <th class="mat-header-cell cdk-header-cell"> Approver </th>
                                                             <th class="mat-header-cell cdk-header-cell"> Actions </th>
                                                         </tr>
                                                     </thead>
                                                     <tbody role="rowgroup">
-                                                        <tr class="mat-row cdk-row ng-star-inserted">
+                                                        @* <tr class="mat-row cdk-row ng-star-inserted">
                                                             <td class="mat-cell cdk-cell">Test</td>
                                                             <td class="mat-cell cdk-cell">10/04/2025</td>
                                                             <td class="mat-cell cdk-cell">01:00</td>
                                                             <td class="mat-cell cdk-cell">-</td>
                                                             <td class="mat-cell cdk-cell"><span class="badge rounded-pill bg-warning">Pending</span></td>
                                                             <td class="mat-cell cdk-cell"><button type="button" data-bs-toggle="modal" data-bs-target="#viewLeaveDetailsModal" class="btn btn-outline-secondary btn-sm">View Details</button></td>
+                                                        </tr> *@
+                                                        <tr class="mat-row mat-no-data-row ng-star-inserted" role="row">
+                                                            <td colspan="9999" class="text-muted no-results ng-star-inserted"><img src="/images/No result found.svg" class="no-result-found"></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -158,34 +161,45 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="addEditLeaveModal">
-    <div class="modal-dialog efcModal efcMaxModal">
+<div class="modal fade" id="addEditWFHModal">
+    <div class="modal-dialog efcModal">
         <div class="modal-content">
             <div class="rd-dialog-heading p-0">
-                Apply Overtime
+                WFH Apply
             </div>
-            <div class="row">
-                <div class="col-md-6 rd-form-select my-1">
-                    <label class="rd-form-select-label mb-1">Overtime Working Date *</label>
-                    <input type="date" class="form-control" value="0" placeholder="Working Date" />
+            <div class="row align-items-end">
+                <div class="col-md-6 rd-form-select mb-2">
+                    <label class="rd-form-select-label mb-1">WFH Range *</label>
+                    <input type="date" class="form-control" placeholder="Start Date" />
                 </div>
-                <div class="col-md-6 rd-form-select my-1">
-                    <label class="rd-form-select-label mb-1">Overtime Working Hours*</label>
-                    <input type="text" class="form-control" value="0" placeholder="Overtime Working Hours" />
+                <div class="col-md-6 rd-form-select my-2">
+                    <input type="date" class="form-control" placeholder="End Date" />
                 </div>
-                <div class="col-md-12 rd-form-select my-1">
-                    <label class="rd-form-select-label mb-1">Comments *</label>
-                    <textarea type="date" class="form-control" rows="3" value="0" placeholder="Enter Comments"></textarea>
+                <div class="col-md-12 rd-form-select mb-3">
+                    <label class="rd-form-select-label mb-1">Supporting Documents</label>
+                    <input type="file" class="form-control" placeholder="Supporting Documents" />
+                </div>
+                <div class="col-md-12 rd-form-select mb-1">
+                    <div class="rd-alert-info-sm rd-alert-text-info text-start rd-mb-2">
+                        <span class="fw-bold">
+                            <mat-icon role="img" fontset="material-icons-outlined" class="mat-icon notranslate rd-alert-text-info material-icons-outlined mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font" data-mat-icon-namespace="material-icons-outlined">info</mat-icon>
+                        </span>
+                        Accepted formats PNG,JPEG,PDF,DOCX,XLSX and file must be less than 5MB.
+                    </div>
+                </div>
+                <div class="col-md-12 rd-form-select mb-1">
+                    <label class="rd-form-select-label mb-1">Reason *</label>
+                    <textarea type="date" class="form-control" rows="3" placeholder="Reason for Work from home..."></textarea>
                     <label class="rd-form-select-label d-flex justify-content-end">0 / 500</label>
                 </div>
             </div>
             <div class="modal-footer mt-2">
-                <button type="button" class="btn btn-primary" style="width:200px;">Apply</button>
+                <button type="button" class="btn btn-primary" style="width:200px;">Submit</button>
             </div>
         </div>
     </div>
 </div>
-<div class="modal fade" id="viewLeaveDetailsModal">
+@* <div class="modal fade" id="viewWFHModal">
     <div class="modal-dialog efcModal efcMaxModal modal-dialog-scrollable">
         <div class="modal-content">
             <div class="rd-dialog-heading p-0">
@@ -269,4 +283,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> *@

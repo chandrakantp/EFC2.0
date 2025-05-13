@@ -5,5 +5,276 @@
 <div class="app-container" dir="ltr">
     <div class="container-fluid px-0 main-content-page h-100">
         <partial name="self_service_tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="summary">
+                <ul class="topnav-child-1">
+                    <li><a href="/self_service/attendance/summary"> Summary</a> </li>
+                    <li><a href="/self_service/attendance/daily_attendance">Daily Attendance</a> </li>
+                    <li><a href="/self_service/attendance/holidays">Holiday</a> </li>
+                    <li><a href="/self_service/attendance/leaves">Leave</a></li>
+                    <li><a href="/self_service/attendance/missed_punch">Missed Punch</a></li>
+                    <li><a href="/self_service/attendance/comp_offs">Comp-Off</a></li>
+                    <li><a href="/self_service/attendance/overtime">Overtime</a></li>
+                    <li><a href="/self_service/attendance/wfh">WFH</a></li>
+                    <li class="nav-active-top"><a href="/self_service/attendance/optional_holidays">Optional Holiday</a></li>
+                </ul>
+
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">Optional Holiday</h4>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="container-fluid py-0">
+                                    <div class="row align-items-end  justify-content-between">
+                                        <div class="col-md-9 tab-col-width2">
+                                            <div class="row align-items-end">
+                                                <div class="col-md-3 tab-col-width2">
+                                                    <label class="rd-form-select-label mb-1">Status</label>
+                                                    <select class="form-select">
+                                                        <option value="">All</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3 tab-col-width2">
+                                                    <label class="rd-form-select-label mb-1">Select Holiday</label>
+                                                    <select class="form-select">
+                                                        <option value="">Select Holiday</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-1 tab-col-width2">
+                                                    <button type="button" class="rd-btn-tertairy-sm rd-text-secondary-1" fdprocessedid="xgydxp">Reset</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 d-flex justify-content-end align-items-center tabcol mb-1">
+                                            <button data-bs-toggle="modal" data-bs-target="#addEditHolidayModal" type="button" title="Add" class="mat-ripple p-element rd-round-button ng-star-inserted"><img src="/images/add.svg"></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 px-0">
+                                        <div class="ng-star-inserted">
+                                            <div class="example-table-container rd-table-wrapper">
+                                                <table class="mat-table cdk-table">
+                                                    <thead role="rowgroup">
+                                                        <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                                            <th class="mat-header-cell cdk-header-cell">Holiday Period</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Requested Date</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Holiday Name</th>
+                                                            <th class="mat-header-cell cdk-header-cell"> Status </th>
+                                                            <th class="mat-header-cell cdk-header-cell"> Actions </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody role="rowgroup">
+                                                        @* <tr class="mat-row cdk-row ng-star-inserted">
+                                                        <td class="mat-cell cdk-cell">Test</td>
+                                                        <td class="mat-cell cdk-cell">10/04/2025</td>
+                                                        <td class="mat-cell cdk-cell">01:00</td>
+                                                        <td class="mat-cell cdk-cell">-</td>
+                                                        <td class="mat-cell cdk-cell"><span class="badge rounded-pill bg-warning">Pending</span></td>
+                                                        <td class="mat-cell cdk-cell"><button type="button" data-bs-toggle="modal" data-bs-target="#viewLeaveDetailsModal" class="btn btn-outline-secondary btn-sm">View Details</button></td>
+                                                        </tr> *@
+                                                        <tr class="mat-row mat-no-data-row ng-star-inserted" role="row">
+                                                            <td colspan="9999" class="text-muted no-results ng-star-inserted"><img src="/images/No result found.svg" class="no-result-found"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mat-paginator">
+                                        <div class="mat-paginator-outer-container">
+                                            <div class="mat-paginator-container">
+                                                <div class="mat-paginator-page-size ng-star-inserted">
+                                                    <div class="mat-paginator-page-size-label"> Items per page: </div>
+                                                    <mat-form-field class="mat-form-field mat-paginator-page-size-select mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-should-float mat-form-field-hide-placeholder ng-star-inserted">
+                                                        <div class="mat-form-field-wrapper">
+                                                            <div class="mat-form-field-flex">
+
+                                                                <div class="mat-form-field-infix">
+                                                                    <mat-select role="combobox" aria-autocomplete="none" aria-haspopup="true" class="mat-select ng-star-inserted" id="mat-select-38" tabindex="0" aria-expanded="false" aria-label="Items per page:" aria-required="false" aria-disabled="false" aria-invalid="false">
+                                                                        <div class="mat-select-trigger">
+                                                                            <div class="mat-select-value" id="mat-select-value-39">
+
+                                                                                <span class="mat-select-value-text ng-star-inserted">
+                                                                                    <span class="mat-select-min-line ng-star-inserted">12</span>
+                                                                                </span>
+
+                                                                            </div>
+                                                                            <div class="mat-select-arrow-wrapper">
+                                                                                <div class="mat-select-arrow"></div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </mat-select>
+                                                                    <span class="mat-form-field-label-wrapper">
+
+                                                                    </span>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="mat-form-field-underline ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+
+                                                            <div class="mat-form-field-subscript-wrapper">
+
+                                                                <div class="mat-form-field-hint-wrapper ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+
+                                                                    <div class="mat-form-field-hint-spacer"></div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </mat-form-field>
+
+                                                </div>
+
+                                                <div class="mat-paginator-range-actions">
+                                                    <div class="mat-paginator-range-label"> 1 - 1 of 1 </div>
+
+                                                    <button type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-previous mat-icon-button mat-button-base mat-button-disabled" aria-label="Previous page" disabled="true">
+                                                        <span class="mat-button-wrapper">
+                                                            <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                    </button>
+
+                                                    <button type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-next mat-icon-button mat-button-base mat-button-disabled" aria-label="Next page" disabled="true">
+                                                        <span class="mat-button-wrapper">
+                                                            <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<div class="modal fade" id="addEditHolidayModal">
+    <div class="modal-dialog efcModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Optional Holiday Request
+            </div>
+            <div class="row align-items-end">
+                <div class="col-md-12 rd-form-select mb-2">
+                    <label class="rd-form-select-label mb-1">Select Holiday *</label>
+                    <select class="form-select">
+                        <option>Select Optional Holiday</option>
+                        <option>Select Optional Holiday</option>
+                    </select>
+                </div>
+                <div class="col-md-12 rd-form-select my-2">
+                    <label class="rd-form-select-label mb-1">Comments *</label>
+                    <input type="text" class="form-control" placeholder="Enter Comments" />
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-primary" style="width:200px;">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+@* <div class="modal fade" id="viewWFHModal">
+    <div class="modal-dialog efcModal efcMaxModal modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                My Overtime Request Details
+            </div>
+            <div class="leaves-app">
+                <div class="leave-details">
+                    <div class="leave-head">
+                        <div class="leave-bal">
+                            <div>
+                                <div class="leavename">HR DBMR </div>
+                                <div class="employeeCode">EMP-20240425-001 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row leave">
+                        <div class="col-lg-6">
+                            <div class="leave-type">
+                                <div class="applied"> Overtime Name</div>
+                                <p>Full Day</p>
+                            </div>
+                            <div class="leave-type">
+                                <div class="applied">Overtime Requested Date</div>
+                                <p> 25/08/2024</p>
+                            </div>
+                            <div class="leave-type">
+                                <div class="applied">Requested Hours</div>
+                                <p> 01:00</p>
+                            </div>
+                            <div class="leave-type">
+                                <div class="applied"> Reason</div>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="leave-type">
+                                <div class="applied"> Status</div>
+                                <p>
+                                    <span class="badge rounded-pill bg-warning">Pending</span>
+                                </p>
+                            </div>
+                            <div class="leave-type">
+                                <div class="applied"> Applied On</div>
+                                <p>10/04/2025 05:36 PM </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row rd-mt-2">
+                <div class="col-md-12">
+                    <div class="approve-head">
+                        <h2>Approval History</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-sec">
+                <ul>
+                    <li class="ng-star-inserted">
+                        <div class="aprrove-line"></div>
+                        <div class="approve-details">
+                            <div class="approve-list">
+                                <div class="approver-head">
+                                    <div>
+                                        <img src="/images/emptyProfile.jpg" alt="Admin" class="ng-star-inserted">
+                                    </div>
+                                </div>
+                                <div class="approve-body">
+                                    <p>HR DBMR</p>
+                                    <span> Level 1 </span>
+                                    <span> Reviewed on 28/08/2024 04:40 AM </span>
+                                </div>
+                            </div>
+                            <div class="approve-footer">
+                                <span class="badge rounded-pill bg-warning">Pending</span>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> *@

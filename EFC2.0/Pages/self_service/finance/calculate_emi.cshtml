@@ -11,8 +11,8 @@
                     <li><a href="/self_service/finance/my_salary">My Salary</a></li>
                     <li><a href="/self_service/finance/my_payslip">Payslips</a></li>
                     <li><a href="/self_service/finance/reimbursement">Reimbursements</a></li>
-                    <li><a href="/self_service/finance/employee_loan">Loan</a></li>
-                    <li class="nav-active-top"><a href="/self_service/finance/employee_cheques">Cheques</a></li>
+                    <li class="nav-active-top"><a href="/self_service/finance/employee_loan">Loan</a></li>
+                    <li><a href="/self_service/finance/employee_cheques">Cheques</a></li>
                     <li><a href="/self_service/finance/usa_tax_forms">USA Tax Forms</a></li>
                     <li><a href="/self_service/finance/investment_proof">Proof Of Investments</a></li>
                     <li><a href="/self_service/finance/salary_advance">Salary Advance</a></li>
@@ -23,13 +23,35 @@
                             <div class="page-title-h">
                                 <div class="d-flex justify-content-start align-items-center">
                                     <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
-                                    <h4 class="card-title m-0 card-heading">My Cheques</h4>
+                                    <h4 class="card-title m-0 card-heading">Calculate EMI</h4>
                                 </div>
                             </div>
                             <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
                                 <div class="container-fluid py-0">
                                     <div class="row align-items-end  justify-content-between">
-                                        <div class="col-md-12 d-flex justify-content-end align-items-center tabcol mb-1">
+                                        <div class="col-md-9 tab-col-width2">
+                                            <div class="row align-items-end">
+                                                <div class="col-md-3 tab-col-width2">
+                                                    <label class="rd-form-select-label mb-1">Loan Type</label>
+                                                    <select class="form-select">
+                                                        <option selected>All</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3 tab-col-width2">
+                                                    <label class="rd-form-select-label mb-1">Max. Loan Amount*</label>
+                                                    <input type="text" class="form-control" placeholder="Enter Amount" />
+                                                </div>
+                                                <div class="col-md-3 tab-col-width2">
+                                                    <label class="rd-form-select-label mb-1">Loan End Period (In Months)*</label>
+                                                    <input type="text" class="form-control" placeholder="Enter Months" />
+                                                </div>
+                                                <div class="col-md-2 d-flex align-items-end tab-col-width2"><button type="button" class="mx-2 rd-btn-tertairy-sm rd-text-secondary-1">Reset</button><button type="button" class="mx-2 rd-btn-primary-sm rd-text-primary-1">Submit</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 d-flex justify-content-end align-items-center tabcol mb-1">
                                             <div style="position: relative;">
                                                 <input type="text" class="grid-search-box" placeholder="Search" fdprocessedid="d4j0ak">
                                                 <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color">search</mat-icon>
@@ -42,11 +64,13 @@
                                                 <table class="mat-table cdk-table">
                                                     <thead role="rowgroup">
                                                         <tr class="mat-header-row cdk-header-row ng-star-inserted">
-                                                            <th class="mat-header-cell cdk-header-cell">Employee</th>
-                                                            <th class="mat-header-cell cdk-header-cell">Net Pay</th>
-                                                            <th class="mat-header-cell cdk-header-cell">Cheque Info</th>
-                                                            <th class="mat-header-cell cdk-header-cell">Transaction Proof</th>
-                                                            <th class="mat-header-cell cdk-header-cell">Add Proof</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Loan Type</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Starting Balance</th>
+                                                            <th class="mat-header-cell cdk-header-cell">EMI Amount</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Paid</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Intrest Amount</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Principle Amount</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Ending Balance</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody role="rowgroup">
@@ -147,6 +171,35 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addEditModal">
+    <div class="modal-dialog efcModal efcMaxModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Request For Loan
+            </div>
+            <div class="row align-items-end">
+                <div class="col-md-6 rd-form-select mb-2">
+                    <label class="rd-form-select-label mb-1">Loan Type *</label>
+                    <select class="form-select">
+                        <option></option>
+                    </select>
+                </div>
+                <div class="col-md-3 rd-form-select"></div>
+                <div class="col-md-3 rd-form-select mb-2">
+                    <a href="/self_service/finance/calculate_emi" type="button" class="btn btn-outline-primary" style="width:200px;font-size:14px">Calculate EMI</a>
+                </div>
+                <div class="col-md-12 rd-form-select mb-2">
+                    <label class="rd-form-select-label mb-1">Loan Request Disbursement*</label>
+                    <textarea type="text" class="form-control" rows="6" placeholder="Description"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" style="width:200px;">Submit</button>
             </div>
         </div>
     </div>

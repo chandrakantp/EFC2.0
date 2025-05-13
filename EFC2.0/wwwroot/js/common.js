@@ -181,3 +181,5 @@ function backToApproval() {
     $('#OrganizationApproval').show()
     $('#OrganizationApprovalSteps').hide()
 }
+
+/*Attendance Calender */

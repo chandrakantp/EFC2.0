@@ -5,5 +5,336 @@
 <div class="app-container" dir="ltr">
     <div class="container-fluid px-0 main-content-page h-100">
         <partial name="self_service_tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="summary">
+                <ul class="topnav-child-1">
+                    <li class="nav-active-top"><a href="/self_service/help_requests/tickets">My Tickets</a></li>
+                    <li><a href="/self_service/help_requests/articles">Articles</a></li>
+                </ul>
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div id="NoticePeriodDetailPage" class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">Tickets</h4>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="container-fluid py-0">
+                                    <div class="row align-items-end  justify-content-between">
+                                        <div class="col-md-9 tab-col-width2">
+                                            <div class="row align-items-end">
+                                                <div class="col-md-2 tab-col-width2">
+                                                    <label class="rd-form-select-label mb-1">Category</label>
+                                                    <select class="form-select">
+                                                        <option selected>Select Grievance Category</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2 tab-col-width2">
+                                                    <label class="rd-form-select-label mb-1">Questions</label>
+                                                    <select class="form-select">
+                                                        <option selected>Select Grievance Category</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2 tab-col-width2">
+                                                    <label class="rd-form-select-label mb-1">Status</label>
+                                                    <select class="form-select">
+                                                        <option selected>Select Grievance Category</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                        <option value="">Select Status</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3 tab-col-width2">
+                                                    <button type="button" class="rd-btn-tertairy-sm rd-text-secondary-1">Reset</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 d-flex justify-content-end align-items-center tabcol mb-1">
+                                            <div style="position: relative;">
+                                                <input type="text" class="grid-search-box" placeholder="Search">
+                                                <mat-icon role="img" class="mat-icon notranslate search-icon material-icons mat-icon-no-color">search</mat-icon>
+                                            </div>
+                                            <button data-bs-toggle="modal" data-bs-target="#addEditModal" title="Add" type="button" class="mat-ripple p-element rd-round-button ng-star-inserted"><img src="/images/add.svg"></button>
+                                            <button type="button" ptooltip="Download" tooltipposition="top" class="mat-ripple p-element mat-menu-trigger rd-round-button" fdprocessedid="lmgdd8"><img src="/images/download.svg"></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 px-0">
+                                        <div class="ng-star-inserted">
+                                            <div class="example-table-container rd-table-wrapper">
+                                                <table class="mat-table cdk-table">
+                                                    <thead role="rowgroup">
+                                                        <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                                            <th class="mat-header-cell cdk-header-cell">Grievance Category</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Grievance</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Title</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Requested By</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Status</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Actioned By</th>
+                                                            <th class="mat-header-cell cdk-header-cell">Closed By</th>
+                                                            <th class="mat-header-cell cdk-header-cell text-center"> Actions </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody role="rowgroup">
+                                                        <tr class="mat-row cdk-row ng-star-inserted">
+                                                            <td class="mat-cell cdk-cell">Payroll and Compensation</td>
+                                                            <td class="mat-cell cdk-cell">Salary and Bonuses</td>
+                                                            <td class="mat-cell cdk-cell">Training Program Enrollment</td>
+                                                            <td class="mat-cell cdk-cell">HR DBMR</td>
+                                                            <td class="mat-cell cdk-cell">Closed</td>
+                                                            <td class="mat-cell cdk-cell text-center">HR DBMR</td>
+                                                            <td class="mat-cell cdk-cell text-center">HR DBMR</td>
+                                                            <td class="mat-cell cdk-cell text-center">
+                                                                <img src="/images/right-up.png" alt="Right Arrow" title="Check Ticket" class="img-fluid me-2" data-bs-toggle="modal" data-bs-target="#viewTicketModal">
+                                                                <img src="/images/chat.png" alt="Chat" title="Chat" class="img-fluid" data-bs-toggle="modal" data-bs-target="#addTicketModal">
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="mat-row cdk-row ng-star-inserted">
+                                                            <td class="mat-cell cdk-cell">Payroll and Compensation</td>
+                                                            <td class="mat-cell cdk-cell">Salary and Bonuses</td>
+                                                            <td class="mat-cell cdk-cell">Training Program Enrollment</td>
+                                                            <td class="mat-cell cdk-cell">HR DBMR</td>
+                                                            <td class="mat-cell cdk-cell">Closed</td>
+                                                            <td class="mat-cell cdk-cell text-center">HR DBMR</td>
+                                                            <td class="mat-cell cdk-cell text-center">HR DBMR</td>
+                                                            <td class="mat-cell cdk-cell text-center">
+                                                                <img src="/images/right-up.png" alt="Right Arrow" title="Check Ticket" class="img-fluid me-2" data-bs-toggle="modal" data-bs-target="#viewTicketModal">
+                                                                <img src="/images/chat.png" alt="Chat" title="Chat" class="img-fluid">
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="mat-row cdk-row ng-star-inserted">
+                                                            <td class="mat-cell cdk-cell">Payroll and Compensation</td>
+                                                            <td class="mat-cell cdk-cell">Salary and Bonuses</td>
+                                                            <td class="mat-cell cdk-cell">Training Program Enrollment</td>
+                                                            <td class="mat-cell cdk-cell">HR DBMR</td>
+                                                            <td class="mat-cell cdk-cell">Pending</td>
+                                                            <td class="mat-cell cdk-cell text-center">-</td>
+                                                            <td class="mat-cell cdk-cell text-center">-</td>
+                                                            <td class="mat-cell cdk-cell text-center">
+                                                                <img src="/images/right-up.png" alt="Right Arrow" title="Check Ticket" class="img-fluid me-2" data-bs-toggle="modal" data-bs-target="#viewTicketModal">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mat-paginator">
+                                        <div class="mat-paginator-outer-container">
+                                            <div class="mat-paginator-container">
+                                                <div class="mat-paginator-page-size ng-star-inserted">
+                                                    <div class="mat-paginator-page-size-label"> Items per page: </div>
+                                                    <mat-form-field class="mat-form-field mat-paginator-page-size-select mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-should-float mat-form-field-hide-placeholder ng-star-inserted">
+                                                        <div class="mat-form-field-wrapper">
+                                                            <div class="mat-form-field-flex">
+
+                                                                <div class="mat-form-field-infix">
+                                                                    <mat-select role="combobox" aria-autocomplete="none" aria-haspopup="true" class="mat-select ng-star-inserted" id="mat-select-38" tabindex="0" aria-expanded="false" aria-label="Items per page:" aria-required="false" aria-disabled="false" aria-invalid="false">
+                                                                        <div class="mat-select-trigger">
+                                                                            <div class="mat-select-value" id="mat-select-value-39">
+
+                                                                                <span class="mat-select-value-text ng-star-inserted">
+                                                                                    <span class="mat-select-min-line ng-star-inserted">12</span>
+                                                                                </span>
+
+                                                                            </div>
+                                                                            <div class="mat-select-arrow-wrapper">
+                                                                                <div class="mat-select-arrow"></div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </mat-select>
+                                                                    <span class="mat-form-field-label-wrapper">
+
+                                                                    </span>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="mat-form-field-underline ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+
+                                                            <div class="mat-form-field-subscript-wrapper">
+
+                                                                <div class="mat-form-field-hint-wrapper ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+
+                                                                    <div class="mat-form-field-hint-spacer"></div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </mat-form-field>
+
+                                                </div>
+
+                                                <div class="mat-paginator-range-actions">
+                                                    <div class="mat-paginator-range-label"> 1 - 1 of 1 </div>
+
+                                                    <button type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-previous mat-icon-button mat-button-base mat-button-disabled" aria-label="Previous page" disabled="true">
+                                                        <span class="mat-button-wrapper">
+                                                            <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                    </button>
+
+                                                    <button type="button" class="mat-focus-indicator mat-tooltip-trigger mat-paginator-navigation-next mat-icon-button mat-button-base mat-button-disabled" aria-label="Next page" disabled="true">
+                                                        <span class="mat-button-wrapper">
+                                                            <svg viewBox="0 0 24 24" focusable="false" class="mat-paginator-icon">
+                                                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addEditModal">
+    <div class="modal-dialog efcModal efcMaxModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Raise a Request
+            </div>
+            <div class="row">
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Title *</label>
+                    <input type="text" class="form-control" placeholder="Ex:Regarding WFHa" />
+                </div>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Priority *</label>
+                    <select class="form-select">
+                        <option></option>
+                    </select>
+                </div>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Grievance Category *</label>
+                    <select class="form-select">
+                        <option></option>
+                    </select>
+                </div>
+                <div class="col-md-6 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Grievance to Raise *</label>
+                    <select class="form-select">
+                        <option></option>
+                    </select>
+                </div>
+                <div class="col-md-12 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Description *</label>
+                    <textarea type="text" class="form-control" placeholder="Add Description Here..."></textarea>
+                </div>
+                <div class="col-md-12 tabcol mb-1">
+                    <label class="rd-form-select-label mb-1">Upload PNG, JPG, PDF, DOCX, XLSX etc...*</label>
+                    <input type="file" class="form-control" placeholder="Upload Files" />
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="viewTicketModal">
+    <div class="modal-dialog efcModal efcMaxModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Ticket
+            </div>
+            <div class="mt-4 ng-star-inserted">
+                <div class="basic-con personal_box">
+                    <div class="personal-head">
+                        <h2>HR DBMR</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="personal-body">
+                                <div class="personal-data">
+                                    <h5>Grievance Category</h5>
+                                    <p>Payroll and Compensation</p>
+                                </div>
+                                <div class="personal-data">
+                                    <h5>Grievance Raised</h5>
+                                    <p>Salary and Bonuses</p>
+                                </div>
+                                <div class="personal-data">
+                                    <h5>Attachment</h5>
+                                    <p>-</p>
+                                </div>
+                                <div class="personal-data">
+                                    <h5>Description</h5>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="personal-body">
+                                <div class="personal-data">
+                                    <h5>Priority</h5>
+                                    <p>Medium</p>
+                                </div>
+                                <div class="personal-data">
+                                    <h5>Status</h5>
+                                    <p><span class="badge rounded-pill bg-warning">Pending</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mat-tab-group mat-primary mt-4">
+                        <div class="tabs">
+                            <button class="tab-button mat-tab-body-active" data-target="ticket-history">Ticket History</button>
+                            <button class="tab-button" data-target="comments">Comments</button>
+                        </div>
+                        <div class="mat-tab-body-wrapper">
+                            <div id="ticket-history" class="mat-tab-body ng-star-inserted mat-tab-body-active">
+                                <div class="mat-tab-body-content ng-tns-c182-628 ng-trigger ng-trigger-translateTab">
+                                    <div class="card-body ng-star-inserted p-3 text-center">
+                                        No Histories Found!
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="comments" class="mat-tab-body ng-star-inserted">
+                                <div class="mat-tab-body-content ng-tns-c182-628 ng-trigger ng-trigger-translateTab">
+                                    <div class="card-body ng-star-inserted p-3">
+                                        <div class="row">
+                                            <div class="col-md-12 tabcol mb-1">
+                                                <label class="rd-form-select-label mb-1">Comments *</label>
+                                                <textarea class="form-control" placeholder="Add Comments Here..."></textarea>
+                                            </div>
+                                            <div class="col-md-12 tabcol mb-1">
+                                                <label class="rd-form-select-label mb-1">Upload Documents</label>
+                                                <input type="file" class="form-control" placeholder="Upload Files" />
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer mt-2">
+                                            <button type="button" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
 </div>

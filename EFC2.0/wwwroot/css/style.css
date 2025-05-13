@@ -30906,7 +30906,7 @@ mat-row, mat-header-row, mat-footer-row, th.mat-header-cell, td.mat-cell, td.mat
 }
 
 .mat-cell, .mat-footer-cell {
-    color: #000000de
+    color: #444
 }
 
 .mat-calendar-arrow {
@@ -40664,6 +40664,7 @@ input.mat-input-element:read-only {
 
             .modal-dialog.efcModal .modal-content .modal-footer button.btn-primary {
                 background-color: #325080;
+                border: 1px solid #325080;
             }
 
             .modal-dialog.efcModal .modal-content .modal-footer button.btn-secondary {

@@ -2,8 +2,213 @@
 @{
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
+
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+<style>
+    .fc .fc-toolbar-title {
+        font-weight: 600 !important;
+        font-size: 18px !important;
+    }
+
+    .fc.fc-theme-standard .fc-toolbar .fc-button {
+        padding: 4px 10px;
+        font-size: 15px;
+    }
+
+    .fc-h-event .fc-event-title {
+        font-size: 11px;
+        font-weight: 500;
+        padding: 2px 6px !important;
+    }
+
+    .fc.fc-theme-standard a {
+        color: #000000;
+        font-size: 14px;
+        font-weight: 500;
+    }
+</style>
 <div class="app-container" dir="ltr">
     <div class="container-fluid px-0 main-content-page h-100">
         <partial name="self_service_tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="summary">
+                <ul class="topnav-child-1">
+                    <li><a href="/self_service/attendance/summary"> Summary</a> </li>
+                    <li class="nav-active-top"><a href="/self_service/attendance/daily_attendance">Daily Attendance</a> </li>
+                    <li><a href="/self_service/attendance/holidays">Holiday</a> </li>
+                    <li><a href="/self_service/attendance/leaves">Leave</a></li>
+                    <li><a href="/self_service/attendance/missed_punch">Missed Punch</a></li>
+                    <li><a href="/self_service/attendance/comp_offs">Comp-Off</a></li>
+                    <li><a href="/self_service/attendance/overtime">Overtime</a></li>
+                    <li><a href="/self_service/attendance/wfh">WFH</a></li>
+                    <li><a href="/self_service/attendance/optional_holidays">Optional Holiday</a></li>
+                </ul>
+
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">Daily Attendance</h4>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="container-fluid py-0">
+                                    <div class="row">
+                                        <div class="col-lg-9 col-md-9 col-sm-12 calendar">
+                                            <div id="calendar"></div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="details ng-star-inserted">
+                                                <div class="d-flex justify-content-between align-items-center rd-mb-2">
+                                                    <h3>Check In/Out details</h3>
+                                                    <a class="rd-text-link link ng-star-inserted" style="cursor: pointer;">View Logs</a>
+                                                </div>
+                                                
+                                                <form class="ng-untouched ng-pristine ng-valid ng-star-inserted">
+                                                    <div class="pdetails">
+                                                        <h3>Date</h3>
+                                                        <p class="p-element">8 Apr 2025</p>
+                                                    </div>
+                                                    <div class="pdetails">
+                                                        <h3>Check-In</h3>
+                                                        <p> 09:30 AM </p>
+                                                    </div>
+                                                    <div class="pdetails">
+                                                        <h3>Check-Out</h3>
+                                                        <p> 05:30 PM </p>
+                                                    </div>
+                                                    <div class="pdetails">
+                                                        <h3>In Hours</h3>
+                                                        <p class="p-element">08 hrs 00 mins</p>
+                                                    </div>
+                                                    <div class="pdetails">
+                                                        <h3 class="mb-0">Status</h3>
+                                                        
+                                                        <div class="w-50 ng-star-inserted">
+                                                            <p class="p-element mb-0">Present</p>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    
+                                                    <div class="text-primary text-end rd-text-link link mt-2 cursor-pointer">Show more</div>
+                                                    
+                                                </form>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<div class="modal fade" id="addEditHolidayModal">
+    <div class="modal-dialog efcModal">
+        <div class="modal-content">
+            <div class="rd-dialog-heading p-0">
+                Optional Holiday Request
+            </div>
+            <div class="row align-items-end">
+                <div class="col-md-12 rd-form-select mb-2">
+                    <label class="rd-form-select-label mb-1">Select Holiday *</label>
+                    <select class="form-select">
+                        <option>Select Optional Holiday</option>
+                        <option>Select Optional Holiday</option>
+                    </select>
+                </div>
+                <div class="col-md-12 rd-form-select my-2">
+                    <label class="rd-form-select-label mb-1">Comments *</label>
+                    <input type="text" class="form-control" placeholder="Enter Comments" />
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-primary" style="width:200px;">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var calendarEl = document.getElementById('calendar');
+
+        var eventData = {
+            '2025-04-08': {
+                checkIn: '09:30 AM',
+                checkOut: '05:30 PM',
+                inHours: '08 hrs 00 mins',
+                status: 'Present'
+            },
+            '2025-04-16': {
+                checkIn: '10:00 AM',
+                checkOut: '04:00 PM',
+                inHours: '06 hrs 00 mins',
+                status: 'P/A'
+            },
+            '2025-04-30': {
+                checkIn: '-',
+                checkOut: '-',
+                inHours: '00 hrs 00 mins',
+                status: 'Absent'
+            },
+            '2025-04-28': {
+                checkIn: '-',
+                checkOut: '-',
+                inHours: '00 hrs 00 mins',
+                status: 'Holiday'
+            },
+            '2025-04-18': {
+                checkIn: '09:00 AM',
+                checkOut: '05:00 PM',
+                inHours: '08 hrs 00 mins',
+                status: 'Comp-Off (Present)'
+            }
+        };
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: ''
+            },
+            events: [
+                { title: 'Present', start: '2025-04-08', color: '#4CAF50' },
+                { title: 'P/A', start: '2025-04-16', color: '#FFEB3B', textColor: '#000' },
+                { title: 'Absent', start: '2025-04-30', color: '#F44336' },
+                { title: 'Holiday', start: '2025-04-28', color: '#FF9800' },
+                { title: 'Comp-Off (Present)', start: '2025-04-18', color: '#03A9F4' }
+            ],
+            dateClick: function (info) {
+                var dateStr = info.dateStr;
+                var dateObj = new Date(dateStr);
+                var formattedDate = dateObj.toLocaleDateString('en-GB', {
+                    day: 'numeric', month: 'short', year: 'numeric'
+                });
+
+                var data = eventData[dateStr] || {
+                    checkIn: '-',
+                    checkOut: '-',
+                    inHours: '00 hrs 00 mins',
+                    status: 'No data'
+                };
+
+                $('.pdetails:eq(0) .p-element').text(formattedDate);
+                $('.pdetails:eq(1) p').text(data.checkIn);
+                $('.pdetails:eq(2) p').text(data.checkOut);
+                $('.pdetails:eq(3) .p-element').text(data.inHours);
+                $('.pdetails:eq(4) .p-element').text(data.status);
+            }
+        });
+
+        calendar.render();
+    });
+</script>

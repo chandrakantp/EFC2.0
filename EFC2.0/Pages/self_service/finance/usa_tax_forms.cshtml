@@ -5,5 +5,58 @@
 <div class="app-container" dir="ltr">
     <div class="container-fluid px-0 main-content-page h-100">
         <partial name="self_service_tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top">
+                <ul class="topnav-child-1">
+                    <li><a href="/self_service/finance/my_salary">My Salary</a></li>
+                    <li><a href="/self_service/finance/my_payslip">Payslips</a></li>
+                    <li><a href="/self_service/finance/reimbursement">Reimbursements</a></li>
+                    <li><a href="/self_service/finance/employee_loan">Loan</a></li>
+                    <li><a href="/self_service/finance/employee_cheques">Cheques</a></li>
+                    <li class="nav-active-top"><a href="/self_service/finance/usa_tax_forms">USA Tax Forms</a></li>
+                    <li><a href="/self_service/finance/investment_proof">Proof Of Investments</a></li>
+                    <li><a href="/self_service/finance/salary_advance">Salary Advance</a></li>
+                </ul>
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">USA Tax Forms</h4>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="container-fluid py-0 px-0">
+                                    <div class="col-12 px-0">
+                                        <div class="ng-star-inserted">
+                                            <div class="example-table-container rd-table-wrapper">
+                                                <table class="mat-table cdk-table">
+                                                    <thead role="rowgroup">
+                                                        <tr class="mat-header-row cdk-header-row ng-star-inserted">
+                                                            <th class="mat-header-cell cdk-header-cell">Form Name</th>
+                                                            <th class="mat-header-cell cdk-header-cell" width="200">Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody role="rowgroup">
+                                                        <tr class="mat-row cdk-row ng-star-inserted">
+                                                            <td class="mat-cell cdk-cell">Form W-9 (Rev. October 2018)</td>
+                                                            <td class="mat-cell cdk-cel"><a href="" class="subForms">Submit Form</a></td>
+                                                        </tr>
+                                                        @*  <tr class="mat-row mat-no-data-row ng-star-inserted" role="row">
+                                                        <td colspan="9999" class="text-muted no-results ng-star-inserted"><img src="/images/No result found.svg" class="no-result-found"></td>
+                                                        </tr> *@
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

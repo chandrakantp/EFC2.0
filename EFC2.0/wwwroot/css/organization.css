@@ -1128,7 +1128,6 @@ h3.subTitle {
 
 .mat-row .mat-cell {
     padding: 4px 16px;
-    font-weight: 400;
     line-height: 38px;
 }
 
@@ -1777,4 +1776,96 @@ ul {
             color: #000;
             flex: 1
         }
+}
+
+/**Calender Attendance*/
+
+.fc .fc-toolbar-title {
+    font-weight: 600 !important;
+    font-size: 18px !important;
+}
+
+.fc.fc-theme-standard .fc-toolbar .fc-button {
+    padding: 4px 10px;
+    font-size: 15px;
+}
+
+.fc-h-event .fc-event-title {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 6px !important;
+}
+
+.fc.fc-theme-standard a {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+}
+.details {
+    border: 1px solid #E4E6E9;
+    padding: 20px;
+    border-radius: 5px
+}
+
+.details h3 {
+    color: #757575;
+    font-size: 13px !important;
+    font-weight: 500 !important
+}
+
+.details .pdetails {
+    display: flex;
+    align-items: center
+}
+
+    .details .pdetails h3 {
+        color: #757575;
+        font-size: 12px !important;
+        font-weight: 500 !important;
+        width: 50%
+    }
+
+    .details .pdetails p {
+        color: #757575;
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        width: 50%;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        -webkit-box-orient: vertical
+    }
+
+.link {
+    font-size: 12px;
+    text-decoration: none
+}
+.card-grp p {
+    font-size: 14px;
+}
+.card-grp span {
+    font-size: 12px;
+}
+.subForms {
+    font-size: 14px;
+    font-weight: 600;
+    color: #466cfd;
+}
+span.badge {
+    padding: 6px 14px;
+    font-size: 11px;
+}
+.article-data {
+    text-align: center;
+    padding: 50px 10px;
+    background-color: #fff4f4;
+}
+.article-data h3 {
+    font-size: 26px !important;
+    font-weight: 800 !important;
+}
+.viewarticle-data {
+    text-align: center;
+    padding: 20px 10px;
 }

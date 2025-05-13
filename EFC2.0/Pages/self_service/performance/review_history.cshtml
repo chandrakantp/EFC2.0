@@ -5,5 +5,66 @@
 <div class="app-container" dir="ltr">
     <div class="container-fluid px-0 main-content-page h-100">
         <partial name="self_service_tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="summary">
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <div class="d-flex justify-content-start align-items-center">
+                                        <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                        <img src="/images/emptyProfile.jpg" alt="Admin" width="30" class="rounded-circle ng-star-inserted">
+                                        <span class="ms-2" style="font-size: 14px;">
+                                            <p class="mb-0 fw-bold card-heading text-capitalize">HR DBMR</p>
+                                            <div class="text-muted small text-capitalize">Admin Department | Executive </div>
+                                        </span>
+                                        <mat-icon role="img" class="mat-icon notranslate mx-2 text-muted material-icons mat-icon-no-color ng-star-inserted" style="cursor: pointer;" aria-hidden="true" data-mat-icon-type="font">turned_in_not </mat-icon>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="mainContentHeightOrg2">
+                                    <div class="mat-tab-group mat-primary">
+                                        <div class="tabs">
+                                            <a href="/self_service/performance/kra" class="tab-button">Key Result Areas (KRA)</a>
+                                            <a href="/self_service/performance/competency" class="tab-button">Competency</a>
+                                            <a href="/self_service/performance/skillSet" class="tab-button">Skill</a>
+                                            <a href="/self_service/performance/review_history" class="tab-button mat-tab-body-active">Review History</a>
+                                        </div>
+                                        <div class="example-table-container rd-table-wrapper">
+                                            <table mat-table="" class="mat-table cdk-table" role="table">
+                                                <thead role="rowgroup">
+                                                    <tr role="row" mat-header-row="" class="mat-header-row cdk-header-row ng-star-inserted">
+                                                        <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell cdk-column-appraisalName mat-column-appraisalName ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;">Appraisal Name</th>
+                                                        <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell cdk-column-publishedDate mat-column-publishedDate ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;"> Published On</th>
+                                                        <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell text-center cdk-column-action mat-column-action ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;">Action</th>
+                                                        <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell text-center cdk-column-feedback mat-column-feedback ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;"> Feedback </th>
+                                                        
+                                                    </tr>
+                                                    
+                                                </thead>
+                                                <tbody role="rowgroup">
+                                                    
+                                                    <tr class="mat-row mat-no-data-row ng-star-inserted" role="row">
+                                                        <td colspan="9999" class="text-muted no-results ng-star-inserted"><img src="/images/No result found.svg" alt="No result found" class="no-result-found"></td>
+                                                        
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                                <tfoot role="rowgroup" class="mat-table-sticky" style="display: none; bottom: 0px; z-index: 10;">
+                                                    
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

@@ -5,5 +5,49 @@
 <div class="app-container" dir="ltr">
     <div class="container-fluid px-0 main-content-page h-100">
         <partial name="self_service_tabs" />
+        <div class="aos-init aos-animate">
+            <div class="child-content nav-active-top" id="summary">
+                <ul class="topnav-child-1">
+                    <li><a href="/self_service/help_requests/tickets">My Tickets</a></li>
+                    <li class="nav-active-top"><a href="/self_service/help_requests/articles">Articles</a></li>
+                </ul>
+                <div class="container-fluid p-3">
+                    <div class="grand-child nav-active-top">
+                        <div id="NoticePeriodDetailPage" class="ng-star-inserted">
+                            <div class="page-title-h">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <mat-icon role="img" class="mat-icon notranslate text-muted material-icons mat-icon-no-color" style="cursor: pointer;">chevron_left </mat-icon>
+                                    <h4 class="card-title m-0 card-heading">Help Desk Articles</h4>
+                                </div>
+                            </div>
+                            <mat-card class="mat-card mat-focus-indicator b-shadow-none border-0">
+                                <div class="container-fluid py-3">
+                                    <div class="article-data">
+                                        <h3>How can we help you?</h3>
+                                        <p>Article to assist with Help-Desk inquires</p>
+                                        <div class="row justify-content-center mt-4">
+                                            <div class="col-md-4 tab-col-width2">
+                                                <input type="text" class="form-control" placeholder="Search Articles" />
+                                            </div>
+                                            <div class="col-md-4 tab-col-width2">
+                                                <select class="form-select">
+                                                    <option selected>Select Category</option>
+                                                    <option value="">Select Status</option>
+                                                    <option value="">Select Status</option>
+                                                    <option value="">Select Status</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="viewarticle-data">
+                                        No Article Found
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
