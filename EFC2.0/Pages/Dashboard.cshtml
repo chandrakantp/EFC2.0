@@ -1,325 +1,240 @@
 ﻿@page
+@using Microsoft.AspNetCore.Http
 @{
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 <link href="~/css/dashboard.css" rel="stylesheet" media="all" onload="this.media='all'" />
-    <div class="app-container" dir="ltr">
-        <div class="container-fluid px-0 main-content-page h-100">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 card-bg-white fixed-column">
-                            <div class="card-wrapper-bg">
-                                <div class="wrapper-1 d-flex align-items-center mb-4">
-                                    <div><img src="~/images/sun.svg" alt=""></div>
-                                    <div class="sub-text"> Every great day starts with a single punch. Let's make today count! </div>
+<div class="app-container" dir="ltr">
+    <div class="container-fluid px-0 main-content-page h-100">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 card-bg-white fixed-column">
+                    <div class="card-wrapper-bg">
+                        <div class="wrapper-1 d-flex align-items-center mb-4">
+                            <div><img src="~/images/sun.svg" alt=""></div>
+                            <div class="sub-text"> Every great day starts with a single punch. Let's make today count! </div>
+                        </div>
+                        <div class="white-card-wrapper">
+                            <div class="sub-flex1">
+                                <div class="flex-head"> Today Attendance </div>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-row" style="gap: .5rem;">
+                                <div class="sub-flex">
+                                    <div class="flex-head"> Check In </div>
+                                    <div id="checkIn" class="flex-head1"> --:-- </div>
                                 </div>
-                                <div class="white-card-wrapper">
-                                    <div class="sub-flex1">
-                                        <div id="currentDate" class="flex-head1"></div>
-                                        <div class="flex-head"> Shift Timing - (09:30 - 17:30) </div>
-                                    </div>
-                                    <hr>
-                                    <div class="d-flex flex-row" style="gap: .5rem;">
-                                        <div class="sub-flex">
-                                            <div class="flex-head"> Check In </div>
-                                            <div class="flex-head1"> 09:15 </div>
-                                        </div>
-                                        <div class="separtor"></div>
-                                        <div class="sub-flex">
-                                            <div class="flex-head"> Check out </div>
-                                            <div class="flex-head1"> 18:24 </div>
-                                        </div>
-                                         <div class="separtor"></div>
-                                        <div class="sub-flex">
-                                            <div class="flex-head"> Break Hours </div>
-                                            <div class="flex-head1"> 00h : 56m  </div>
-                                        </div>
-                                        <div class="separtor"></div>
-                                        <div class="sub-flex">
-                                            <div class="flex-head"> Total Hours </div>
-                                            <div class="flex-head1"> 08h : 00m  </div>
-                                        </div>
-                                    </div>
+                                <div class="separtor"></div>
+                                <div class="sub-flex">
+                                    <div class="flex-head"> Check out </div>
+                                    <div id="checkOut" class="flex-head1"> --:-- </div>
                                 </div>
-                                <button type="button" class="rd-btn-primary-sm home-login-btn rd-mt-2 ng-star-inserted"> Check In </button>
-                                <div class="leave-bg mt-3">
-                                    <div class="d-flex justify-content-between rd-mb-1">
-                                        <div class="rd-home-headings1">Leave Balance</div>
-                                        <div routerlink="/self-service-all/attendance/leaves/leave-history/apply-leave/0" class="apply-button" tabindex="0">Apply For Leave</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 rd-mt-2 ng-star-inserted">
-                                            <div class="leave-border">
-                                                <div class="leave-head"> Casual Leave </div>
-                                                <div class="rd-mt-2"><span class="leave-count">10.00</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 rd-mt-2 ng-star-inserted">
-                                            <div class="leave-border">
-                                                <div class="leave-head"> Sick Leave </div>
-                                                <div class="rd-mt-2"><span class="leave-count">08.00</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="separtor"></div>
+                                <div class="sub-flex">
+                                    <div class="flex-head"> Break Hours </div>
+                                    <div id="breakHours" class="flex-head1"> 00h : 00m </div>
                                 </div>
-                                <div class="leave-bg mt-3">
-                                    <div class="d-flex justify-content-between rd-mb-1">
-                                        <div class="rd-home-headings1">Help Desk</div>
-                                        <div routerlink="/self-service-all/attendance/leaves/leave-history/apply-leave/0" class="apply-button" tabindex="0">Create Ticket</div>
-                                    </div>
+                                <div class="separtor"></div>
+                                <div class="sub-flex">
+                                    <div class="flex-head"> Total Hours </div>
+                                    <div id="totalHours" class="flex-head1"> 00h : 00m </div>
+                                </div>
+                            </div>
+                        </div>
 
+                        @if (HttpContext.Session.GetString("day_loginEssl") != "esslLoginFirst")
+                        {
+                            <button type="button" class="rd-btn-primary-sm home-login-btn rd-mt-2 ng-star-inserted"> Check In </button>
+                        }
+
+                        <div class="leave-bg mt-3">
+                            <div class="d-flex justify-content-between rd-mb-1">
+                                <div class="rd-home-headings1">Leave Balance</div>
+                                <div routerlink="/self-service-all/attendance/leaves/leave-history/apply-leave/0" class="apply-button" tabindex="0">Apply For Leave</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 rd-mt-2 ng-star-inserted">
+                                    <div class="leave-border">
+                                        <div class="leave-head"> Casual Leave </div>
+                                        <div class="rd-mt-2"><span class="leave-count">00</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 rd-mt-2 ng-star-inserted">
+                                    <div class="leave-border">
+                                        <div class="leave-head"> Sick Leave </div>
+                                        <div class="rd-mt-2"><span class="leave-count">00</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="leave-bg mt-3">
+                            <div class="d-flex justify-content-between rd-mb-1">
+                                <div class="rd-home-headings1">Help Desk</div>
+                                <div routerlink="/self-service-all/attendance/leaves/leave-history/apply-leave/0" class="apply-button" tabindex="0">Create Ticket</div>
+                            </div>
+
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Sr. No.
+                                        </th>
+                                        <th>
+                                            Ticket
+                                        </th>
+                                        <th>
+                                            Status
+                                        </th>
+
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 card-bg-grey scrollable-column">
+                    <div class="d-flex align-items-center justify-content-between tab-padding-grey-card">
+                        <div>
+                            <div class="user-text"> Hello @HttpContext.Session.GetString("EmpName"), </div>
+                            <div class="user-text1 mt-1"> This is what we’ve got for you today, fresh insights and inspiration </div>
+                        </div>
+                    </div>
+                    <div class="row rd-mt-3">
+                        <div class="col-md-6">
+
+                            <div class="card-announce">
+                                <div class="d-flex align-items-center justify-content-between rd-mb-2">
+                                    <div class="announce-text">Announcement</div>
+                                </div>
+                                <div class="announce-border" id="announcementList">
+                                    <!-- Announcements will be injected here -->
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6" style="padding-left: 0px;">
+                            <div class="card-announce tab-chart-bottom">
+                                <div class="topcard topheigh">
+                                    <div class="rd-card-home h-100">
+                                        <div>
+                                            <div class="d-flex justify-content-between rd-mb-2">
+                                                <div style="align-self: center;">
+                                                    <div class="rd-home-headings rd-mb-3">Monthly Attendance</div>
+                                                </div>
+                                                <div class="rd-form-select">
+                                                    <select id="monthSelect" class="form-select form-select-sm">
+                                                        <option value="1">January</option>
+                                                        <option value="2">February</option>
+                                                        <option value="3">March</option>
+                                                        <option value="4">April</option>
+                                                        <option value="5">May</option>
+                                                        <option value="6">June</option>
+                                                        <option value="7">July</option>
+                                                        <option value="8">August</option>
+                                                        <option value="9">September</option>
+                                                        <option value="10">October</option>
+                                                        <option value="11">November</option>
+                                                        <option value="12">December</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="static">
+                                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                                <div id="chartContainer"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row rd-mt-2">
+                        <div class="col-md-6">
+                            <div class="events-wrap heightWrap">
+                                <div class="d-flex justify-content-between rd-mb-1">
+                                    <div class="rd-home-headings1">Events</div>
+                                    <div class="apply-button">View All</div>
+                                </div>
+                                <mat-tab-group class="mat-tab-group tab-border tab-home mat-primary" style="max-height: 250px; overflow-y: auto;">
+                                    <mat-tab-header class="mat-tab-header">
+                                        <button aria-hidden="true" type="button" mat-ripple="" tabindex="-1" class="mat-ripple mat-tab-header-pagination mat-tab-header-pagination-before mat-elevation-z4 mat-tab-header-pagination-disabled" disabled="">
+                                            <div class="mat-tab-header-pagination-chevron"></div>
+                                        </button>
+                                        <div class="mat-tab-label-container">
+                                            <div role="tablist" class="mat-tab-list">
+                                                <div class="mat-tab-labels">
+                                                    <div role="tab" class="mat-ripple mat-tab-label mat-focus-indicator mat-tab-label-active ng-star-inserted" id="mat-tab-label-0-0" tabindex="0" aria-posinset="1" aria-setsize="2" aria-controls="mat-tab-content-0-0" aria-selected="true" aria-disabled="false">
+                                                        <div class="mat-tab-label-content">Birthday</div>
+                                                    </div>
+                                                    <div role="tab" class="mat-ripple mat-tab-label mat-focus-indicator ng-star-inserted" id="mat-tab-label-0-1" tabindex="-1" aria-posinset="2" aria-setsize="2" aria-controls="mat-tab-content-0-1" aria-selected="false" aria-disabled="false">
+                                                        <div class="mat-tab-label-content">Work Anniversary</div>
+                                                    </div>
+                                                </div>
+                                                <mat-ink-bar class="mat-ink-bar" style="visibility: visible; left: 0px; width: 160px;"></mat-ink-bar>
+                                            </div>
+                                        </div>
+                                    </mat-tab-header>
+                                    <div class="mat-tab-body-wrapper">
+
+
+                                        <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c182-13 mat-tab-body-active ng-star-inserted" id="mat-tab-content-0-0">
+                                            <div class="mat-tab-body-content ng-tns-c182-13 ng-trigger ng-trigger-translateTab">
+                                                <div class="row ng-star-inserted" style="">
+
+                                                    <div id="birthdayContainer" class="row">
+                                                        <!-- Birthday cards will be injected here via jQuery -->
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </mat-tab-body>
+                                        <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c182-14 ng-star-inserted" id="mat-tab-content-0-1">
+                                            <div class="mat-tab-body-content ng-tns-c182-14 ng-trigger ng-trigger-translateTab">
+                                                <div class="row ng-star-inserted" style="">
+
+                                                    <div id="anniversaryContainer" class="row">
+                                                        <!-- Anniversary cards will be injected here via jQuery -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </mat-tab-body>
+
+
+                                    </div>
+                                </mat-tab-group>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="padding-left: 0px;">
+                            <div class="holi-bg heightWrap">
+                                <div class="d-flex justify-content-between rd-mb-1">
+                                    <div class="rd-home-headings1">Holidays of 2025</div>
+                                    <div class="apply-button">View All</div>
+                                </div>
+                                <div class="rd-mt-2">
                                     <table class="table table-hover">
                                         <thead>
                                             <tr>
                                                 <th>
-                                                    Sr. No.
+                                                    Holiday
                                                 </th>
                                                 <th>
-                                                    Ticket
+                                                    Date
                                                 </th>
                                                 <th>
-                                                    Status
+                                                    Location
                                                 </th>
 
                                             </tr>
                                         </thead>
 
                                         <tbody>
-                                            <tr>
-                                                <td>
-                                                    1
-                                                </td>
-
-                                                <td>
-                                                   This is for test
-                                                </td>
-
-                                                <td>
-                                                    Open
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    2
-                                                </td>
-
-                                                <td>
-                                                    This is for test
-                                                </td>
-
-                                                <td>
-                                                    Open
-                                                </td>
-                                            </tr>
                                         </tbody>
                                     </table>
-                                </div>
-                            </div>
-                    </div>
-                    <div class="col-md-8 card-bg-grey scrollable-column">
-                        <div class="d-flex align-items-center justify-content-between tab-padding-grey-card">
-                            <div>
-                                <div class="user-text"> Hello HR DBMR, </div>
-                                <div class="user-text1 mt-1"> This is what we’ve got for you today, fresh insights and inspiration </div>
-                            </div>
-                        </div>
-                        <div class="row rd-mt-3">
-                            <div class="col-md-6">
-                                <div class="card-announce">
-                                    <div class="d-flex align-items-center justify-content-between rd-mb-2">
-                                        <div class="announce-text"> Announcement </div>
-                                    </div>
-                                    <div class="announce-border">
-                                        <div class="announce-head ng-star-inserted"> New Training Programs </div>
-                                        <div class="announce-head1 rd-mb-3">
-                                            <span>
-                                                We are excited to introduce our new training programs designed to enhance your skills and expertise in [specific area(s)]. These comprehensive training initiatives have been carefully crafted to provide you with the necessary tools and knowledge to thrive in your roles and contribute to the continued success of our organization. Through these programs, we aim to cultivate
-                                                a culture of continuous learning and professional development,
-                                                empowering each of you to reach your full potential.We encourage all employees to take full advantage of these opportunities
-                                                and invest in your personal and professional growth.
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6" style="padding-left: 0px;">
-                                <div class="card-announce tab-chart-bottom">
-                                    <div class="topcard topheigh">
-                                            <div class="rd-card-home h-100">
-                                                <div>
-                                                    <div class="d-flex justify-content-between rd-mb-2">
-                                                        <div style="align-self: center;">
-                                                            <div class="rd-home-headings rd-mb-3">Monthly Attendance</div>
-                                                        </div>
-                                                        <div class="rd-form-select">
-                                                            <select id="monthSelect" class="form-select form-select-sm">
-                                                                <option value="1">January</option>
-                                                                <option value="2">February</option>
-                                                                <option value="3">March</option>
-                                                                <option value="4">April</option>
-                                                                <option value="5">May</option>
-                                                                <option value="6">June</option>
-                                                                <option value="7">July</option>
-                                                                <option value="8">August</option>
-                                                                <option value="9">September</option>
-                                                                <option value="10">October</option>
-                                                                <option value="11">November</option>
-                                                                <option value="12">December</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="static">
-                                                    <div class="d-flex flex-column justify-content-center align-items-center">
-                                                        <div id="chartContainer"></div>       
-                                                    </div>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row rd-mt-2">
-                            <div class="col-md-6">
-                                <div class="events-wrap heightWrap">
-                                    <div class="d-flex justify-content-between rd-mb-1">
-                                        <div class="rd-home-headings1">Events</div>
-                                        <div class="apply-button">View All</div>
-                                    </div>
-                                    <mat-tab-group class="mat-tab-group tab-border tab-home mat-primary" style="max-height: 250px; overflow-y: auto;">
-                                        <mat-tab-header class="mat-tab-header">
-                                            <button aria-hidden="true" type="button" mat-ripple="" tabindex="-1" class="mat-ripple mat-tab-header-pagination mat-tab-header-pagination-before mat-elevation-z4 mat-tab-header-pagination-disabled" disabled="">
-                                                <div class="mat-tab-header-pagination-chevron"></div>
-                                            </button>
-                                            <div class="mat-tab-label-container">
-                                                <div role="tablist" class="mat-tab-list">
-                                                    <div class="mat-tab-labels">
-                                                        <div role="tab" class="mat-ripple mat-tab-label mat-focus-indicator mat-tab-label-active ng-star-inserted" id="mat-tab-label-0-0" tabindex="0" aria-posinset="1" aria-setsize="2" aria-controls="mat-tab-content-0-0" aria-selected="true" aria-disabled="false">
-                                                            <div class="mat-tab-label-content">Birthday</div>
-                                                        </div>
-                                                        <div role="tab" class="mat-ripple mat-tab-label mat-focus-indicator ng-star-inserted" id="mat-tab-label-0-1" tabindex="-1" aria-posinset="2" aria-setsize="2" aria-controls="mat-tab-content-0-1" aria-selected="false" aria-disabled="false">
-                                                            <div class="mat-tab-label-content">Work Anniversary</div>
-                                                        </div>
-                                                    </div>
-                                                    <mat-ink-bar class="mat-ink-bar" style="visibility: visible; left: 0px; width: 160px;"></mat-ink-bar>
-                                                </div>
-                                            </div>  
-                                        </mat-tab-header>
-                                        <div class="mat-tab-body-wrapper">
-                                            <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c182-13 mat-tab-body-active ng-star-inserted" id="mat-tab-content-0-0">
-                                                <div class="mat-tab-body-content ng-tns-c182-13 ng-trigger ng-trigger-translateTab">
-                                                    <div class="row ng-star-inserted" style="">
-                                                        <div class="col-md-6 rd-mt-2 text-center ng-star-inserted">
-                                                            <div class="bday-border">
-                                                                <div>
-                                                                    <img src="~/images/emptyProfile.jpg" alt="" class="event-img ng-star-inserted">
-                                                                </div>
-                                                                <div class="event-user"> HR DBMR </div>
-                                                                <p class="event-day"> Apr 25,Fri </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </mat-tab-body>
-                                            <mat-tab-body role="tabpanel" class="mat-tab-body ng-tns-c182-14 ng-star-inserted" id="mat-tab-content-0-1">
-                                                <div class="mat-tab-body-content ng-tns-c182-14 ng-trigger ng-trigger-translateTab">
-                                                    <div class="row ng-star-inserted" style="">
-                                                        <div class="col-md-6 rd-mt-2 text-center ng-star-inserted">
-                                                            <div class="bday-border">
-                                                                <div>
-                                                                    <img src="~/images/emptyProfile.jpg" alt="" class="event-img ng-star-inserted">
-                                                                </div>
-                                                                <div class="event-user"> HR DBMR </div>
-                                                                <p class="event-day"> Apr 25,Fri </p>
-                                                                <div class="rd-table-tags-success rd-mb-1 rd-me-1"><span class="rd-table-tag-dot rd-alert-text-success"></span> 2 Years </div>
-                                                            </div>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </mat-tab-body>
-                                        </div>
-                                    </mat-tab-group>
-                                </div>
-                            </div>
-                            <div class="col-md-6" style="padding-left: 0px;">
-                                <div class="holi-bg heightWrap">
-                                    <div class="d-flex justify-content-between rd-mb-1">
-                                        <div class="rd-home-headings1">Holidays of 2025</div>
-                                        <div class="apply-button">View All</div>
-                                    </div>
-                                    <div class="rd-mt-2">
-                                        <table class="table table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        Holiday
-                                                    </th>
-                                                    <th>
-                                                        Date
-                                                    </th>
-                                                    <th>
-                                                        Location
-                                                    </th>
-
-                                                </tr>
-                                            </thead>
-
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        Good Friday
-                                                    </td>
-
-                                                    <td>
-                                                        18 Apr 2025
-                                                        <br>
-                                                        ( Friday )
-                                                    </td>
-
-                                                    <td>
-                                                        Pune / Gurugram
-                                                    </td>
-
-
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        International Labor Day
-                                                    </td>
-
-                                                    <td>
-                                                        01 May 2025
-                                                        <br>
-                                                        ( Thursday )
-                                                    </td>
-
-                                                    <td>
-                                                        Pune / Gurugram
-                                                    </td>
-
-
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        Independence Day
-                                                    </td>
-
-                                                    <td>
-                                                        15 Aug 2025
-                                                        <br>
-                                                        ( Friday )
-                                                    </td>
-
-                                                    <td>
-                                                        Pune / Gurugram
-                                                    </td>
-
-
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -328,6 +243,8 @@
             </div>
         </div>
     </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function () {
@@ -355,41 +272,243 @@
 </script>
 <script src="https://unpkg.com/apexcharts@3.22.1/dist/apexcharts.min.js"></script>
 
-<script>
-    var options = {
-        series: [22, 2, 2],
-        chart: {
-            type: 'donut',
-        },
-        colors: ['#CBFFBA', '#FFBABA', '#FFDEBA'],
-        labels: ['Present', 'Absent', 'Leave'],
-        dataLabels: {
-            enabled: false
-        },
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                    width: "100%"
-                },
-                legend: {
-                    position: 'bottom'
-                }
-            }
-        }],
-        legend: {
-            position: 'bottom',
-            labels: {
-                colors: '#000', 
-                useSeriesColors: false
-            }
-        }
-    };
 
-    var chart = new ApexCharts(document.querySelector("#chartContainer"), options);
-    chart.render();
+
+<script>
+    $(document).ready(function () {
+
+
+        $.ajax({
+            url: '/Dashboard/GetLeaveBalance',
+            type: 'GET',
+            success: function (data) {
+                let html = '';
+                data.forEach(function (item) {
+
+                    html += `
+                        <div class="col-md-6 rd-mt-2">
+                            <div class="leave-border">
+                                <div class="leave-head"> ${item.leaveType} </div>
+                                <div class="rd-mt-2"><span class="leave-count">${item.balance.toFixed(2)}</span></div>
+                            </div>
+                        </div>
+                    `;
+                });
+                $('.leave-bg .row').html(html);
+            },
+            error: function () {
+                alert("Failed to load leave balance.");
+            }
+        });
+    });
+
+    $(document).ready(function () {
+      $.ajax({
+        url: '/Dashboard/GetLatestAnnouncements',
+        type: 'GET',
+        success: function (data) {
+          const container = $('#announcementList');
+          container.empty();
+
+          if (data.length === 0) {
+            container.append('<div class="announce-head1">No announcements found.</div>');
+            return;
+          }
+
+          data.forEach(item => {
+            const date = new Date(item.createdDate).toLocaleDateString();
+            const html = `
+              <div class="announce-head">${item.title}</div>
+              <div class="announce-head1 rd-mb-"style="text-align: end;"><span>${date}</span></div>
+            `;
+            container.append(html);
+          });
+        },
+        error: function () {
+          $('#announcementList').html('<div class="announce-head1">Failed to load announcements.</div>');
+        }
+      });
+    });
+
+
+    $(document).ready(function () {
+      $.ajax({
+        url: '/Dashboard/GetHolidayList',
+        type: 'GET',
+        success: function (data) {
+          const tbody = $('.holi-bg tbody');
+          tbody.empty();
+
+          if (data.length === 0) {
+            tbody.append('<tr><td colspan="3">No holidays found.</td></tr>');
+          }
+
+          data.forEach(h => {
+            const holidayDate = new Date(h.date);
+            const formattedDate = holidayDate.toLocaleDateString('en-GB', {
+              day: '2-digit',
+              month: 'short',
+              year: 'numeric'
+            });
+
+            const weekday = holidayDate.toLocaleDateString('en-US', { weekday: 'long' });
+
+            const htmlRow = `
+              <tr>
+                <td>${h.holidayName}</td>
+                <td>${formattedDate}<br/>(${weekday})</td>
+                <td>${h.resion}</td>
+              </tr>
+            `;
+            tbody.append(htmlRow);
+          });
+        },
+        error: function () {
+          $('.holi-bg tbody').html('<tr><td colspan="3">Failed to load holidays.</td></tr>');
+        }
+      });
+    });
+
+        // Birthday tab
+    $.get('/Dashboard/GetBirthdays', function (data) {
+        let html = '';
+        data.forEach(emp => {
+            let date = new Date(emp.dob);
+            let day = date.toLocaleString('default', { day: '2-digit' });
+            let month = date.toLocaleString('default', { month: 'short' });
+            let weekday = date.toLocaleString('default', { weekday: 'short' });
+            html += `
+                <div class="col-md-6 rd-mt-2 text-center">
+                    <div class="bday-border">
+                        <div><img src="/emp/thumb/${emp.photo}" class="event-img"></div>
+                        <div class="event-user">${emp.name}</div>
+                        <p class="event-day">${month} ${day}, ${weekday}</p>
+                    </div>
+                </div>`;
+        });
+        $('#birthdayContainer').html(html);
+    });
+
+    // Anniversary tab
+    $.get('/Dashboard/GetAnniversaries', function (data) {
+        let html = '';
+        data.forEach(emp => {
+            let date = new Date(emp.doj);
+            let day = date.toLocaleString('default', { day: '2-digit' });
+            let month = date.toLocaleString('default', { month: 'short' });
+            let weekday = date.toLocaleString('default', { weekday: 'short' });
+            html += `
+                <div class="col-md-6 rd-mt-2 text-center">
+                    <div class="bday-border">
+                     <div><img src="/emp/thumb/${emp.photo}" class="event-img"></div>
+                        <div class="event-user">${emp.name}</div>
+                        <p class="event-day">${month} ${day}, ${weekday}</p>
+                        <div class="rd-table-tags-success rd-mb-1 rd-me-1">
+                            <span class="rd-table-tag-dot rd-alert-text-success"></span> ${emp.yearsCompleted} Years
+                        </div>
+                    </div>
+                </div>`;
+        });
+        $('#anniversaryContainer').html(html);
+    });
+
+
+        $.ajax({
+        url: '/Attendance/GetCalendarAttendanceData',
+        type: 'GET',
+        data: {
+            start: new Date().toISOString().split('T')[0],        // today's date in yyyy-MM-dd format
+            end: new Date().toISOString().split('T')[0],
+            daterange: '',
+            datepicker: new Date().toISOString().split('T')[0],
+            datepicker2: null
+        },
+        success: function(data) {
+
+            if(data && data.length > 0) {
+                let attendance = data[0];
+                $('#checkIn').text(attendance.chekIn || 'N/A');
+                $('#checkOut').text(attendance.chekOut || 'N/A');
+                $('#breakHours').text(attendance.spent_Out_Time || 'N/A');
+                $('#totalHours').text(attendance.actual_Working_Hours || 'N/A');
+            } else {
+                $('#checkIn').text('N/A');
+                $('#checkOut').text('N/A');
+                $('#breakHours').text('N/A');
+                $('#totalHours').text('N/A');
+            }
+        },
+        error: function() {
+            alert('Failed to fetch attendance data');
+        }
+    });
+
+
 
 </script>
+<script>
+    function loadMonthlyAttendance(month) {
+        $.ajax({
+            url: '/Attendance/GetMonthlyAttendanceData',
+            type: 'GET',
+            data: { month: month },
+            success: function (data) {
+                console.log(data);
+                var newOptions = {
+                    series: [data.present, data.partialpresent, data.absent, data.leave],
+                    chart: {
+                        type: 'donut',
+                    },
+                    colors: ['#28a745', '#FFA500', '#FF0000', '#007BFF'],
+                    labels: ['Present', 'Partial Present' ,'Absent', 'Leave',],
+                    dataLabels: {
+                        enabled: false
+                    },
+                    responsive: [{
+                        breakpoint: 480,
+                        options: {
+                            chart: {
+                                width: "100%"
+                            },
+                            legend: {
+                                position: 'bottom'
+                            }
+                        }
+                    }],
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            colors: '#000',
+                            useSeriesColors: false
+                        }
+                    }
+                };
+
+                var chartContainer = document.querySelector("#chartContainer");
+                chartContainer.innerHTML = ""; // Clear old chart
+                var chart = new ApexCharts(chartContainer, newOptions);
+                chart.render();
+            },
+            error: function () {
+                alert("Failed to load attendance data.");
+            }
+        });
+    }
+
+    // Initial load with current month
+    $(document).ready(function () {
+        const currentMonth = new Date().getMonth() + 1;
+        $('#monthSelect').val(currentMonth);
+        loadMonthlyAttendance(currentMonth);
+    });
+
+    // On month change
+    $('#monthSelect').on('change', function () {
+        const selectedMonth = $(this).val();
+        loadMonthlyAttendance(selectedMonth);
+    });
+</script>
+
 
 
 
@@ -398,3 +517,5 @@
     const options = { weekday: 'long', day: '2-digit', month: 'short', year: 'numeric' };
     document.getElementById("currentDate").innerText = now.toLocaleDateString("en-GB", options);
 </script>
+
+

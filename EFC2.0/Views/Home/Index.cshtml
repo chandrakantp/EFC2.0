@@ -3,27 +3,6 @@
     ViewData["HideHeader"] = true;
     ViewData["HideSidebar"] = true;
 }
-
-<style>
-
-    input:invalid {
-        border-color: red;
-    }
-
-    #invisiblepass {
-        display: none;
-    }
-
-    .eye-icon {
-        width: 24px; /* or your icon size */
-        height: 24px;
-        line-height: 24px; /* vertically center */
-        display: inline-block;
-        vertical-align: middle;
-        text-align: center;
-    }
-</style>
-
 <div id="layout-wrapper">
     <div class="Hr-Root ng-star-inserted">
         <div class="ng-star-inserted">
@@ -81,8 +60,6 @@
                                     </div>
 
                                     <p class="login-description fw-light rd-mt-1 text-center">Welcome back! Please login to your EFC account </p>
-                                    <p id="loginMessage" class="login-description fw-light rd-mt-1 text-center" style="color: red; display: none;"> </p>
-                               
                                     <div class="icon_wrap icon_wrap_in">
                                         <mat-form-field class="mat-form-field example-full-width my-1 ng-tns-c111-5 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-should-float mat-form-field-has-label ng-star-inserted mat-form-field-autofilled ng-dirty ng-valid ng-touched">
                                             <div class="mat-form-field-wrapper ng-tns-c111-5">
@@ -90,7 +67,7 @@
 
                                                     <div class="mat-form-field-infix ng-tns-c111-5">
                                                         @* <input autocomplete="off" name="email" type="text" placeholder="Enter your Employee Id" required="" class="mat-input-element mat-form-field-autofill-control ng-tns-c111-5 cdk-text-field-autofill-monitored cdk-text-field-autofilled valid ng-dirty ng-valid ng-touched" id="mat-input-2" data-placeholder="Enter your Employee Id" aria-required="true" aria-invalid="false"> *@
-                                                        <input name="DBMREmpID" type="text" class="mat-input-element mat-form-field-autofill-control p-element ng-tns-c111-6 cdk-text-field-autofill-monitored cdk-text-field-autofilled valid ng-dirty ng-valid ng-touched" placeholder="Enter your Employee Id / Email ID" ... />
+                                                        <input name="DBMREmpID" type="text" placeholder="Enter your Employee Id / Email ID" ... />
                                                         <span class="mat-form-field-label-wrapper ng-tns-c111-5">
                                                             <label class="mat-form-field-label ng-tns-c111-5 ng-star-inserted" id="mat-form-field-label-5" for="mat-input-2" aria-owns="mat-input-2">
 
@@ -122,7 +99,7 @@
 
                                                     <div class="mat-form-field-infix ng-tns-c111-6">
                                                         @*  <input matinput="" autocomplete="off" placeholder="Enter your password" formcontrolname="password" ptooltip="Your password must be at least 8 characters long, contain at least one number and have a mixture of uppercase, lowercase, special characters." required="" class="mat-input-element mat-form-field-autofill-control p-element ng-tns-c111-6 cdk-text-field-autofill-monitored cdk-text-field-autofilled valid ng-dirty ng-valid ng-touched" type="password" id="mat-input-3" data-placeholder="Enter your password" aria-required="true" aria-invalid="false"> *@
-                                                        <input name="password" type="password" class="mat-input-element mat-form-field-autofill-control p-element ng-tns-c111-6 cdk-text-field-autofill-monitored cdk-text-field-autofilled valid ng-dirty ng-valid ng-touched" placeholder="Enter your password" ... />
+                                                        <input name="password" type="password" placeholder="Enter your password" ... />
                                                         <span class="mat-form-field-label-wrapper ng-tns-c111-6">
                                                             <label class="mat-form-field-label ng-tns-c111-6 ng-star-inserted" id="mat-form-field-label-7" for="mat-input-3" aria-owns="mat-input-3">
 
@@ -132,10 +109,12 @@
 
                                                         </span>
                                                     </div>
+                                                    <div class="mat-form-field-suffix ng-tns-c111-6 ng-star-inserted">
 
-                                                    <div style="position: relative; width: 24px; height: 24px; cursor: pointer;">
-                                                        <mat-icon id="visiblepass" role="img" class="eye-icon mat-icon notranslate cursor-pointer eye-icon material-icons mat-icon-no-color ng-tns-c111-6 ng-star-inserted" style="position: absolute; top: 0; left: 0; visibility: visible;">visibility_off</mat-icon>
-                                                        <mat-icon id="invisiblepass" role="img" class="eye-icon mat-icon notranslate cursor-pointer eye-icon material-icons mat-icon-no-color ng-tns-c111-6 ng-star-inserted" style="position: absolute; top: 0; left: 0; visibility: hidden;">visibility</mat-icon>
+                                                        <mat-icon id="visiblepass" role="img" matsuffix="" class="mat-icon notranslate cursor-pointer eye-icon material-icons mat-icon-no-color ng-tns-c111-6 ng-star-inserted" aria-hidden="true" data-mat-icon-type="font">visibility_off</mat-icon>
+
+                                                        <mat-icon id="invisiblepass" role="img" matsuffix="" class="mat-icon notranslate cursor-pointer eye-icon material-icons mat-icon-no-color ng-tns-c111-6 ng-star-inserted" aria-hidden="true" data-mat-icon-type="font">visibility_on</mat-icon>
+
                                                     </div>
 
                                                 </div>
@@ -284,49 +263,11 @@
 
 <script>
 
-     $('#visiblepass').click(function() {
-          $('#visiblepass').css('visibility', 'hidden');
-          $('#invisiblepass').css('visibility', 'visible');
-          $('input[name="password"]').attr('type', 'text');
-     });
-
-    $('#invisiblepass').click(function() {
-          $('#visiblepass').css('visibility', 'visible');
-          $('#invisiblepass').css('visibility', 'hidden');
-          $('input[name="password"]').attr('type', 'password');
-    });
-
+    $(document).ready(function () {
         $('#loginButton').click(function () {
-            var isValid = true;
-
-            var DBMREmpIDInput = $('input[name="DBMREmpID"]');
-            var passwordInput = $('input[name="password"]');
-
-            var DBMREmpID = DBMREmpIDInput.val().trim();
-            var password = passwordInput.val().trim();
-
-            DBMREmpIDInput.css('border-bottom', '');
-            passwordInput.css('border-bottom', '');
-
-            if (DBMREmpID === '') {
-                DBMREmpIDInput.css('border-bottom', '2px solid red');
-                isValid = false;
-            }
-
-            if (password === '') {
-                passwordInput.css('border-bottom', '2px solid red');
-                isValid = false;
-            }
-
-            if (!isValid) {
-                return;
-            }
-
-            var $btn = $('#loginButton');
-            var originalText = $btn.text();
-            $btn.text('Please wait...').prop('disabled', true);
-
-
+            var DBMREmpID = $('input[name="DBMREmpID"]').val();
+            var password = $('input[name="password"]').val();
+            alert('hi');
             $.ajax({
                 url: '/Home/Login',
                 type: 'POST',
@@ -336,18 +277,17 @@
                 },
                 success: function (response) {
                     if (response.includes("success")) {
-                        window.location.href = "/Dashboard";
+                        alert("Login successful!");
+                        window.location.href = "/Dashboard"; // redirect if needed
                     } else {
-                        $('#loginMessage').text(response).show();
-                        $btn.text(originalText).prop('disabled', false);
+                        alert("Login failed: " + response);
                     }
                 },
                 error: function (xhr, status, error) {
                     console.error(error);
                     alert("An error occurred during login.");
-                     $btn.text(originalText).prop('disabled', false);
                 }
             });
         });
-
+    });
 </script>

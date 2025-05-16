@@ -1,4 +1,11 @@
-﻿<div class="navbar page-header navbar-light fixed-top rd-shadow-300" dir="ltr">
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    var empName = HttpContextAccessor.HttpContext?.Session.GetString("EmpName") ?? "User";
+}
+
+<div class="navbar page-header navbar-light fixed-top rd-shadow-300" dir="ltr">
     <div class="top-nav-left">
         <a href="/dashboard" class="logo" href="#/">
             <span class="logo">
@@ -24,9 +31,8 @@
                     </div>
                     <div class="m-4px username">
                         <div class="user2">
-                            <p class="userName">HR DBMR, </p>
+                            <p class="userName">@empName</p>
                         </div>
-                        <p class="userName">Admin</p>
                     </div>
                 </div>
             </div>

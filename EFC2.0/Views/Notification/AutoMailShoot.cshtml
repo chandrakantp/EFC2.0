@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+<br />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<p><h3> Please don't close the tab. </h3></p>
+ 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+
+    function myFunctionAutoLeave() {
+        $.ajax({
+            type: "POST",
+            url: "/Notification/AutoMailShootFunction",
+            data: {},
+            success: function (data) {
+                console.log(data);
+            },
+            failure: function (data) {
+                console.log(data);
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    }
+   // var interval = setInterval(function () { myFunctionAutoLeave(); }, 120000);
+    //180000
+    myFunctionAutoLeave()
+</script>
+
+
